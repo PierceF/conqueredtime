@@ -1,5 +1,5 @@
 
-import "bootstrap";
-import { timer } from "../components/timer.js";
-timer();
+import 'bootstrap';
+import { timer } from '../components/timer';
 
+timer();
