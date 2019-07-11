@@ -25,8 +25,8 @@
   height:10vh;
   background-color:#f4f4f4;
   width:100%;
+  font-size:24px;
   border:none;
-  font-size:32px;
   font-weight:200;
   color:#69585F;
   font-family: 'Poppins', sans-serif;
@@ -52,30 +52,49 @@ input:focus {
 
 .form-submit {
 margin-top:2vh;
-width:100%;
+width:200px;
 height:73px;
 border:none;
 background-color: #EF959D;
 color:white;
 font-weight:800;
 font-size:16px;
-border-radius:4px;
+border-radius:15px;
+border-bottom: 7px solid #C47A81;
 }
 
-.form-submit:hover {
+.form-submit:active {
+border:none;
 background-color:#DA888F;
-cursor:pointer;
 }
+
+.form-submit-blue {
+width:200px;
+height:73px;
+border:none;
+background-color: #B1DDF1;
+color:white;
+font-weight:800;
+font-size:16px;
+border-radius:15px;
+border-bottom: 7px solid #A1C9DC;
+}
+
+.form-submit-blue:active {
+border:none;
+background-color:#A1C9DC;
+}
+
 
 .form-secondary {
   margin:0;
 }
 
 .form-control-label {
-  height:10vh;
+
   width:100%;
   border:none;
-  font-size:32px;
+  font-size:24px;
   font-weight:800;
   color:#69585F;
   font-family: 'Poppins', sans-serif;
@@ -86,4 +105,21 @@ cursor:pointer;
 .form-control {
   background-color:white;
   border-radius: 4px;
+}
+
+.btn {
+  color:white !important;
+  width:200px;
+  height:73px;
+  border:none;
+  background-color: #B1DDF1;
+  color:white;
+  font-weight:800;
+  font-size:16px;
+  border-radius:15px;
+  border-bottom: 7px solid #A1C9DC;
+}
+
+.btn:active {
+  background-color:#A1C9DC;
 }

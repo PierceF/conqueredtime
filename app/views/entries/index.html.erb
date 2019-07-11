@@ -1,32 +1,16 @@
-<h2 class="paragraph-margin"><%= @journal.title.capitalize %></h2>
+
+<h2><%= @journal.title.capitalize %></h2>
 <%= simple_form_for [@journal, @entry] do |m| %>
-  <%= m.input :goal, :label => "Goal" %>
+  <%= m.input :goal  %>
   <%= m.simple_fields_for :milestones do |p| %>
-    <%= p.input :title, :label => "Milestone", :class => "form-textfield" %>
+    <%= p.input :title, label: "Add 1, 2, or 3 milestones!", :class => "form-textfield" %>
+  <% end %>
+  <%= m.simple_fields_for :milestones do |p| %>
+    <%= p.input :title, label: false, :class => "form-textfield" %>
+  <% end %>
+    <%= m.simple_fields_for :milestones do |p| %>
+    <%= p.input :title, label: false, :class => "form-textfield" %>
   <% end %>
   <%= m.submit "Create", :class => "form-submit"%>
 <% end %>
-<div class="button-large-blue" style="text-align:center;">
-<%= link_to "Start Pomodoro", Pomodoro.first %>
 
-<% @entries.each do |entry| %>
-
-<div class="entries-card">
-
-<h3><%= entry.goal %></h3>
-
-  <div class="background-card">
-<h3 style="font-weight:800;"><%= entry.goal.capitalize %></h3>
-<div class="entries-card-milestones">
-
-  <% entry.milestones.each do |milestone| %>
-<h4 style=";"> <%= milestone.title %></h4>
-<%= simple_form_for([milestone, Pomodoro.new]) do |m| %>
-<div class="entries-card-button">
-  <%= m.submit "Start a Focus Session", :class => "form-submit"%>
-  </div>
-<% end %>
-<% end %>
-  </div>
-  </div>
-<% end %>
