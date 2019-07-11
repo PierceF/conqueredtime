@@ -1,9 +1,11 @@
 .entries-card {
- background-color:#FFFFFF;
  border-radius:4px;
  min-height:400px;
  max-height:400px;
+ min-width:300px;
+ max-width:300px;
  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+
  margin:10px 0px;
  display: flex;
  justify-content: flex-start;
@@ -21,9 +23,21 @@
 .entries-card-text {
  align-items:flex-end;
 
+ margin:10px auto;
+ background: white;
 }
 
-.background-card {
-  background-image: url('https://res.cloudinary.com/doem0zjpf/image/upload/v1562769259/yeeet_z3366i.png');
-  background-size:100%;
+.entries-card-milestones {
+  flex-direction: column;
+  min-height:400px;
+  max-height:400px;
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+
+}
+
+.entries-card-milestones h4 {
+    font-weight:200;
 }
