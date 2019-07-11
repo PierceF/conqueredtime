@@ -9,16 +9,16 @@
 
 <% @entries.each do |entry| %>
 <div class="entries-card">
-
-
   <div class="background-card">
-<h3 style="font-weight:800;"><%=  link_to entry.goal.capitalize, entry_path(entry) %></h3>
+<h3 style="font-weight:800;"><%=  link_to entry.goal.capitalize, entry_path(entry), :class => "link-title" %></h3>
 <div class="entries-card-milestones">
-  <% entry.milestones.each do |milestone| %>
+  <h3><% entry.milestones.each do |milestone| %></h3>
 <h4 style=";"> <%= milestone.title %></h4>
 <%= simple_form_for([milestone, Pomodoro.new]) do |m| %>
 <div class="entries-card-button">
   <%= m.submit "Start Focus Session", :id => "button-special"%>
+  </div>
+  </div>
   </div>
   </div>
 <% end %>
