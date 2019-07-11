@@ -12,17 +12,21 @@
 <% @entries.each do |entry| %>
 
 <div class="entries-card">
+
+<h3><%= entry.goal %></h3>
+
   <div class="background-card">
 <h3 style="font-weight:800;"><%= entry.goal.capitalize %></h3>
 <div class="entries-card-milestones">
+
   <% entry.milestones.each do |milestone| %>
 <h4 style=";"> <%= milestone.title %></h4>
 <%= simple_form_for([milestone, Pomodoro.new]) do |m| %>
+<div class="entries-card-button">
   <%= m.submit "Start a Focus Session", :class => "form-submit"%>
-<% end %>
-<% end %>
-
   </div>
+<% end %>
+<% end %>
   </div>
   </div>
 <% end %>
