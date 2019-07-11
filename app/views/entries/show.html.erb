@@ -1,3 +1,18 @@
+
+<div class="card-large">
+<h3><%= @entry.goal.split.map(&:capitalize).join(' ') %></h3>
+<!-- <p><%= @entry.milestones.first.pomodoros.first.end - @entry.milestones.first.pomodoros.first.start %></p> -->
+<% @milestones.each do |milestone| %>
+<%= milestone.time %>
+<h3 style=";"> <%= milestone.title.split.map(&:capitalize).join(' ') %></h3>
+<%= simple_form_for([milestone, Pomodoro.new]) do |m| %>
+  <%= m.submit "Start a Focus Session", :class => "form-submit"%>
+<% end %>
+
+<% end %>
+</div>
+
+
 <div class="entries-card">
   <%= simple_form_for [@entry, @milestone] do |f| %>
   <%= f.error_notification %>
@@ -18,5 +33,7 @@
   <%= simple_form_for([milestone, Pomodoro.new]) do |m| %>
   <%= m.submit "Focus Session", :class => "button-test-card"%>
 </div>
+
 <% end %>
 <% end %>
+
