@@ -85,6 +85,23 @@ border:none;
 background-color:#A1C9DC;
 }
 
+.form-submit-green {
+  margin-top:2vh;
+  width:120px;
+  height:50px;
+  border:none;
+  background-color: #B8D8BA;
+  color:white;
+  font-weight:800;
+  font-size:16px;
+  border-radius:15px;
+  border-bottom: 7px solid #A8C5AA;
+}
+
+.form-submit-green:active {
+border:none;
+background-color:#A8C5AA
+}
 
 .form-secondary {
   margin:0;
@@ -118,6 +135,10 @@ background-color:#A1C9DC;
   font-size:16px;
   border-radius:15px;
   border-bottom: 7px solid #A1C9DC;
+}
+
+.btn:hover {
+  background-color: #B1DDF1 !important;
 }
 
 .btn:active {

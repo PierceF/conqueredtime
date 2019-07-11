@@ -3,9 +3,20 @@
   outline: none;
   user-select: none;
 }
+
+
 a {
-  color: inherit;
-  text-decoration: none;
+  // display:inline-block;
+  // margin-top:2vh;
+  // padding:25px 40px;
+  // border:none;
+  // background-color: #EF959D;
+  // color:white;
+  // font-weight:800;
+  // font-size:16px;
+  // border-radius:15px;
+  // border-bottom: 7px solid #C47A81;
+  // text-decoration: none;
   &:hover{
     color: inherit;
     text-decoration: none;
@@ -16,14 +27,12 @@ a {
   max-width: 512px;
   width: 100%;
   #clock {
-    background: url(http://joeweaver.me/codepenassets/freecodecamp/challenges/build-a-pomodoro-clock/bg.png) no-repeat center center;
     background-size: contain;
     display: flex;
     justify-content: center;
     margin-bottom: -6.25vw;
     padding: 40vw 0;
     @media all and (min-width: 512px){
-      margin-bottom: -32px;
       padding: 204px 0;
     }
     @media all and (max-width: 184px){
@@ -38,10 +47,12 @@ a {
       display: flex;
       flex-direction: column;
       #title {
-        color: #FF8B8A;
+        color: #EF959D;
         font-size: 28px;
-        line-height: 28px;
+        line-height: 50px;
         margin: 3px 0 1px;
+        font-weight:800;
+        font-family: 'Roboto', sans-serif !important;
         @media all and (max-width: 512px){
           font-size: 5.5vw;
           line-height: 5.5vw;
@@ -52,9 +63,9 @@ a {
         }
       }
       #countdown {
-        color: #ff778d;
+        color: #EF959D;
         display: flex;
-        font-size: 43px;
+        font-size: 80px;
         font-weight: 600;
         line-height: 43px;
         @media all and (max-width: 512px){
@@ -90,6 +101,7 @@ a {
           .fa-play {
             font-size: 77%;
             top: -1px;
+            display:none;
           }
           &:hover {
             color: darken(#FF6292, $hover);
@@ -293,4 +305,47 @@ audio {
       padding: 7px;
     }
   }
+}
+
+button {
+  margin-top:2vh;
+  width:200px;
+  height:73px;
+  border:none;
+  background-color: #B1DDF1;
+  color:white;
+  font-weight:800;
+  font-size:16px;
+  border-radius:15px;
+  border-bottom: 7px solid #A1C9DC;
+}
+
+button:active {
+  border:none;
+  background-color:#A1C9DC;
+}
+
+.test {
+  text-align: center;
+  line-height:70px;
+  display:inline-block;
+  margin-top:2vh;
+  height:73px;
+  width:200px;
+  border:none;
+  background-color: #EF959D;
+  color:white;
+  font-weight:800;
+  font-size:16px;
+  border-radius:15px;
+  border-bottom: 7px solid #C47A81;
+  text-decoration: none;
+}
+.test:active {
+  border:none;
+  background-color:#DA888F;
+}
+
+.test-active {
+
 }

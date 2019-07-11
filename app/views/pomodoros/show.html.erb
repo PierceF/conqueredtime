@@ -18,10 +18,10 @@
 <div id="pomodoro">
   <div id="clock">
     <div id="timer">
-      <div id="title">Ready?</div>
+      <div id="title">Are you ready?</div>
       <div id="countdown">
-        <span id="minutes">05</span>
-        <span id="seconds">00</span>
+        <span id="minutes" style="font-family: 'Roboto', sans-serif;">05</span>
+        <span id="seconds" style="font-family: 'Roboto', sans-serif;">00</span>
       </div>
       <div id="controls" class="reset">
 
@@ -45,7 +45,9 @@
 
         <div id="back">
           <%= link_to entry_path(@entry) do %>
-          <i class="fas fa-chevron-circle-left"></i> To journal
+          <div class="test">
+            To journal
+            </div>
           <% end %>
         </div>
        <!--  <div id="pause"><i class="fas fa-pause"></i> Pause</div>
@@ -56,9 +58,9 @@
   <div id="options">
     <div id="session">
       <!-- <i id="incrSession" class="fas fa-angle-double-up"></i> -->
-      <span class="option-title">Your session is</span>
+      <span class="option-title">Your Focus Session is</span>
       <input id="sessionInput" type="number" value="25" max="25" min="25">
-      <span class="option-title" style="margin-top: 0px;">minutes</span>
+      <span class="option-title" style="margin-top: 0px;">Minutes</span>
       <!-- <i id="decrSession" class="fas fa-angle-double-down"></i> -->
     </div>
     <!-- <div id="break"> -->

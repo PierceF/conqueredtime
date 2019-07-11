@@ -1,12 +1,12 @@
-
-<div class="card-large">
 <h3><%= @entry.goal.split.map(&:capitalize).join(' ') %></h3>
+<div class="card-large">
 <% @milestones.each do |milestone| %>
 <div class="card-large-group">
-<%= milestone.time %>
-<h3 style=";"> <%= milestone.title.split.map(&:capitalize).join(' ') %></h3>
+<h3><i style="font-size:16px"; class="fas fa-clock"></i>
+<%= milestone.time %></h3>
+<h4> <%= milestone.title.split.map(&:capitalize).join(' ') %></h4>
 <%= simple_form_for([milestone, Pomodoro.new]) do |m| %>
-  <%= m.submit "Start a Focus Session", :class => "form-submit"%>
+  <%= m.submit "Focus Session", :class => "form-submit-green"%>
   </div>
 <% end %>
 <% end %>
