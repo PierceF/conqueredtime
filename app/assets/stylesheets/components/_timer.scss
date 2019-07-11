@@ -11,22 +11,6 @@ a {
     text-decoration: none;
   }
 }
-body {
-  align-items: center;
-  background: #f4f4f4;
-  // background: radial-gradient(ellipse at center, rgba(255,179,206,0) 0%, rgba(255,180,199,0) 43%, rgba(255,181,189,0.43) 100%);
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  display: flex;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffb3ce', endColorstr='#6effb5bd', GradientType=1);
-  flex-direction: column;
-  font-family: "Open Sans", sans-serif;
-  height: 100vh;
-  justify-content: center;
-  min-width: 184px;
-  overflow-x: hidden;
-  transition: background-color .2s;
-}
 #pomodoro {
   margin-bottom: 43px;
   max-width: 512px;

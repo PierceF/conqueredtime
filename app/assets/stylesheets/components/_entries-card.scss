@@ -1,15 +1,36 @@
 .entries-card {
- background-color:#FFFFFF;
  border-radius:4px;
- margin:20px;
  min-height:400px;
  max-height:400px;
+ min-width:300px;
+ max-width:300px;
  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+
+ margin:10px 0px;
+ display: flex;
+ justify-content: flex-start;
+ flex-direction: column;
+ align-items: center;
+ position:relative;
+}
+
+.entries-card-button {
+  position:absolute;
+  bottom:10px;
+  right:10px;
+}
+
+.entries-card-text {
+ align-items:flex-end;
+
+ margin:10px auto;
+ background: white;
 }
 
 .entries-card-milestones {
   flex-direction: column;
-  height:362px;
+  min-height:400px;
+  max-height:400px;
   width:100%;
   display: flex;
   justify-content: center;
@@ -17,6 +38,6 @@
 
 }
 
-.entries-card {
-
+.entries-card-milestones h4 {
+    font-weight:200;
 }

@@ -5,11 +5,9 @@ class PomodorosController < ApplicationController
   end
 
   def create
-    @milestone = Milestone.find(params[:milestone_id])
     @pomodoro = Pomodoro.new
-    @pomodoro.milestone = @milestone
+    @pomodoro.milestone = Milestone.find(params[:milestone_id])
     @pomodoro.save!
-
     # redirect_to pomodoro_path(@pomodoro)
     redirect_to @pomodoro
   end

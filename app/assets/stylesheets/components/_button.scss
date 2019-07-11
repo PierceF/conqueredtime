@@ -1,5 +1,5 @@
 .button-small-red {
-margin-top: 40px;
+  margin: 10px 0px;
 }
 
 .button-small-red a {
@@ -18,7 +18,7 @@ margin-top: 40px;
 }
 
 .button-small-blue {
-margin-top: 100px;
+    margin:10px 0px;
 }
 
 .button-small-blue a {
@@ -38,9 +38,6 @@ margin-top: 100px;
 
 /* Button Large */
 
-.button-large-red {
-margin-top: 100px;
-}
 
 .button-large-red a {
   font-size:16px;
@@ -50,6 +47,7 @@ margin-top: 100px;
   text-decoration:none;
   font-weight:800;
   border-radius: 4px;
+  display:block;
 }
 
 .button-large-red a:hover {
@@ -60,8 +58,15 @@ margin-top: 100px;
 /* Button Blue */
 
 .button-large-blue {
-margin-top: 100px;
+  margin:10px 0px;
+  cursor:pointer;
 }
+
+.button-large-red {
+  margin:10px 0px;
+  cursor:pointer;
+}
+
 
 .button-large-blue a {
   font-size:16px;
@@ -71,6 +76,7 @@ margin-top: 100px;
   text-decoration:none;
   font-weight:800;
   border-radius: 4px;
+  display:block;
 }
 
 .button-large-blue a:hover {
@@ -78,3 +84,22 @@ margin-top: 100px;
   transition:0.3s;
 }
 
+
+.button-small-blue {
+cursor:pointer;
+}
+
+.button-small-blue a {
+  font-size:16px;
+  padding:25px 50px;
+  background-color: #B1DDF1;
+  color:white;
+  text-decoration:none;
+  font-weight:800;
+  border-radius: 4px;
+}
+
+.button-small-blue a:hover {
+  background-color:#B8E0F2;
+  transition:0.3s;
+}
