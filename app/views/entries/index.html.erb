@@ -8,7 +8,6 @@
 <% end %>
 
 <% @entries.each do |entry| %>
-
 <div class="entries-card">
 <h3><%= entry.goal %></h3>
   <% entry.milestones.each do |milestone| %>
@@ -16,6 +15,7 @@
 <%= simple_form_for([milestone, Pomodoro.new]) do |m| %>
 <div class="entries-card-button">
   <%= m.submit "Start Focus Session", :id => "button-special"%>
+  </div>
   </div>
 <% end %>
 <% end %>
