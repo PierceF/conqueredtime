@@ -20,13 +20,13 @@
     <div id="timer">
       <div id="title">Ready?</div>
       <div id="countdown">
-        <span id="minutes">00</span>
-        <span id="seconds">05</span>
+        <span id="minutes">05</span>
+        <span id="seconds">00</span>
       </div>
       <div id="controls" class="reset">
 
         <div id="start">
-          <%= simple_form_for @pomodoro do |f| %>
+          <%= simple_form_for @pomodoro, remote: true do |f| %>
             <%= f.input :action, as: :hidden, input_html: { value: 'start' } %>
             <%= button_tag do %>
               <i class="fas fa-play"></i> Start
@@ -35,7 +35,7 @@
         </div>
 
         <div id="done">
-          <%= simple_form_for @pomodoro do |f| %>
+          <%= simple_form_for @pomodoro, remote: true do |f| %>
             <%= f.input :action, as: :hidden, input_html: { value: 'done' } %>
             <%= button_tag do %>
               <i class="fas fa-check"></i> I am done
