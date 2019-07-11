@@ -15,7 +15,7 @@ resources :entries do
   end
 
 
-  resources :pomodoros, only: [:show]
+  resources :pomodoros, only: [:show, :update]
   resources :profiles, only: [:show, :edit, :update]
   resources :entries, only: [:show]
 
