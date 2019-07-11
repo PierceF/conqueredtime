@@ -68,6 +68,23 @@ border:none;
 background-color:#DA888F;
 }
 
+.form-submit-blue {
+width:200px;
+height:73px;
+border:none;
+background-color: #B1DDF1;
+color:white;
+font-weight:800;
+font-size:16px;
+border-radius:15px;
+border-bottom: 7px solid #A1C9DC;
+}
+
+.form-submit-blue:active {
+border:none;
+background-color:#A1C9DC;
+}
+
 
 .form-secondary {
   margin:0;
@@ -88,4 +105,21 @@ background-color:#DA888F;
 .form-control {
   background-color:white;
   border-radius: 4px;
+}
+
+.btn {
+  color:white !important;
+  width:200px;
+  height:73px;
+  border:none;
+  background-color: #B1DDF1;
+  color:white;
+  font-weight:800;
+  font-size:16px;
+  border-radius:15px;
+  border-bottom: 7px solid #A1C9DC;
+}
+
+.btn:active {
+  background-color:#A1C9DC;
 }
