@@ -2,8 +2,7 @@
 //= require_tree .
 
 
-var typed = new Typed('.form-textfield', {
-  strings: ["First sentence.", "Second sentence."],
-  typeSpeed: 30
+const typed = new Typed('.form-textfield', {
+  strings: ['First sentence.', 'Second sentence.'],
+  typeSpeed: 30,
 });
-
