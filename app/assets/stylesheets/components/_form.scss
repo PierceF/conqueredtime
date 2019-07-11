@@ -1,6 +1,8 @@
 .form-textfield{
   height:10vh;
-  background-color:#f4f4f4;
+
+  background-color:white;
+
   width:100%;
   border:none;
   font-size:24px;
@@ -8,8 +10,15 @@
   color:#69585F;
   font-family: 'Poppins', sans-serif;
   text-align: center;
+
   border-radius:4px;
-  border:1px solid #E8E8E8;
+
+  border-radius: 4px;
+}
+
+.form-textfield {
+
+
 }
 
 .form-control {
@@ -64,16 +73,17 @@ cursor:pointer;
 
 .form-control-label {
   height:10vh;
-  background-color:#f4f4f4;
   width:100%;
   border:none;
   font-size:32px;
-  font-weight:200;
+  font-weight:800;
   color:#69585F;
   font-family: 'Poppins', sans-serif;
-  text-align: center;
+
+
 }
 
-.optional {
-
+.form-control {
+  background-color:white;
+  border-radius: 4px;
 }
