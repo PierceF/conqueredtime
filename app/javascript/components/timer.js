@@ -1,39 +1,40 @@
+/* global $ */
+
+
 const timer = () => {
-
   $(() => {
-
-    let $audio = $("audio"), // from https://tide.moreless.io/en/
-        $theme = $(".theme"),
-        $title = $("#title"),
-        $controls = $("#controls"),
-        $options = $("#options"),
-        $minutes = $("#minutes"),
-        $seconds = $("#seconds"),
-        $start = $("#start"),
-        $pause = $("#pause"),
-        $done = $("#done"),
-        $reset = $("#reset"),
-        $back = $("#back"),
-        // $incrSession = $("#incrSession"),
-        $sessionInput = $("#sessionInput"),
-        // $decrSession = $("#decrSession"),
-        // $incrBreak = $("#incrBreak"),
-        // $breakInput = $("#breakInput"),
-        // $decrBreak = $("#decrBreak"),
-        // breakLength = 5 * 60,
-        // breakMax = 5,
-        // breakMin = 5,
-        sessionLength = 0.10 * 60,
-        sessionMax = 1,
-        sessionMin = 0.10,
-        sessionNum = 0,
-        countdown,
-        countType,
-        remainingTime = sessionLength;
+    const $audio = $('audio'); // from https://tide.moreless.io/en/
+    const $theme = $('.theme');
+    const $title = $('#title');
+    const $controls = $('#controls');
+    const $options = $('#options');
+    const $minutes = $('#minutes');
+    const $seconds = $('#seconds');
+    const $start = $('#start');
+    const $pause = $('#pause');
+    const $done = $('#done');
+    const $reset = $('#reset');
+    const $back = $('#back');
+    // $incrSession = $("#incrSession"),
+    const $sessionInput = $('#sessionInput');
+    // $decrSession = $("#decrSession"),
+    // $incrBreak = $("#incrBreak"),
+    // $breakInput = $("#breakInput"),
+    // $decrBreak = $("#decrBreak"),
+    // breakLength = 5 * 60,
+    // breakMax = 5,
+    // breakMin = 5,
+    let sessionLength = 0.10 * 60;
+    const sessionMax = 1;
+    const sessionMin = 0.10;
+    let sessionNum = 0;
+    let countdown;
+    let countType;
+    let remainingTime = sessionLength;
 
     init();
 
-    function init(){
+    function init() {
       // $audio.prop("volume", 0);
       // $incrSession.click(() => incrSession());
       // $decrSession.click(() => decrSession());
@@ -46,7 +47,7 @@ const timer = () => {
         //   startBreak();
         // }
         // else {
-          startSession();
+        startSession();
         // }
       });
       $done.click(() => done());
@@ -54,15 +55,15 @@ const timer = () => {
       // $reset.click(() => reset());
       // $theme.click(e => audioSelect(e));
     }
-    function startSession(){
+    function startSession() {
       sessionNum++;
-      countType = "session";
+      countType = 'session';
       $options.slideUp(143);
-      $controls.removeClass().addClass("started");
-      $title.fadeOut(43, function(){
-        $(this).html("Session " + sessionNum).fadeIn();
+      $controls.removeClass().addClass('started');
+      $title.fadeOut(43, function () {
+        $(this).html(`Session ${sessionNum}`).fadeIn();
       });
-      $audio.animate({volume: 1}, 1000);
+      $audio.animate({ volume: 1 }, 1000);
       start(remainingTime || sessionLength);
     }
     // function startBreak(){
@@ -73,17 +74,17 @@ const timer = () => {
     //   $audio.animate({volume: 0}, 5000);
     //   start(remainingTime || breakLength);
     // }
-    function start(timeLeft){
+    function start(timeLeft) {
       clearInterval(countdown);
       countdown = setInterval(() => {
         timeLeft--;
         remainingTime = timeLeft;
-        let minLeft = Math.floor(timeLeft / 60),
-            secLeft = timeLeft - minLeft * 60;
+        const minLeft = Math.floor(timeLeft / 60);
+        const secLeft = timeLeft - minLeft * 60;
         updateMinutes(minLeft);
-        updateSeconds(secLeft < 10 ? "0" + secLeft : secLeft);
-        if (timeLeft < 1){
-          if (countType === "session"){
+        updateSeconds(secLeft < 10 ? `0${secLeft}` : secLeft);
+        if (timeLeft < 1) {
+          if (countType === 'session') {
             // startBreak(breakLength);
             // if sessiong finished by time Display the button Confirm your session
             done();
@@ -93,14 +94,14 @@ const timer = () => {
         }
       }, 1000);
     }
-    function done(){
+    function done() {
       sessionNum--;
       // $audio.animate({volume: 0}, 1000);
       clearInterval(countdown);
       // $options.slideDown(143);
-      $controls.removeClass().addClass("done");
-      $title.fadeOut(43, function(){
-        $(this).html("Done").fadeIn();
+      $controls.removeClass().addClass('done');
+      $title.fadeOut(43, function () {
+        $(this).html('Done').fadeIn();
       });
     }
     // function pause(){
@@ -154,31 +155,27 @@ const timer = () => {
     //   updateBreak(num);
     //   reset();
     // }
-    function updateMinutes(num){
+    function updateMinutes(num) {
       $minutes.text(num);
     }
-    function updateSeconds(num){
+    function updateSeconds(num) {
       $seconds.text(num);
     }
-    function updateSession(num){
+    function updateSession(num) {
       num = num < sessionMin ? sessionMin : num > sessionMax ? sessionMax : num;
       $sessionInput.val(num).blur();
       updateMinutes(num);
-      updateSeconds("00");
+      updateSeconds('00');
       sessionLength = num * 60;
       reset();
     }
-    function updateBreak(num){
+    function updateBreak(num) {
       $breakInput.val(num < breakMin ? breakMin : num > breakMax ? breakMax : num).blur();
       breakLength = num * 60;
       reset();
     }
-
-
   });
 };
 
 
-
 export { timer };
-
