@@ -12,6 +12,7 @@ class EntriesController < ApplicationController
     @entry = Entry.find(params[:id])
     @milestones = @entry.milestones
     @pomodoro = Pomodoro.new
+    @milestone = Milestone.new
   end
 
   def new

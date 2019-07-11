@@ -9,6 +9,19 @@
 
 <% end %>
 </div>
+
+<%= simple_form_for [@entry, @milestone] do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+  <div class="form-inputs">
+    What would you like to title your milestone?
+    <%= f.input :title, hint: 'milestone title', label: 'New Milestone Title' %>
+  </div>
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
+
 <div class="button-large-red" style="text-align:center;">
 <%= link_to "BACK", journals_path %>
 </div>
