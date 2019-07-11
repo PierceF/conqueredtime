@@ -1,27 +1,42 @@
 .entries-card {
- background-color:#FFFFFF;
  border-radius:4px;
  min-height:400px;
  max-height:400px;
+ max-width:300px;
  box-shadow: 0 0 15px rgba(0,0,0,0.2);
- margin:10px 0px;
+ display: flex;
+ margin: 20px auto;
+ justify-content: flex-start;
+ flex-direction: column;
+ align-items: center;
+ position:relative;
+ background: linear-gradient(162deg, white 80%, #EF959D 80%);
+}
+#button-special {
+  border:none;
+  background:#EF959D;
+  color:white;
+  font-family: 'Roboto', "sans-serif";
+  font-weight:800;
 }
 
-.entries-card-milestones {
-  flex-direction: column;
-  height:362px;
-  width:100%;
-  display: flex;
-  justify-content: center;
-  align-items:center;
-
+.link-title {
+  font-size:32px;
 }
 
-.entries-card {
-
+.entries-card-button {
+  position:absolute;
+  bottom:10px;
+  right:10px;
 }
 
-.background-card {
-  background-image: url('https://res.cloudinary.com/doem0zjpf/image/upload/v1562769259/yeeet_z3366i.png');
-  background-size:100%;
+.entries-card-text {
+ align-items:flex-end;
+ margin:10px auto;
+ background: white;
+}
+
+
+.entries-card-milestones h4 {
+    font-weight:200;
 }
