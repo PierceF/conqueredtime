@@ -24,7 +24,7 @@ class EntriesController < ApplicationController
     @entry = Entry.new(entry_params)
     @entry.journal = Journal.find(params[:journal_id])
     @entry.save
-    redirect_back fallback_location: journal_entries_path(@entry.journal)
+    redirect_to entry_path(@entry)
   end
 
   private
