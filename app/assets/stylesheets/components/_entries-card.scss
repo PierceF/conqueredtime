@@ -1,10 +1,10 @@
 .entries-card {
  background-color:#FFFFFF;
  border-radius:4px;
- margin:20px;
  min-height:400px;
  max-height:400px;
  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+ margin:10px 0px;
 }
 
 .entries-card-milestones {
@@ -19,4 +19,9 @@
 
 .entries-card {
 
+}
+
+.background-card {
+  background-image: url('https://res.cloudinary.com/doem0zjpf/image/upload/v1562769259/yeeet_z3366i.png');
+  background-size:100%;
 }

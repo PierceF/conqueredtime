@@ -1,6 +1,26 @@
 
+.flex-left {
+  display:flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.flex-right {
+  display:flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.border-bottom {
+border-bottom:1px solid #C6C6C6;
+}
+
+.height-viewport{
+ height:100vh;
+}
+
 .container-main {
-  width:400px;
+  width:450px;
   margin: 0 auto;
   height:100%;
 }
@@ -23,9 +43,11 @@ h1, h2, h3 {
   color:#3d3c38;
 }
 
-h1 {
-  font-size: 48px;
 
+
+h1 {
+  font-size: 40px;
+  font-weight:800;
 }
 
 h2 {
@@ -36,20 +58,32 @@ h2 {
 
 h3 {
   font-size: 32px;
+  color:#495058;
+  font-weight:800;
+
 }
 
 h4 {
   font-size: 24px;
-  color:#3d3c38;
-
 }
 
 p, a{
   font-size:16px;
   margin:0px;
-  color:#3d3c38;
+  color:black;
+  font-family: 'Open Sans', sans-serif;
+  font-weight:200;
 }
+
 
 .green-text {
   color:#B8D8BA;
+}
+
+.color1 {
+
+}
+
+.paragraph-margin {
+  margin:5vh 0px;
 }
