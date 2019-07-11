@@ -26,13 +26,3 @@
 </div>
 <% end %>
 
-<% @milestones.each do |milestone| %>
-<div class="card-test">
-  <h4><%= milestone.title.split.map(&:capitalize).join(' ') %></h4>
-  <%= simple_form_for([milestone, Pomodoro.new]) do |m| %>
-  <%= m.submit "Focus Session", :class => "button-test-card"%>
-</div>
-
-<% end %>
-<% end %>
-
