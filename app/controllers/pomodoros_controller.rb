@@ -19,6 +19,8 @@ class PomodorosController < ApplicationController
     # @duration = 25.minutes
     @pomodoro = Pomodoro.find(params[:id])
 
+    # @milestone_time = (Time.now(end) - Time.now(start)).to_i
+
     # @remaining_seconds = (@pomodoro.created_at + @duration - Time.now).to_i
 
     # mins = @remaining_seconds / 60
@@ -27,5 +29,13 @@ class PomodorosController < ApplicationController
     # @remaining = "#{mins}min #{seconds}sec"
 
     @entry = @pomodoro.milestone.entry
+  end
+
+  def update
+    @pomodoro = Pomodoro.find(params[:id])
+
+    if params[:pomodoro][:action] == 'start'
+    elsif params[:pomodoro][:action] == 'done'
+    end
   end
 end
