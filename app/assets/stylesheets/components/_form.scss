@@ -143,5 +143,32 @@ background-color:#A8C5AA
 }
 
 .btn:active {
-  background-color:#A1C9DC; 
+  background-color:#A1C9DC;
+  border:none;
+}
+
+.form-submit-2 {
+  text-align: center;
+  line-height:73px;
+  display: inline-block;
+  width:100px;
+  height:73px;
+  border:none;
+  background-color: #EF959D;
+  color:white;
+  font-weight:800;
+  font-size:16px;
+  border-radius:15px;
+  border-bottom: 7px solid #C47A81;
+}
+
+.form-submit-2:active {
+  background: #C47A81;
+  text-decoration: none;
+  border:none;
+}
+
+.form-submit-2:hover {
+  text-decoration: none;
+  color: white;
 }
