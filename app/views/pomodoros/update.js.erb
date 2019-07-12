@@ -59,8 +59,8 @@ $(() => {
     $options.slideUp(143);
     $controls.removeClass().addClass('started');
     $title.fadeOut(43, function () {
-    $(this).html(`Session ${sessionNum}`).fadeIn();    });
-    $audio.animate({ volume: 1 }, 1000);
+    $(this).html(`Session`).fadeIn();    });
+    // $audio.animate({ volume: 1 }, 1000);
     start(remainingTime || sessionLength);
   }
   // function startBreak(){
