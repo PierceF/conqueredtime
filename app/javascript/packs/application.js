@@ -1,8 +1,6 @@
 
-// import Typed from '../components/typed.js';
-import 'bootstrap';
-// import { timer } from '../components/timer.js';
 
-// timer();
+import 'bootstrap';
+
 import $ from "jquery";
 window.$ = $;
