@@ -105,7 +105,15 @@ a {
             color: darken(#FF6292, $hover);
           }
         }
-        #done {
+        .btn-tag {
+           color: #FF6292;
+           border: none;
+           font-size: 16px;
+           margin: 0px;
+           background-color: transparent;
+           text-transform: uppercase;
+           font-family: 'Poppins', sans-serif;
+           font-weight: 200;
           .fa-check {
             font-size: 90%;
             top: -1px;

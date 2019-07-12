@@ -1,22 +1,26 @@
 <% title "New Product" %>
-<h2>Journals</h2>
+<h2 style="text-align:center">Journals</h2>
+
 
 <%#= link_to 'hello', root_path %>
 <%#= link_to root_path do %>
   <% @journals.each do |journal| %>
       <div class="flip-card">
-        <h3><%= journal.title %></h3>
+        <h4><%= journal.title %></h4>
         <%= link_to "Entries", journal_entries_path(journal) %>
         <% journal.entries.first(3).each do |entry| %>
           <div>
-            <a href="#0" id="info" class="info popup-trigger" title="info"><%= entry.goal %></a>
+            <h4><%= entry.goal %></h4>
+            <a href="#0" id="info" class=" popup-trigger" title="info"><%= entry.goal %></a>
+
             <div class="popup" role="alert">
               <div class="popup-container">
                 <a href="#0" class="popup-close img-replace">Close</a>
+
                 <% entry.last_three_milestones.each do |milestone| %>
                   <%= milestone.title %>
                     <%= simple_form_for([milestone, Pomodoro.new]) do |m| %>
-                    <%= m.submit "Focus!", :class => "form-submit"%>
+                    <%= m.submit "Focus!", :class => "button-pomodoro"%>
                     <% end %>
                 <%=  link_to "See all milestones", entry_path(entry) %>
                 <% end %>
@@ -30,7 +34,7 @@
 <%# end %>
 
 <div class="button-small-blue">
-  <%= link_to "BACK", root_path %>
+  <%= link_to "BACK", root_path, :class => "button-small-blue" %>
 </div>
 
 <a href="#0" id="info" class="info popup-trigger" title="info">Popup</a>

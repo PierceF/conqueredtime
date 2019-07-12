@@ -3,12 +3,17 @@
 .content-group1, .content-group2, .content-group3, .content-group4,{
   text-align: center;
   min-height:500px;
- margin:30px 0px;
  background: #fafafa;
  box-shadow: 0 0 15px rgba(0,0,0,0.2);
  border-radius:10px;
+ margin:30px auto;
 }
 
+.content-group1 p, .content-group2 p, .content-group3 p, .content-group4 p, .content-group5 p,   {
+  width:300px;
+  margin: 30px auto;
+  padding-bottom: 10px;
+}
 
 
 
