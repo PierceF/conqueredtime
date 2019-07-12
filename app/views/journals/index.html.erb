@@ -6,14 +6,17 @@
       <div class="flip-card">
         <h3><%= journal.title %></h3>
         <% journal.entries.first(3).each do |entry| %>
-          <h4><%= entry.goal %></h4>
-          <a href="#0" id="info" class="info popup-trigger" title="info"><%= entry.goal %></a>
+          <div>
+            <h4><%= entry.goal %></h4>
+            <a href="#0" id="info" class="info popup-trigger" title="info"><%= entry.goal %></a>
 
-          <div class="popup" role="alert">
-            <div class="popup-container">
-              <a href="#0" class="popup-close img-replace">Close</a>
-              <h1>Responsive Popup</h1>
+            <div class="popup" role="alert">
+              <div class="popup-container">
+                <a href="#0" class="popup-close img-replace">Close</a>
+                <h1>Responsive Popup</h1>
+              </div>
             </div>
+
           </div>
         <% end %>
       </div>
