@@ -2,7 +2,7 @@ class Milestone < ApplicationRecord
   has_many :pomodoros, dependent: :destroy
   belongs_to :entry
 
-  def time
+  def minutes
     total = 0
     pomodoros.each do |p|
       if p.start.nil? || p.end.nil?
@@ -13,5 +13,17 @@ class Milestone < ApplicationRecord
       total += time_length
     end
     total
+  end
+
+  def time
+    minutes = self.minutes
+    if minutes >= 60
+      hours = minutes / 60
+      minutes = minutes % 60
+
+      "#{hours} hour(s) #{minutes} min(s)"
+    else
+      "#{minutes} min(s)"
+    end
   end
 end
