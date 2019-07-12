@@ -233,7 +233,7 @@ a {
     }
     input[type=number]{
       background: linear-gradient(lighten(#FF8B8A, 20), lighten(#FF6292, 22));
-      border: 0;
+      border: none;
       border-bottom: calc(3px + .28vw) solid #FF6292;
       border-radius: 10px;
       color: #FF6292;
