@@ -28,4 +28,15 @@
   </div>
 </div>
 <% end %>
-</div>
+
+<h3><%= @entry.goal.split.map(&:capitalize).join(' ') %></h3>
+<% @milestones.each do |milestone| %>
+<div class="flex-main">
+<h3><%=milestone.time %></h3>
+<h3 style=";"> <%= milestone.title.split.map(&:capitalize).join(' ') %></h3>
+<%= simple_form_for([milestone, Pomodoro.new]) do |m| %>
+  <%= m.submit "Focus Session", :class => ""%>
+  </div>
+<% end %>
+<% end %>
+

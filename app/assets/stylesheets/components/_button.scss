@@ -17,24 +17,6 @@
   transition:0.3s;
 }
 
-.button-small-blue {
-    margin:10px 0px;
-}
-
-.button-small-blue a {
-  font-size:16px;
-  padding:25px 50px;
-  background-color: #B1DDF1;
-  color:white;
-  text-decoration:none;
-  font-weight:800;
-  border-radius: 4px;
-}
-
-.button-small-blue a:hover {
-  background-color:#B8E0F2;
-  transition:0.3s;
-}
 
 /* Button Large */
 
@@ -96,10 +78,11 @@ cursor:pointer;
   color:white;
   text-decoration:none;
   font-weight:800;
-  border-radius: 4px;
+  border-radius: 15px;
+  border-bottom:7px solid #91B5C6;
 }
 
-.button-small-blue a:hover {
-  background-color:#B8E0F2;
-  transition:0.3s;
+.button-small-blue a:active {
+  background: #91B5C6;
+  border:none;
 }
