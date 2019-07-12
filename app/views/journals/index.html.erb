@@ -1,27 +1,36 @@
-<h2>  Journals</h2>
+<h2>Journals</h2>
 
-<%= link_to root_path do %>
+<%#= link_to 'hello', root_path %>
+<%#= link_to root_path do %>
+  <% @journals.each do |journal| %>
+      <div class="flip-card">
+        <h3><%= journal.title %></h3>
+        <% journal.entries.first(3).each do |entry| %>
+          <h4><%= entry.goal %></h4>
+          <a href="#0" id="info" class="info popup-trigger" title="info"><%= entry.goal %></a>
 
-<div class="flip-card">
-  <div class="flip-card-inner">
-    <% @journals.each do |journal| %>
-
-    <div class="flip-card-front grid-main card-journal background">
-      <h3><%= journal.title.split.map(&:capitalize).join(' ') %></h3>
-    </div>
-<% end %>
-<% end %>
-
-    <% @journals.each do |journal| %>
-      <%= link_to journal_entries_path(journal) do %>
-    <div class="flip-card-back">
-      <h3><%= journal.title.split.map(&:capitalize).join(' ') %></h3>
+          <div class="popup" role="alert">
+            <div class="popup-container">
+              <a href="#0" class="popup-close img-replace">Close</a>
+              <h1>Responsive Popup</h1>
+            </div>
+          </div>
+        <% end %>
       </div>
-    <% end %>
-    <% end %>
+  <% end %>
+<%# end %>
+
+<div class="button-small-blue">
+  <%= link_to "BACK", root_path %>
+</div>
+
+<a href="#0" id="info" class="info popup-trigger" title="info">Popup</a>
+
+<div class="popup" role="alert">
+  <div class="popup-container">
+    <a href="#0" class="popup-close img-replace">Close</a>
+    <h1>Responsive Popup</h1>
   </div>
 </div>
 
-<div class="button-small-blue">
-<%= link_to "BACK", root_path %>
-</div>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
