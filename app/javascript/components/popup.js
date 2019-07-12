@@ -3,8 +3,8 @@ const popup = () => {
     //open popup
     $('.popup-trigger').on('click', function(event){
       event.preventDefault();
-      $('.popup').addClass('is-visible');
-      // $(event.currentTarget).parent().find(".popup").addClass('is-visible');
+      // $('.popup').addClass('is-visible');
+      $(event.currentTarget).parent().find(".popup").addClass('is-visible');
 
     });
 
