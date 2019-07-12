@@ -18,7 +18,7 @@
                 <% entry.last_three_milestones.each do |milestone| %>
                   <%= milestone.title %>
                     <%= simple_form_for([milestone, Pomodoro.new]) do |m| %>
-                    <%= m.submit "Focus!", :class => "form-submit"%>
+                    <%= m.submit "Focus!", :class => "button-pomodoro"%>
                     <% end %>
                 <%=  link_to "See all milestones", entry_path(entry) %>
                 <% end %>
