@@ -40,7 +40,6 @@ border-bottom:1px solid #C6C6C6;
 }
 
 h1, h2, h3 {
-  text-align: center;
   margin:0px;
   color:#3d3c38;
 }
@@ -87,4 +86,8 @@ p, a{
 
   .paragraph-margin {
   margin:5vh 0px;
+}
+
+.margin-paragraph {
+  margin-bottom:5vh;
 }

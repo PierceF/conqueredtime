@@ -1,4 +1,3 @@
-
 <h2><%= @journal.title.capitalize %></h2>
 <%= simple_form_for [@journal, @entry] do |m| %>
   <%= m.input :goal  %>
@@ -14,3 +13,37 @@
   <%= m.submit "Create", :class => "form-submit"%>
 <% end %>
 
+<% @entries.each do |entry| %>
+<div class="background-card">
+<div class="entries-card">
+
+   <div class="background-card">
+<h3 style="font-weight:800;"><%=  link_to entry.goal.capitalize, entry_path(entry), :class => "link-title" %></h3>
+<div class="entries-card-milestones">
+  <h3><% entry.milestones.each do |milestone| %></h3>
+<h4 style=";"> <%= milestone.title %></h4>
+<% end %>
+
+   </div>
+  </div>
+  </div>
+<% end %>
+
+
+
+
+<% @entries.each do |entry| %>
+<div class="wrap-collabsible">
+  <input id="collapsible" class="toggle" type="checkbox">
+  <label for="collapsible" class="lbl-toggle"><%= entry.goal %></label>
+  <div class="collapsible-content">
+    <div class="content-inner">
+      <%=  link_to entry.goal.capitalize, entry_path(entry), :class => "link-title" %> Milestones:
+      <% entry.milestones.each do |milestone| %>
+ <p><%= milestone.title %><i class="far fa-clock"></i></p>
+     <% end %>
+    </div>
+  </div>
+</div>
+
+<% end %>
