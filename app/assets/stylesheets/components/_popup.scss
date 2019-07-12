@@ -1,22 +1,11 @@
-body {
-  font-family:'Roboto';
-}
 
 .popup-trigger {
-  display: block;
-  width: 170px;
-  right: 2rem;
   margin: 3em auto;
   text-align: center;
-  color: #FFF;
-  font-size: 18px;
-  padding:1rem 2rem;
+  color:black;
+  font-size: 16px;
   text-decoration:none;
   font-weight: bold;
-  text-transform: uppercase;
-  border-radius: 50em;
-  background: #35a785;
-  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.07);
   transition:300ms all;
 }
 
@@ -25,13 +14,13 @@ body {
 }
 
 .popup {
+
   position: fixed;
   left: 0;
   top: 0;
   height: 100%;
   z-index: 1000;
   width: 100%;
-  background-color: rgba(94, 110, 141, 0.9);
   opacity: 0;
   visibility: hidden;
   transition:500ms all;
@@ -48,7 +37,7 @@ body {
   transform:translateY(-50%);
   transition:500ms all;
   position: relative;
-  width: 40%;
+  width: 450px;
   margin: 2em auto;
   top: 5%;
   padding:5rem;
@@ -56,6 +45,11 @@ body {
   border-radius: .25em .25em .4em .4em;
   text-align: center;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+
+}
+
+.button-pomodoro {
+border:none;
 }
 
 .is-visible .popup-container {
