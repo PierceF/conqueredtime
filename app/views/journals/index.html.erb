@@ -12,7 +12,7 @@
             <div class="popup" role="alert">
               <div class="popup-container">
                 <a href="#0" class="popup-close img-replace">Close</a>
-                <% entry.milestones.each do |milestone| %>
+                <% entry.last_three_milestones.each do |milestone| %>
                   <%= milestone.title %>
                     <%= simple_form_for([milestone, Pomodoro.new]) do |m| %>
                     <%= m.submit "Focus!", :class => "form-submit"%>
