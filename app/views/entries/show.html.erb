@@ -1,3 +1,4 @@
+
 <h3><%= @entry.goal.split.map(&:capitalize).join(' ') %></h3>
 <div class="card-large">
 <% @milestones.each do |milestone| %>
@@ -13,6 +14,7 @@
 </div>
 
 
+
 <div class="entries-card">
   <%= simple_form_for [@entry, @milestone] do |f| %>
   <%= f.error_notification %>
@@ -20,9 +22,18 @@
   <%= f.input :title, hint: 'Ex, Clean my room', label: 'Create Milestone' %>
   <div class="form-actions">
     <%= f.button :submit %>
-    <div class="back-button-form">
-      <%= link_to "Back", journals_path %>
-    </div>
+      <%= link_to "Back", journals_path, :class => "form-submit-2"%>
   </div>
 </div>
+<% end %>
+</div>
+
+
+<h3><%= @entry.goal.split.map(&:capitalize).join(' ') %></h3>
+<% @milestones.each do |milestone| %>
+<%= milestone.time %>
+<h3 style=";"> <%= milestone.title.split.map(&:capitalize).join(' ') %></h3>
+<%= simple_form_for([milestone, Pomodoro.new]) do |m| %>
+  <%= m.submit "Focus Session", :class => ""%>
+<% end %>
 <% end %>
