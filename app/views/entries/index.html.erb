@@ -2,6 +2,21 @@
 
 <h2><%= @journal.title.capitalize %></h2>
 
+<% @entries.each do |entry| %>
+  <button class="collapsible"><%= entry.goal %></button>
+  <div class="content">
+    <%=  link_to entry.goal.capitalize, entry_path(entry), :class => "link-title" %> Milestones:
+    <% entry.last_three_milestones.each do |milestone| %>
+      <%= simple_form_for([milestone, Pomodoro.new]) do |m| %>
+          <!-- <i class="far fa-clock"></i> -->
+        <%= button_tag do %>
+          <p><i class="far fa-clock"></i><%= milestone.title %></p>
+        <% end %>
+      <% end %>
+    <% end %>
+  </div>
+<% end %>
+
 <%= simple_form_for [@journal, @entry] do |m| %>
   <%= m.input :goal, :placeholder => 'Eg: 15% body fat by Jan 1, 2020' %>
   <%= m.simple_fields_for :milestones do |p| %>
@@ -22,18 +37,5 @@
 
 
 
-<% @entries.each do |entry| %>
-  <button class="collapsible"><%= entry.goal %></button>
-  <div class="content">
-    <%=  link_to entry.goal.capitalize, entry_path(entry), :class => "link-title" %> Milestones:
-    <% entry.last_three_milestones.each do |milestone| %>
-      <%= simple_form_for([milestone, Pomodoro.new]) do |m| %>
-          <!-- <i class="far fa-clock"></i> -->
-        <%= button_tag do %>
-          <p><i class="far fa-clock"></i><%= milestone.title %></p>
-        <% end %>
-      <% end %>
-    <% end %>
-  </div>
-<% end %>
+
 
