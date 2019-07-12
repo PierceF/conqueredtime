@@ -25,6 +25,7 @@ class PomodorosController < ApplicationController
     # @remaining = "#{mins}min #{seconds}sec"
 
     @entry = @pomodoro.milestone.entry
+    @milestone = @pomodoro.milestone
   end
 
   def update
