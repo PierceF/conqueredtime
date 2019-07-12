@@ -2,12 +2,14 @@
 <div class="scroll-effect">
 <div class="card-large">
 <h3><%= @entry.goal.split.map(&:capitalize).join(' ') %></h3>
-<% @milestones.each do |milestone| %>
+<% @milestones.ordered.each do |milestone| %>
 <div class="card-large-group">
 <h3 style=";"> <%= milestone.title.split.map(&:capitalize).join(' ') %></h3>
-<p>Total time spent is <%= milestone.time %> </p>
-<%= simple_form_for([milestone, Pomodoro.new]) do |m| %>
-  <%= m.submit "Focus Session", :class => "form-submit"%>
+        <%= simple_form_for([milestone, Pomodoro.new]) do |m| %>
+          <!-- <i class="far fa-clock"></i> -->
+          <%= button_tag do %>
+          <i class="far fa-clock"></i>
+          <% end %>
   </div>
 <% end %>
 <% end %>
@@ -26,14 +28,15 @@
   </div>
 </div>
 <% end %>
-</div>
-
 
 <h3><%= @entry.goal.split.map(&:capitalize).join(' ') %></h3>
 <% @milestones.each do |milestone| %>
-<%= milestone.time %>
+<div class="flex-main">
+<h3><%=milestone.time %></h3>
 <h3 style=";"> <%= milestone.title.split.map(&:capitalize).join(' ') %></h3>
 <%= simple_form_for([milestone, Pomodoro.new]) do |m| %>
   <%= m.submit "Focus Session", :class => ""%>
+  </div>
 <% end %>
 <% end %>
+

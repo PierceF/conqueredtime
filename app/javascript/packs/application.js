@@ -10,3 +10,6 @@ popup();
 import $ from "jquery";
 window.$ = $;
 
+import { initCollapsible } from '../components/collapsible.js';
+
+initCollapsible();
