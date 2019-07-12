@@ -10,7 +10,7 @@
         <%= link_to "Entries", journal_entries_path(journal) %>
         <% journal.entries.first(3).each do |entry| %>
           <div>
-            <h4><%= entry.goal %></h4>
+
             <a href="#0" id="info" class=" popup-trigger" title="info"><%= entry.goal %></a>
 
             <div class="popup" role="alert">
@@ -37,13 +37,5 @@
   <%= link_to "BACK", root_path, :class => "button-small-blue" %>
 </div>
 
-<a href="#0" id="info" class="info popup-trigger" title="info">Popup</a>
-
-<div class="popup" role="alert">
-  <div class="popup-container">
-    <a href="#0" class="popup-close img-replace">Close</a>
-    <h1>Responsive Popup</h1>
-  </div>
-</div>
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
