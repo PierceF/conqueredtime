@@ -1,17 +1,5 @@
 
-.flex-left {
-  display:flex;
-  align-items: flex-start;
-  flex-direction: column;
-  width:450px;
-}
-
-.flex-right {
-  display:flex;
-  align-items: flex-end;
-  flex-direction: column;
-  width:450px;
-}
+ 
 
 .border-bottom {
 border-bottom:1px solid #C6C6C6;
@@ -38,6 +26,7 @@ border-bottom:1px solid #C6C6C6;
   flex-direction:column;
   justify-content: center;
 }
+
 
 h1, h2, h3 {
   margin:0px;
