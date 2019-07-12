@@ -21,22 +21,17 @@
 
 
 <% @entries.each do |entry| %>
-<div class="wrap-collabsible">
-  <input id="collapsible" class="toggle" type="checkbox">
-  <label for="collapsible" class="lbl-toggle"><%= entry.goal %></label>
-  <div class="collapsible-content">
-    <div class="content-inner">
-      <%=  link_to entry.goal.capitalize, entry_path(entry), :class => "link-title" %> Milestones:
-      <% entry.last_three_milestones.each do |milestone| %>
-        <%= simple_form_for([milestone, Pomodoro.new]) do |m| %>
+  <button class="collapsible"><%= entry.goal %></button>
+  <div class="content">
+    <%=  link_to entry.goal.capitalize, entry_path(entry), :class => "link-title" %> Milestones:
+    <% entry.last_three_milestones.each do |milestone| %>
+      <%= simple_form_for([milestone, Pomodoro.new]) do |m| %>
           <!-- <i class="far fa-clock"></i> -->
-          <%= button_tag do %>
+        <%= button_tag do %>
           <p><i class="far fa-clock"></i><%= milestone.title %></p>
-          <% end %>
         <% end %>
-     <% end %>
-    </div>
+      <% end %>
+    <% end %>
   </div>
-</div>
 <% end %>
 
