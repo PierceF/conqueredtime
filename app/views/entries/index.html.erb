@@ -2,10 +2,10 @@
 
 <h2><%= @journal.title.capitalize %></h2>
 
-
-
+<img class="img-test" src="https://res.cloudinary.com/doem0zjpf/image/upload/v1562936507/try3013_rzzkbc.png" alt="">
+<div class="experiment-card-container">
 <% @entries.each do |entry| %>
-  <button class="collapsible"><%= entry.goal %></button>
+  <button class="collapsible"><h4><%= entry.goal %></h4></button>
   <div class="content">
     <%=  link_to entry.goal.capitalize, entry_path(entry), :class => "link-title" %> Milestones:
     <% entry.last_three_milestones.each do |milestone| %>
@@ -18,4 +18,21 @@
     <% end %>
   </div>
 <% end %>
+</div>
+<%= simple_form_for [@journal, @entry] do |m| %>
+  <%= m.input :goal, :placeholder => 'Eg: 15% body fat by Jan 1, 2020' %>
+  <%= m.simple_fields_for :milestones do |p| %>
+    <%= p.input :title, :placeholder => 'An objective or activity', label: "Add 1, 2, or 3 milestones!",  :class => "form-textfield" %>
+  <% end %>
+  <%= m.simple_fields_for :milestones do |p| %>
+    <%= p.input :title, :placeholder => 'that supports your main goal..', label: false, :class => "form-textfield" %>
+  <% end %>
+    <%= m.simple_fields_for :milestones do |p| %>
+    <%= p.input :title, :placeholder => 'Eg: Yoga', label: false, :class => "form-textfield" %>
+  <% end %>
+  <%= m.submit "Create", :class => "form-submit"%>
+<% end %>
 
+<div class="icon-div">
+<i class="fas fa-arrow-down"></i>
+</div>

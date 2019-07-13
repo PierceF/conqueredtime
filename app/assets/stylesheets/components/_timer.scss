@@ -1,8 +1,8 @@
-* {
-  box-sizing: border-box;
-  outline: none;
-  user-select: none;
-}
+// * {
+//   box-sizing: border-box;
+//   outline: none;
+//   user-select: none;
+// }
 a {
   color: inherit;
   text-decoration: none;
@@ -95,6 +95,7 @@ a {
             color: darken(#FF6292, $hover);
           }
         }
+
         #pause {
           .fa-pause {
             font-size: 90%;
@@ -176,7 +177,6 @@ a {
             display: none;
           }
         }
-
 
         @media all and (max-width: 512px){
           font-size: 5.5vw;
