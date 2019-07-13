@@ -5,14 +5,13 @@ class EntriesController < ApplicationController
     @entries = @journal.entries
     @entry = Entry.new
     @entry.milestones.build
-    # @pomodoro = Pomodoro.new
   end
 
   def show
     @entry = Entry.find(params[:id])
-    @milestones = @entry.milestones
+    @milestones = @entry.milestones.ordered
+    @milestone = @milestones.first
     @pomodoro = Pomodoro.new
-    @milestone = Milestone.new
   end
 
   def new
@@ -25,7 +24,7 @@ class EntriesController < ApplicationController
     @entry = Entry.new(entry_params)
     @entry.journal = Journal.find(params[:journal_id])
     @entry.save
-    redirect_to entry_path(@entry)
+    redirect_to journal_entries_path(@entry.journal)
   end
 
   private

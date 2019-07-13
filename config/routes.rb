@@ -10,7 +10,7 @@ resources :entries do
     resources :milestones, only: [:new, :create]
   end
 
-  resources :milestones do
+  resources :milestones, only: [:show] do
     resources :pomodoros, only: [:new, :create]
   end
 
