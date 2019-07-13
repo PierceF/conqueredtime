@@ -2,6 +2,18 @@
 
 <h2><%= @journal.title.capitalize %></h2>
 
+<div class="container-logo">
+
+</div>
+<p>Hello, glad you decided to start a new journal! Think of this as a notebook where you'll keep track of all your goals specifically realted to name you choose for your notebook. Your journal could be about Fitness, Health, Relationships, Spirituality, Household Chores etc.<br><br>
+
+Great!, What's a new goal that's specific to your journal <%= @journal.title.capitalize %>. Make sure your goal is S.M.A.R.T (Specific, Mesuarable, Achievable, Realistic, and Timely). I've already filled one out for you as an example for inspiration. Look forward to knowing your SMART Goal :)
+<br><br>
+Nice! now let's breakdown your goal into milestones. They can be actions, habits, or benchmarks that you can dedicate some time towards. Think of them as objectives that'll make your goal a reality if your dedicate some focus time towards them on a regular basis.
+
+<br><br>
+Awesome! you now have crear plan of action to create the kind of life you envision. Are you ready to start a focus session towards any one of the milestones that you just created?</p>
+
 <img class="img-test" src="https://res.cloudinary.com/doem0zjpf/image/upload/v1562936507/try3013_rzzkbc.png" alt="">
 <div class="experiment-card-container">
 <% @entries.each do |entry| %>
