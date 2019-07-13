@@ -3,7 +3,7 @@
 <div class="card-large">
 Good job!  You've worked on<h3><%= @entry.goal.split.map(&:capitalize).join(' ') %></h3> for (time)
 <div class="card-large-group">
-<h3 style=";"> <%= @milestone.title.split.map(&:capitalize).join(' ') %></h3> (time spent on last pom)
+<h3 style=";"> <%= @milestone.title.split.map(&:capitalize).join(' ') %></h3> (time spent on last pom <%= @milestone.time %>)
 
 
 Click here to do another focus session
