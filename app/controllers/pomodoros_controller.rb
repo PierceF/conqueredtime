@@ -25,6 +25,7 @@ class PomodorosController < ApplicationController
     # @remaining = "#{mins}min #{seconds}sec"
 
     @entry = @pomodoro.milestone.entry
+    @journal = @entry.journal
     @milestone = @pomodoro.milestone
   end
 
