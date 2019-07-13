@@ -6,19 +6,19 @@
   font-weight:200;
   color:#69585F;
   border:none;
-  font-family: 'Poppins', sans-serif;
+  background-color:#f4f4f4;
+  margin-top:20px;
 }
 
 
 .form-control {
   height:10vh;
   border:none;
-  border-radius:15px;
-  width:100%;
+  width:365px;
   font-size:24px;
   font-weight:200;
   color:#69585F;
-  font-family: 'Poppins', sans-serif;
+  background-color:#f4f4f4 !important;
 }
 
 
@@ -35,15 +35,14 @@ input:focus {
   color:#495057;
   font-weight:200;
   font-size:24px;
-  opacity:0.8;
+  opacity:0.4;
 }
 
 
 
 .form-submit {
-margin-top:2vh;
+margin-top:1vh;
 padding:20px 70px;
-border:none;
 background-color: #EF959D;
 color:white;
 font-weight:800;
@@ -60,6 +59,7 @@ display: inline-block;
 .form-submit:active {
 border:none;
 background-color:#DA888F;
+border-top: 7px solid #DA888F !important;
 }
 
 .form-submit-blue {
@@ -113,10 +113,6 @@ background-color:#A8C5AA
 
 }
 
-.form-control {
-  background-color:white;
-  border-radius: 4px;
-}
 
 .btn {
   color:white !important;
