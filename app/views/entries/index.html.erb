@@ -2,15 +2,10 @@
 
 <h2><%= @journal.title.capitalize %></h2>
 
-<div class="container-logo">
-
-</div>
-<p>hello</p>
 <img class="img-test" src="https://res.cloudinary.com/doem0zjpf/image/upload/v1562936507/try3013_rzzkbc.png" alt="">
-</div>
-
+<div class="experiment-card-container">
 <% @entries.each do |entry| %>
-  <button class="collapsible"><%= entry.goal %></button>
+  <button class="collapsible"><h4><%= entry.goal %></h4></button>
   <div class="content">
     <%=  link_to entry.goal.capitalize, entry_path(entry), :class => "link-title" %> Milestones:
     <% entry.last_three_milestones.each do |milestone| %>
@@ -23,6 +18,7 @@
     <% end %>
   </div>
 <% end %>
+</div>
 <%= simple_form_for [@journal, @entry] do |m| %>
   <%= m.input :goal, :placeholder => 'Eg: 15% body fat by Jan 1, 2020' %>
   <%= m.simple_fields_for :milestones do |p| %>
@@ -40,7 +36,3 @@
 <div class="icon-div">
 <i class="fas fa-arrow-down"></i>
 </div>
-
-
-
-
