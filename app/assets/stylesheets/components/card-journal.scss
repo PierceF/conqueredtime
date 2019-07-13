@@ -1,0 +1,15 @@
+.card-journal {
+  height:250px;
+  width:400px;
+  background-color: white;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:20px auto;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card-journal h3 {
+  border-bottom: 1px solid #E5E5E5;
+}
