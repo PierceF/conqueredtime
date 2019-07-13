@@ -12,16 +12,13 @@ Awesome! You now have clear plan of action to create the kind of life you envisi
 <img class="img-test" src="https://res.cloudinary.com/doem0zjpf/image/upload/v1562936507/try3013_rzzkbc.png" alt="">
 <div class="experiment-card-container">
 
-
-<h2><%= @journal.title.capitalize %></h2>
-
 <%= simple_form_for [@journal, @entry] do |m| %>
   <%= m.input :goal, :placeholder => "none" %>
   <%= m.simple_fields_for :milestones do |p| %>
     <%= p.input :title,  :class => "form-textfield" %>
   <% end %>
   <%= m.simple_fields_for :milestones do |p| %>
-    <%= p.input, label: false, :class => "form-textfield" %>
+    <%= p.input :title, label: false, :class => "form-textfield" %>
   <% end %>
     <%= m.simple_fields_for :milestones do |p| %>
     <%= p.input :title, label: false, :class => "form-textfield" %>
