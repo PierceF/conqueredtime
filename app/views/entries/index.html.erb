@@ -2,6 +2,14 @@
 
 <h2><%= @journal.title.capitalize %></h2>
 
+
+<div class="container-logo">
+
+</div>
+<p>hello</p>
+<img class="img-test" src="https://res.cloudinary.com/doem0zjpf/image/upload/v1562936507/try3013_rzzkbc.png" alt="">
+</div>
+
 <% @entries.each do |entry| %>
   <button class="collapsible"><%= entry.goal %></button>
   <div class="content">
@@ -16,7 +24,6 @@
     <% end %>
   </div>
 <% end %>
-
 <%= simple_form_for [@journal, @entry] do |m| %>
   <%= m.input :goal, :placeholder => 'Eg: 15% body fat by Jan 1, 2020' %>
   <%= m.simple_fields_for :milestones do |p| %>

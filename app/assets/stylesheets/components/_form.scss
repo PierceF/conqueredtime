@@ -1,8 +1,6 @@
 .form-textfield{
   height:10vh;
-
   background-color:white;
-
   width:100%;
   border:none;
   font-size:24px;
@@ -10,16 +8,9 @@
   color:#69585F;
   font-family: 'Poppins', sans-serif;
   text-align: center;
-
   border-radius:4px;
-
-  border-radius: 4px;
 }
 
-.form-textfield {
-
-
-}
 
 .form-control {
   height:10vh;
@@ -53,8 +44,7 @@ input:focus {
 
 .form-submit {
 margin-top:2vh;
-width:200px;
-height:73px;
+padding:20px 70px;
 border:none;
 background-color: #EF959D;
 color:white;
@@ -170,4 +160,8 @@ background-color:#A8C5AA
 .form-submit-2:hover {
   text-decoration: none;
   color: white;
+}
+
+.container-logo {
+  position: relative;
 }
