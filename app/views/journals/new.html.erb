@@ -3,18 +3,22 @@
     <!-- <h2 class="title-margin">Step 4: Realize Your True Potential</h2> -->
     <div class="card-create">
       <div class="image-create">
-    <img class="img-artwork" src="https://res.cloudinary.com/doem0zjpf/image/upload/v1563000290/try_irklrm.png" alt="">
+    <!-- <img class="img-artwork" src="https://res.cloudinary.com/doem0zjpf/image/upload/v1563000290/try_irklrm.png" alt=""> -->
     </div>
-  <h4 style="color:#495058;">Create Your Journal</h4>
+  <h4 style="color:#495058;">Your New Journal</h4>
+  <div class="group-new">
+  <img src="https://res.cloudinary.com/doem0zjpf/image/upload/v1563001489/nice_try_bzisao.png" alt="">
+  <p>Your Journal should contain something like bla bla bla bla</p>
+  </div>
   <form action="/journals" method="post">
     <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
     <label class="hidden" for="title">Title:
     </label>
 
-    <input class="form-textfield" type="text" name="journal[title]" id="title">
-
-<div class="margin-paragraph">
-    <input class="form-submit" value="Create a new Journal" type="submit">
+    <input class="form-textfield form-textfield-new" type="text" name="journal[title]" id="title">
+    <div class="button-mainpage-group">
+    <input class="form-submit" value="Create Your New Journal" type="submit">
+    </div>
   </form>
   </div>
 </div>
