@@ -2,6 +2,10 @@ class Milestone < ApplicationRecord
   has_many :pomodoros, dependent: :destroy
   belongs_to :entry
 
+  def self.ordered
+    order("DATE_TRUNC('second', updated_at) desc, id asc")
+  end
+
   def minutes
     total = 0
     pomodoros.each do |p|

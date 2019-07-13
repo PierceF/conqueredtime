@@ -1,6 +1,15 @@
+<% title "New Product" %>
 <h2 style="text-align:center">Journals</h2>
+
   <% @journals.each do |journal| %>
   <div class="card-journal">
       <h3><%= journal.title.capitalize %></h3>
       </div>
     <% end %>
+
+<div class="button-small-blue">
+  <%= link_to "BACK", root_path, :class => "button-small-blue" %>
+</div>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+

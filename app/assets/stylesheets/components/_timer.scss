@@ -115,6 +115,7 @@ a {
            text-transform: uppercase;
            font-family: 'Poppins', sans-serif;
            font-weight: 200;
+           outline: 0;
           .fa-check {
             font-size: 90%;
             top: -1px;
@@ -233,7 +234,7 @@ a {
     }
     input[type=number]{
       background: linear-gradient(lighten(#FF8B8A, 20), lighten(#FF6292, 22));
-      border: 0;
+      border: none;
       border-bottom: calc(3px + .28vw) solid #FF6292;
       border-radius: 10px;
       color: #FF6292;
