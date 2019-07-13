@@ -1,2 +1,20 @@
-<h1>Journals#new</h1>
-<p>Find me in app/views/journals/new.html.erb</p>
+<div class="content-group5">
+  <div class="banner-main">
+
+    <!-- <h2 class="title-margin">Step 4: Realize Your True Potential</h2> -->
+    <img class="img-artwork vert-move " src="https://res.cloudinary.com/doem0zjpf/image/upload/v1562846054/jeees_aayrrr.png" alt="">
+
+  </div>
+
+  <h4 style="color:#495058;">Create Your Journal</h4>
+  <form action="/journals" method="post">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <label class="hidden" for="title">Title:
+    </label>
+
+    <input class="form-textfield" type="text" placeholder="Eg: Health, Fitness, School, Career.. " name="journal[title]" id="title">
+
+<div class="margin-paragraph">
+    <input class="form-submit" value="Create a new Journal" type="submit">
+  </form>
+  </div>

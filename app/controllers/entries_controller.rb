@@ -16,8 +16,9 @@ class EntriesController < ApplicationController
   end
 
   def new
-    @journal = Journal.find(params[:id])
+    @journal = Journal.find(params[:journal_id])
     @entry = Entry.new
+    @entry.milestones.build
   end
 
   def create
