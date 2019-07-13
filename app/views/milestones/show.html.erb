@@ -1,0 +1,26 @@
+
+<div class="scroll-effect">
+<div class="card-large">
+Good job!  You've worked on<h3><%= @entry.goal.split.map(&:capitalize).join(' ') %></h3> for (time)
+<div class="card-large-group">
+<h3 style=";"> <%= @milestone.title.split.map(&:capitalize).join(' ') %></h3> (time spent on last pom)
+
+
+Click here to do another focus session
+        <%= simple_form_for([@milestone, Pomodoro.new]) do |m| %>
+          <!-- <i class="far fa-clock"></i> -->
+          <%= button_tag do %>
+          <i class="far fa-clock"></i>
+          <% end %>
+          <% end %>
+  </div>
+</div>
+</div>
+
+
+
+
+Try a focus session for another milestone under this entry:
+
+
+Or go back to your journal.

@@ -13,11 +13,11 @@ Nice! now let's breakdown your goal into milestones. They can be actions, habits
 
 <br><br>
 Awesome! you now have crear plan of action to create the kind of life you envision. Are you ready to start a focus session towards any one of the milestones that you just created?</p>
-<img class="img-test" src="https://res.cloudinary.com/doem0zjpf/image/upload/v1562936507/try3013_rzzkbc.png" alt="">
-</div>
 
+<img class="img-test" src="https://res.cloudinary.com/doem0zjpf/image/upload/v1562936507/try3013_rzzkbc.png" alt="">
+<div class="experiment-card-container">
 <% @entries.each do |entry| %>
-  <button class="collapsible"><%= entry.goal %></button>
+  <button class="collapsible"><h4><%= entry.goal %></h4></button>
   <div class="content">
     <%=  link_to entry.goal.capitalize, entry_path(entry), :class => "link-title" %> Milestones:
     <% entry.last_three_milestones.each do |milestone| %>
@@ -30,6 +30,7 @@ Awesome! you now have crear plan of action to create the kind of life you envisi
     <% end %>
   </div>
 <% end %>
+</div>
 <%= simple_form_for [@journal, @entry] do |m| %>
   <%= m.input :goal, :placeholder => 'Eg: 15% body fat by Jan 1, 2020' %>
   <%= m.simple_fields_for :milestones do |p| %>
@@ -47,7 +48,3 @@ Awesome! you now have crear plan of action to create the kind of life you envisi
 <div class="icon-div">
 <i class="fas fa-arrow-down"></i>
 </div>
-
-
-
-
