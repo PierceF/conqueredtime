@@ -10,6 +10,23 @@
   padding:5px 10px 0px 15px;
 }
 
+.group-creation1 {
+  height:110vh;
+  margin:0 auto;
+}
+
+.group-creation2 {
+  margin:0 auto;
+}
+
+.card-for-entries h2 {
+  margin-top:10px;
+}
+
+.card-for-entries p {
+  margin:20px 0px;
+}
+
 .card-for-entries img {
   position:absolute;
   bottom:0px;
@@ -20,4 +37,19 @@
 
 .card-for-entries p {
   text-align: center;
+}
+
+.card-for-milestones {
+  background-color: white;
+  border-radius: 15px;
+  width:400px;
+  height:500px;
+  border-bottom: 7px solid #E5E5E5;
+  border-right:  5px solid #E5E5E5;
+  box-shadow: 15px 10px 10px rgba(0,0,0,0.2);
+  padding:5px 10px 0px 15px;
+}
+
+.card-for-milestones p {
+  margin:20px 0px;
 }

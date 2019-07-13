@@ -16,9 +16,10 @@
   border:none;
   width:365px;
   font-size:24px;
-  font-weight:200;
+  font-weight:400;
   color:#69585F;
   background-color:#f4f4f4 !important;
+
 }
 
 
@@ -102,16 +103,14 @@ background-color:#A8C5AA
 }
 
 .form-control-label {
-
   width:100%;
   border:none;
   font-size:24px;
   font-weight:800;
   color:#69585F;
-  font-family: 'Poppins', sans-serif;
-
-
+  display:none;
 }
+
 
 
 .btn {
