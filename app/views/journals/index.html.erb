@@ -1,17 +1,34 @@
-<% title "New Product" %>
-<h2 style="text-align:center">Journals</h2>
-
-  <% @journals.each do |journal| %>
-    <%= link_to journal_entries_path(journal) do %>
-      <div class="card-journal">
-
-      <h3><%= journal.title.capitalize %></h3>
+<div class="card-journal">
+  <div class="card-journal-profile">
+    <img src="https://source.unsplash.com/random/100x100" alt="">
+  </div>
+  <div class="card-journal-text">
+    <h2>Journal</h2>
+    <div class="card-journal-entries">
+    <p>First Entry</p>
+    <p>First Entry</p>
+    <p>First Entry</p>
     </div>
-    <% end %>
-  <% end %>
+    <div class="card-journal-trophies">
+    <div class="trophies">
+    <p>Trophies</p>
+    <i class="fas fa-trophy"></i>
+    </div>
 
-<div class="button-small-blue">
-  <%= link_to "BACK", root_path, :class => "button-small-blue" %>
+    <div class="time">
+    <p>Time</p>
+    <i class="fas fa-hourglass-end"></i>
+
+    </div>
+    <div class="times">
+    <p>Times</p>
+    <i class="fab fa-apple"></i>
+    </div>
+
+    <div class="something">
+    <p>something</p>
+    <i class="fas fa-address-book"></i>
+    </div>
+    </div>
+  </div>
 </div>
-
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

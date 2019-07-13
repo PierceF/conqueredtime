@@ -1,16 +1,73 @@
 .card-journal {
-  height:250px;
-  width:400px;
-  background-color: white;
-  border-radius: 15px;
-  border-bottom: 7px solid #D3D3D3;
+  background-color:white;
+  width:450px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin:20px auto;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  height:250px;
+  border-radius:5px;
+  box-shadow: 10px 15px 2px rgba(0,0,0,0.2);
 }
 
-.card-journal h3 {
-  border-bottom: 1px solid #E5E5E5;
+.card-journal-profile {
+  display: flex;
+align-items: center;
+height:100%;
+background-color:#B1DDF1;
+padding:0 20px;
+border-radius:5px 0px 0px 5px;
+width:140px;
+}
+
+.card-journal-profile img {
+  border-radius:50%;
+}
+
+.card-journal-text {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width:100%;
+  height:100%;
+}
+
+.card-journal-entries {
+  display:flex;
+  flex-direction: column;
+  justify-content:space-between;
+  width:100%;
+  height:100%;
+}
+
+.card-journal-trophies {
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+  height:100%;
+  width:100%;
+
+}
+
+.trophies, .time, .times, .something {
+  margin: 5px 10px;
+}
+
+.trophies {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.time {
+  display: flex;
+  flex-direction: column;
+}
+
+.times {
+  display:flex;
+  flex-direction: column;
+
+}
+
+.something {
+  display: flex;
+  flex-direction: column;
 }
