@@ -1,13 +1,15 @@
+  <% @journals.each do |journal| %>
+    <%= link_to journal_entries_path(journal) do %>
 <div class="card-journal">
   <div class="card-journal-profile">
     <img src="https://source.unsplash.com/random/100x100" alt="">
   </div>
   <div class="card-journal-text">
-    <h2>Journal</h2>
+    <h2><%= journal.title.capitalize %></h2>
     <div class="card-journal-entries">
-    <p>First Entry</p>
-    <p>First Entry</p>
-    <p>First Entry</p>
+<% journal.last_three_entries.each do |entry| %>
+<p><%= entry.goal %> 25 minutes</p>
+<% end %>
     </div>
     <div class="card-journal-trophies">
     <div class="trophies">
@@ -32,3 +34,7 @@
     </div>
   </div>
 </div>
+
+
+    <% end %>
+  <% end %>
