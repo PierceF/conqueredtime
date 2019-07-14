@@ -1,24 +1,30 @@
 .card-journal {
-  background-color:white;
   width:450px;
   display: flex;
   height:250px;
-  border-radius:5px;
-  box-shadow: 10px 15px 2px rgba(0,0,0,0.2);
+  border-radius:15px;
+  box-shadow: 15px 10px 10px rgba(0,0,0,0.2);
+  background: #EF959D;
+  border-bottom: 7px solid #C47A81;
+  border-right: 7px solid #C47A81;
+  margin:30px 0px;
 }
 
 .card-journal-profile {
   display: flex;
 align-items: center;
 height:100%;
-background-color:#B1DDF1;
 padding:0 20px;
 border-radius:5px 0px 0px 5px;
 width:140px;
 }
 
+
+
 .card-journal-profile img {
   border-radius:50%;
+  height:100px;
+  width:100px;
 }
 
 .card-journal-text {
@@ -34,7 +40,7 @@ width:140px;
   flex-direction: column;
   justify-content:space-between;
   width:100%;
-  height:100%;
+  height:300px;
 }
 
 .card-journal-trophies {
@@ -64,10 +70,18 @@ width:140px;
 .times {
   display:flex;
   flex-direction: column;
-
 }
 
 .something {
   display: flex;
   flex-direction: column;
+}
+
+
+.card-journal p {
+  color:white;
+}
+
+.card-journal h2 {
+  color:white;
 }
