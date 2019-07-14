@@ -1,5 +1,5 @@
 .card-journal {
-  width:450px;
+  width:400px;
   display: flex;
   height:250px;
   border-radius:15px;
@@ -7,11 +7,11 @@
   background: #EF959D;
   border-bottom: 7px solid #C47A81;
   border-right: 7px solid #C47A81;
-  margin:30px 0px;
+  margin:30px auto;
 }
 
 .card-journal-profile {
-  display: flex;
+display: flex;
 align-items: center;
 height:100%;
 padding:0 20px;
@@ -39,17 +39,16 @@ width:140px;
   display:flex;
   flex-direction: column;
   justify-content:space-between;
-  width:100%;
+  width:400px;
   height:300px;
 }
 
 .card-journal-trophies {
   display:flex;
   align-items:flex-end;
-  justify-content:center;
+  justify-content:flex-end;
   height:100%;
   width:100%;
-
 }
 
 .trophies, .time, .times, .something {
@@ -59,22 +58,25 @@ width:140px;
 .trophies {
   display: flex;
   flex-direction: column;
-
+  font-size:24px;
 }
 
 .time {
   display: flex;
   flex-direction: column;
+  font-size:24px;
 }
 
 .times {
   display:flex;
   flex-direction: column;
+  font-size:24px;
 }
 
 .something {
   display: flex;
   flex-direction: column;
+  font-size:24px;
 }
 
 

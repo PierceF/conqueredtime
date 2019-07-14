@@ -1,6 +1,6 @@
 .card-create {
   margin:0 auto;
-  height:600px;
+  height:300px;
   width:400px;
   background: white;
   border-radius: 15px;
@@ -9,6 +9,11 @@
   border-radius:20px;
   box-shadow: 15px 10px 10px rgba(0,0,0,0.2);
   padding: 10px 0px 10px 0px;
+}
+
+.card-create p {
+  font-size:22px;
+  font-weight:200;
 }
 
 .card-create img {
