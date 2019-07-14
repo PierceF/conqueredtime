@@ -1,3 +1,4 @@
+
 <% @journals.each do |journal| %>
   <%= link_to journal_entries_path(journal) do %>
   <div class="card-journal">
@@ -5,6 +6,46 @@
       <div class="card-journal-profile-inner">
         <img src="https://res.cloudinary.com/doem0zjpf/image/upload/v1563010635/NOOOG_dt4nzg.png" alt="">
       </div>
+
+
+    <div class="card-create">
+      <div class="image-create">
+    <!-- <img class="img-artwork" src="https://res.cloudinary.com/doem0zjpf/image/upload/v1563000290/try_irklrm.png" alt=""> -->
+    </div>
+  <div class="group-new">
+  <img src="https://res.cloudinary.com/doem0zjpf/image/upload/v1563001489/nice_try_bzisao.png" alt="">
+  <p>Do you have a goal in mind?  Select which journal to track it in, or create a new journal at the bottom.</p>
+  </div>
+  <form action="/journals" method="post">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <label class="hidden" for="title">Title:
+    </label>
+
+    <input class="form-textfield form-textfield-new" type="text" name="journal[title]" id="title">
+    </div>
+  </form>
+  </div>
+</div>
+
+
+  <% @journals.each do |journal| %>
+    <%= link_to journal_entries_path(journal) do %>
+<div class="card-journal">
+  <div class="card-journal-profile">
+    <img src="https://source.unsplash.com/random/100x100" alt="">
+  </div>
+  <div class="card-journal-text">
+    <h2><%= journal.title.capitalize %></h2>
+    <div class="card-journal-entries">
+<% journal.last_three_entries.each do |entry| %>
+<p><%= entry.goal %> 25 minutes</p>
+<% end %>
+    </div>
+    <div class="card-journal-trophies">
+    <div class="trophies">
+    <p>Trophies</p>
+    <i class="fas fa-trophy"></i>
+      
     </div>
     <div class="card-journal-text">
       <h2><%= journal.title.capitalize %></h2>
@@ -38,5 +79,14 @@
     </div>
   </div>
 
+
 <% end %>
 <% end %>
+
+
+
+
+
+    <input class="form-submit" value="Create Your New Journal" type="submit">
+    </div>
+
