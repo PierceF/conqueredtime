@@ -1,10 +1,10 @@
-
+// console.log('haha');
 
 import 'bootstrap';
 
 // import { popup } from '../components/popup.js';
 
-popup();
+// popup();
 
 
 import $ from "jquery";
