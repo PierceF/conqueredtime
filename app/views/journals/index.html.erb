@@ -1,3 +1,24 @@
+
+    <div class="card-create">
+      <div class="image-create">
+    <!-- <img class="img-artwork" src="https://res.cloudinary.com/doem0zjpf/image/upload/v1563000290/try_irklrm.png" alt=""> -->
+    </div>
+  <div class="group-new">
+  <img src="https://res.cloudinary.com/doem0zjpf/image/upload/v1563001489/nice_try_bzisao.png" alt="">
+  <p>Do you have a goal in mind?  Select which journal to track it in, or create a new journal at the bottom.</p>
+  </div>
+  <form action="/journals" method="post">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <label class="hidden" for="title">Title:
+    </label>
+
+    <input class="form-textfield form-textfield-new" type="text" name="journal[title]" id="title">
+    </div>
+  </form>
+  </div>
+</div>
+
+
   <% @journals.each do |journal| %>
     <%= link_to journal_entries_path(journal) do %>
 <div class="card-journal">
@@ -38,3 +59,9 @@
 
     <% end %>
   <% end %>
+
+
+
+
+    <input class="form-submit" value="Create Your New Journal" type="submit">
+    </div>
