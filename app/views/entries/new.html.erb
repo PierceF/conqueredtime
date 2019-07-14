@@ -1,3 +1,4 @@
+<div class="scroll-container">
 <div class="group-creation1">
 <div class="card-for-entries">
   <h2 style="text-align:center;"><%= @journal.title.capitalize %> Journal</h2>
@@ -11,12 +12,16 @@ Awesome! You now have a clear map to accomplish your goal. Are you ready to star
 <%= simple_form_for [@journal, @entry] do |m| %>
   <%= m.input :goal %>
   <div style="margin-top:30px;" class="">
-  <a class="button-scroll form-submit" href="#">Create</a>
+  <a href="#scroll-button" class="button-scroll form-submit" href="#">Create</a>
   </div>
   </div>
   </div>
 
-<div class="group-creation2">
+  <div class="space-between">
+
+  </div>
+
+<div id="scroll-button" class="group-creation2">
   <div class="card-for-milestones">
     <div class="card-for-milestones-text">
       <p>Only one more step to go. Create three milestones
@@ -34,5 +39,6 @@ Awesome! You now have a clear map to accomplish your goal. Are you ready to star
   <% end %>
   <%= m.submit "Create", :class => "form-submit"%>
 <% end %>
+</div>
 </div>
 </div>
