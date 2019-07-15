@@ -15,7 +15,13 @@ class MilestonesController < ApplicationController
   def show
     @entry = @milestone.entry
     @pomodoro = Pomodoro.find(params[:pomodoro_id])
+    @journal = @entry.journal
+    @milestone = @pomodoro.milestone
+    @achievements = @journal.achievements.all
     # @pomodoro = Pomodoro.find(Milestone.find(params[:id]).pomodoro)
+    create_badge
+    @trophies = []
+    find_achievements
   end
 
   private
@@ -26,5 +32,21 @@ class MilestonesController < ApplicationController
 
   def set_milestone
     @milestone = Milestone.find(params[:id])
+  end
+
+  def create_badge
+    Trophy.find_by Trophy.name == "Wow awesome job! Have a trophy.".nil?
+    if @journal.journal_minutes >= 300
+      Achievement.create!(journal_id: @journal.id, trophy: (Trophy.find_by Trophy.name == "Wow awesome job! Have a trophy."))
+    end
+  end
+
+  def find_achievements
+    @achievements.each do |achievement|
+      if achievement.trophy.shown == false
+        @trophies << achievement.trophy
+        achievement.trophy.shown = true
+      end
+    end
   end
 end

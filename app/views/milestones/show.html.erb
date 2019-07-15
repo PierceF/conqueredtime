@@ -133,3 +133,13 @@ Try a focus session for another milestone under this entry:
 
 
 Or go back to your journal.
+
+
+<script>
+  <% @trophies.each do |trophy| %>
+    setTimeout(() => {
+      alert("<%= trophy.name %>");
+  }, 1000);
+  <% end %>
+
+</script>
