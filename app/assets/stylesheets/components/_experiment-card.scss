@@ -16,15 +16,21 @@
   margin-top:10px;
 }
 
+.collapsible {
+  transition:0.3s;
+}
+
 .active {
   background: #C47A81;
+  box-shadow:none;
+  transition:0.3s;
 }
 
 
 .content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.2s ease-out;
+  transition: max-height 0.3s ease-out;
   background-color: #F4BBC0;
   border-radius:10px;
   width:400px;
@@ -34,7 +40,11 @@
 }
 
 .group-collapse {
+  height:100%;
+  width:100%;
   padding:10px 0px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .group-collapse button {
@@ -46,6 +56,7 @@
 .group-collapse i {
   font-size:16px;
   color:white;
+  margin:0px !important;
 }
 
 .group-collapse p {
