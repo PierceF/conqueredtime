@@ -42,7 +42,6 @@ input:focus {
 
 
 .form-submit {
-padding:20px 70px;
 background-color: #EF959D;
 color:white;
 font-weight:800;
@@ -51,6 +50,12 @@ border-radius:15px;
 border-bottom: 7px solid #C47A81 !important;
 display: inline-block;
 border:NONE;
+margin: 10px 0px;
+width:200px;
+height:75px;
+display: flex;
+align-items: center;
+justify-content: center;
 }
 
 .form-submit:hover {

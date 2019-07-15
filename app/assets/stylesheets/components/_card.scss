@@ -8,26 +8,43 @@
   border-right:  5px solid #E5E5E5;
   position:relative;
   box-shadow: 15px 10px 10px rgba(0,0,0,0.2);
-  // padding:5px 10px 0px 15px;
+  padding:5px 10px 0px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between
 }
+
+
+.card-for-entries-text {
+  width:250px;
+  height:200px;
 
 
 .group-creation1 {
   margin:0 auto;
+
+}
+
+.card-for-entries-flex {
+}
+
+.card-for-entries h2 {
+
+
+}
+
+.group-creation1 {
+  margin:0 auto;
+
+  margin-top:0px;
+
+
 }
 
 .group-creation2 {
   margin:0 auto;
 }
 
-.card-for-entries h2 {
-  margin-top:0px;
-
-}
-
-.card-for-entries p {
-  margin:20px 0px;
-}
 
 .card-for-entries img {
   position:absolute;
@@ -38,6 +55,15 @@
 }
 
 
+.card-for-entries p  {
+  font-size:20px;
+  font-weight:200;
+  margin:20px 20px;
+  line-height:25px;
+}
+
+
+
 .card-for-milestones {
   background-color: white;
   border-radius: 15px;
@@ -46,6 +72,21 @@
   border-bottom: 7px solid #E5E5E5;
   border-right:  5px solid #E5E5E5;
   box-shadow: 15px 10px 10px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin: 0 auto;
+}
+
+.card-for-milestones-text{
+  width:350px;
+  margin:0 auto;
+  margin-bottom:10px;
+}
+
+.card-for-milestones p {
+  font-size:20px;
+
 }
 
 .text-tryout {
@@ -69,5 +110,6 @@
 .card-for-milestones-text{
   width:350px;
   margin:0 auto;
+
   margin-bottom:10px;
 }

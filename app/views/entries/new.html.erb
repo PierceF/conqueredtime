@@ -26,7 +26,6 @@
   <div class="card-for-milestones">
     <div class="card-for-milestones-text">
       <p> Last step!  List 1, 2, or 3 actions, habits, or benchmarks that will bring you closer to your goal.</p>
-    </div>
 
   <%= m.simple_fields_for :milestones do |p| %>
     <%= p.input :title,  :class => "form-textfield" %>
@@ -39,6 +38,8 @@
   <% end %>
   <%= m.submit "Create", :class => "form-submit"%>
 <% end %></div>
+
+  </div>
 </div>
 </div>
 </div>
