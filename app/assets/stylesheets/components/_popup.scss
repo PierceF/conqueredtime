@@ -12,16 +12,16 @@ h1 {
   margin: 80px 0;
 }
 
-.box {
-  width: 40%;
-  margin: 0 auto;
-  background: rgba(255,255,255,0.2);
-  padding: 35px;
-  border: 2px solid #fff;
-  border-radius: 20px/50px;
-  background-clip: padding-box;
-  text-align: center;
-}
+// .box {
+//   width: 40%;
+//   margin: 0 auto;
+//   background: rgba(255,255,255,0.2);
+//   padding: 35px;
+//   border: 2px solid #fff;
+//   border-radius: 20px/50px;
+//   background-clip: padding-box;
+//   text-align: center;
+// }
 
 .button {
   font-size: 1em;
@@ -91,6 +91,50 @@ h1 {
     width: 70%;
   }
   .popup{
+    width: 70%;
+  }
+}
+
+//////////////
+
+.popup2 {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup2 h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup2 .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup2 .close:hover {
+  color: #06D85F;
+}
+.popup2 .content2 {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup2{
     width: 70%;
   }
 }
