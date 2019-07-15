@@ -14,9 +14,15 @@
   justify-content: space-between
 }
 
+
 .card-for-entries-text {
   width:250px;
   height:200px;
+
+
+.group-creation1 {
+  margin:0 auto;
+
 }
 
 .card-for-entries-flex {
@@ -24,10 +30,15 @@
 
 .card-for-entries h2 {
 
+
 }
 
 .group-creation1 {
   margin:0 auto;
+
+  margin-top:0px;
+
+
 }
 
 .group-creation2 {
@@ -43,12 +54,15 @@
   width:207px;
 }
 
+
 .card-for-entries p  {
   font-size:20px;
   font-weight:200;
   margin:20px 20px;
   line-height:25px;
 }
+
+
 
 .card-for-milestones {
   background-color: white;
@@ -72,5 +86,30 @@
 
 .card-for-milestones p {
   font-size:20px;
+
+}
+
+.text-tryout {
+    padding:10px 10px;
+}
+
+.card-milestones-flex {
+  display: flex;
+}
+
+.text-tryout-small {
+  width:300px;
+  padding:0px 10px;
+}
+
+.card-for-milestones img {
+  width:120px;
+  justify-content: flex-end;
+}
+
+.card-for-milestones-text{
+  width:350px;
+  margin:0 auto;
+
   margin-bottom:10px;
 }
