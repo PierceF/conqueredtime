@@ -45,6 +45,14 @@
   margin:0 auto;
 }
 
+.card-for-entries h2 {
+  margin-top:0px;
+
+}
+
+.card-for-entries p {
+  margin:20px 0px;
+}
 
 .card-for-entries img {
   position:absolute;
@@ -72,6 +80,13 @@
   border-bottom: 7px solid #E5E5E5;
   border-right:  5px solid #E5E5E5;
   box-shadow: 15px 10px 10px rgba(0,0,0,0.2);
+}
+
+.text-tryout {
+    padding:10px 10px;
+}
+
+.card-milestones-flex {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
