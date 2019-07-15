@@ -2,13 +2,14 @@
 
 .content-group1, .content-group2, .content-group3, .content-group4{
   text-align: center;
-
   height:500px;
  background: #fafafa;
- box-shadow: 0 0 15px rgba(0,0,0,0.2);
  border-radius:15px;
  margin:30px auto;
- border-bottom: 10px solid #E5E5E5;
+ border-bottom: 5px solid #E3E3E3;
+ border-right: 5px solid #E3E3E3;
+ border-radius:15px;
+  box-shadow: 15px 15px 10px rgba(0,0,0,0.2);
  width:400px;
 }
 
@@ -20,11 +21,11 @@
 }
 
 .content-group5 {
-  background-color: white;
-  border-bottom: 10px solid #E5E5E5;
-  border-right: 5px solid #E5E5E5;
+  background: white;
+  border-bottom: 5px solid #E3E3E3;
+  border-right: 5px solid #E3E3E3;
   border-radius:20px;
-   box-shadow: 15px 10px 10px rgba(0,0,0,0.2);
+   box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
    display: flex;
    align-items: center;
    justify-content: center;
@@ -60,8 +61,6 @@ body {
   width:400px;
   margin-top:40vh;
 }
-
-
 
 .button-mainpage-group {
 margin-bottom:20px;
