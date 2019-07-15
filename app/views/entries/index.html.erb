@@ -3,21 +3,17 @@
 <% @entries.each do |entry| %>
   <button class="collapsible"><h4><%= entry.goal %></h4></button>
   <div class="content">
-    <%=  link_to entry.goal.capitalize, entry_path(entry), :class => "link-title" %> Milestones:
+    <%# <%=  link_to entry.goal.capitalize, entry_path(entry), :class => "link-title" %>
     <% entry.last_three_milestones.each do |milestone| %>
+    <div class="group-collapse">
       <%= simple_form_for([milestone, Pomodoro.new]) do |m| %>
           <!-- <i class="far fa-clock"></i> -->
         <%= button_tag do %>
           <p><i class="far fa-clock"></i><%= milestone.title %></p>
+          </div>
         <% end %>
       <% end %>
     <% end %>
   </div>
 <% end %>
 </div>
-
-
-
-
-
-
