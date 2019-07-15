@@ -14,5 +14,15 @@ class Entry < ApplicationRecord
     end
     total
   end
+  def time
+    minutes = self.entry_minutes
+    if minutes >= 60
+      hours = minutes / 60
+      minutes = minutes % 60
 
+      "#{hours} hour(s) #{minutes} min(s)"
+    else
+      "#{minutes} min(s)"
+    end
+  end
 end
