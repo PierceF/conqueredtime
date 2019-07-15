@@ -2,11 +2,11 @@
   width:400px;
   display: flex;
   height:270px;
-  border-radius:15px;
+  border-radius:20px;
   box-shadow: 15px 10px 10px rgba(0,0,0,0.2);
   background: #EF959D;
-  border-bottom: 7px solid #C47A81;
-  border-right: 7px solid #C47A81;
+  border-bottom: 5px solid #DA888F;
+  border-right: 5px solid #DA888F;
   margin:30px auto;
 }
 
@@ -117,10 +117,11 @@ margin:0 10px;
   background: white;
   height:500px;
   width:400px;
-  border-radius:20px;
-  box-shadow: 15px 10px 10px rgba(0,0,0,0.2);
-  border-bottom: 7px solid #E8E8E8;
-  border-right: 7px solid #E8E8E8;
+  border-radius:15px;
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.2);
+  border-bottom: 5px solid #E8E8E8;
+  border-right: 5px solid #E8E8E8;
+  padding: -10px, -0px;
 }
 
 .card-own-journal-text {
@@ -141,8 +142,6 @@ margin:0 10px;
   height:224px;
 }
 
-.card-own-journal-button {
-  width:100%;
-  text-align: center;
-  border-top:none !important;
+.button-special {
+  margin: 10px 20px;
 }
