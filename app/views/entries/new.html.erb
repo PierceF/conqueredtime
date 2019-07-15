@@ -3,7 +3,7 @@
 <div class="card-for-entries">
   <h2 style="text-align:center;"><%= @journal.title.capitalize %> Journal</h2>
   <% title "New Journal Entry" %>
- <p>Great! Let's create a goal that's specific to <%= @journal.title.capitalize %>.</p>  <div class="hidden">
+ <p class="card-entries-text-group">Great! Let's create a goal that's specific to <%= @journal.title.capitalize %>.</p>  <div class="hidden">
    ** Make sure your goal is S.M.A.R.T (Specific, Measurable, Achievable, Realistic, and Timely).
 What are some actions, habits, or benchmarks that will bring you closer to your goal? Focus on these milestones to accomplish your goal.
 Awesome! You now have a clear map to accomplish your goal. Are you ready to start a focus session towards one of your objectives? %></div>
@@ -26,8 +26,6 @@ Awesome! You now have a clear map to accomplish your goal. Are you ready to star
     <div class="card-for-milestones-text">
       <p>Only one more step to go. Create three milestones
       for your <%= @journal.title.capitalize %> Journal </p>
-    </div>
-
   <%= m.simple_fields_for :milestones do |p| %>
     <%= p.input :title,  :class => "form-textfield" %>
   <% end %>
@@ -38,7 +36,7 @@ Awesome! You now have a clear map to accomplish your goal. Are you ready to star
     <%= p.input :title, label: false, :class => "form-textfield" %>
   <% end %>
   <%= m.submit "Create", :class => "form-submit"%>
-<% end %>
+<% end %></div>
 </div>
 </div>
 </div>
