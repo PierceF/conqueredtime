@@ -18,7 +18,11 @@
       <h2><%= journal.title.capitalize %></h2>
       <% journal.last_three_entries.each do |entry| %>
       <div class="card-journal-entries">
+
+      <!-- <p><%= link_to entry.goal, entry_path(entry) %> </p> -->
+
       <p><%= entry.goal %> </p>
+
       <div class="card-journal-minute">
       <p>25 minutes</p>
       </div>
