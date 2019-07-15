@@ -1,23 +1,80 @@
-
-
-    <!-- <h2 class="title-margin">Step 4: Realize Your True Potential</h2> -->
-    <div class="card-create">
-      <div class="image-create">
-    <!-- <img class="img-artwork" src="https://res.cloudinary.com/doem0zjpf/image/upload/v1563000290/try_irklrm.png" alt=""> -->
+<div class="card-create-journal">
+  <div class="image-create">
+    <div class="group-new">
+      <img src="https://res.cloudinary.com/doem0zjpf/image/upload/v1563001489/nice_try_bzisao.png" alt="">
+      <p>Select which journal to track your goal in, or create a new journal at the bottom.</p>
     </div>
-  <div class="group-new">
-  <img src="https://res.cloudinary.com/doem0zjpf/image/upload/v1563001489/nice_try_bzisao.png" alt="">
-  <p>**This journal will track progress towards your goals.** Your journal title should be an area of your life you wish to improve such as Fitness, Relationships, or Spirituality.</p>
   </div>
+</div>
+
+
+<% @journals.each do |journal| %>
+  <%= link_to journal_entries_path(journal) do %>
+    <div class="card-journal">
+    <!-- <div class="card-journal-profile">
+       <img src="https://source.unsplash.com/random/100x100" alt="">
+    </div> -->
+    <div class="card-journal-text">
+      <h2><%= journal.title.capitalize %></h2>
+      <% journal.last_three_entries.each do |entry| %>
+      <div class="card-journal-entries">
+      <p><%= entry.goal %> </p>
+      <div class="card-journal-minute">
+      <p>25 minutes</p>
+      </div>
+      </div>
+    <% end %>
+      <div class="card-journal-trophies">
+      <div class="trophies">
+      <p>Trophies</p>
+      <p>9 m</p>
+      <i class="fas fa-trophy"></i>
+      </div>
+
+        <div class="time">
+          <p>Time</p>
+          <p>4 m</p>
+          <i class="fas fa-hourglass-end"></i>
+        </div>
+
+        <div class="times">
+          <p>Times</p>
+          <p>5 m</p>
+          <i class="fab fa-apple"></i>
+        </div>
+
+        <div class="something">
+          <p>something</p>
+          <p>6 m</p>
+          <i class="fas fa-address-book"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+<% end %>
+<% end %>
+
+
+ <div class="card-own-journal">
+<div class="card-own-journal-text">
+  <p>Feel free to create your own journal. Remember the title should be a broad subject you wish to work on, like the examples above.</p>
+  <div class="image-create">
+  <img src="https://res.cloudinary.com/doem0zjpf/image/upload/v1563108730/reverze_cuytoz.png" alt="">
+  </div>
+</div>
   <form action="/journals" method="post">
     <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
     <label class="hidden" for="title">Title:
     </label>
 
-    <input class="form-textfield form-textfield-new" placeholder="" type="text" name="journal[title]" id="title">
-    <div class="button-mainpage-group">
-    <input class="form-submit" value="New Journal" type="submit">
-    </div>
+    <input class="form-textfield" type="text" placeholder="Eg: Health, Fitness, School, Career.. " name="journal[title]" id="title">
+ <input type="hidden" id="helpUser" name="helpUser" value=true>
+<div class="margin-paragraph">
+    <input class="form-submit" value="Begin Your Journey" type="submit">
   </form>
   </div>
+</div>
+</div>
 </div>
