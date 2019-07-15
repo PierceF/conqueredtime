@@ -43,3 +43,25 @@
 
 <% end %>
 <% end %>
+
+ <div class="card-own-journal">
+<div class="card-own-journal-text">
+  <p>Feel free to create another journal. Remember the title should be a broad subject you wish to work on.</p>
+  <div class="image-create">
+  <img src="https://res.cloudinary.com/doem0zjpf/image/upload/v1563108730/reverze_cuytoz.png" alt="">
+  </div>
+</div>
+  <form action="/journals" method="post">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <label class="hidden" for="title">Title:
+    </label>
+
+    <input class="form-textfield" type="text" placeholder="Eg: Health, Fitness, School, Career.. " name="journal[title]" id="title">
+ <input type="hidden" id="helpUser" name="helpUser" value=true>
+<div class="margin-paragraph">
+    <input class="form-submit" value="Make a new Journal" type="submit">
+  </form>
+  </div>
+</div>
+</div>
+</div>
