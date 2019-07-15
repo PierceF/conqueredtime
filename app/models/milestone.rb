@@ -6,13 +6,13 @@ class Milestone < ApplicationRecord
     order("DATE_TRUNC('second', updated_at) desc, id asc")
   end
 
-  def minutes
+  def seconds
     total = 0
     pomodoros.each do |p|
       if p.start.nil? || p.end.nil?
         time_length = 0
       else
-        time_length = ((p.end - p.start)/60).to_i
+        time_length = (p.end - p.start).to_i
       end
       total += time_length
     end
@@ -20,14 +20,20 @@ class Milestone < ApplicationRecord
   end
 
   def time
-    minutes = self.minutes
-    if minutes >= 60
+    seconds = self.seconds
+    if seconds >= 60 * 60
+      minutes = seconds / 60
       hours = minutes / 60
       minutes = minutes % 60
+      seconds = seconds % 60
 
-      "#{hours} hour(s) #{minutes} min(s)"
+      "#{hours} hour(s) #{minutes} min #{seconds} sec"
+    elsif seconds >= 60
+      minutes = seconds / 60
+      seconds = seconds % 60
+      "#{minutes} min #{seconds} sec"
     else
-      "#{minutes} min(s)"
+      "#{seconds} sec"
     end
   end
 end

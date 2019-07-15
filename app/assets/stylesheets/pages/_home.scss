@@ -24,10 +24,9 @@
   border-bottom: 10px solid #E5E5E5;
   border-right: 5px solid #E5E5E5;
   border-radius:20px;
-   box-shadow: 15px 10px 10px rgba(0,0,0,0.2);
-   display: flex;
-   align-items: center;
-   justify-content: center;
+   box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+   width:400px;
+   margin:0 auto;
 }
 
 body {
@@ -55,10 +54,9 @@ body {
   margin-top:40px;
 }
 
-.content-group5 {
-  margin:0 auto;
-  width:400px;
-  margin-top:40vh;
+.content-group5 p {
+  font-size: 20px;
+  font-weight:200;  
 }
 
 

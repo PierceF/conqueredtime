@@ -17,8 +17,9 @@
 </div>
 
 <% @entries.each do |entry| %>
+
   <button class="collapsible">
-    <h4><%= entry.goal %></h4>
+    <h4><%= entry.goal %><%= entry.time %></h4>
     <a class="button" href="#popup<%= entry.id %>">+</a>
   </button>
 

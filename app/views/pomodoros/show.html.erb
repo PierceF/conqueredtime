@@ -1,17 +1,14 @@
-<!--
-<h3>You just completed
-  <% @pomodoro.milestone %>
-</h3> -->
-
 <div class="content-group2">
-
+<div id="milestone">
   <h2> Focus on <%=@milestone.title %> </h2>
+</div>
+
 <div id="pomodoro">
   <div id="clock">
     <div id="timer">
       <div id="title">Ready?</div>
       <div id="countdown">
-        <span id="minutes">05</span>
+        <span id="minutes">25</span>
         <span id="seconds">00</span>
       </div>
       <div id="controls" class="reset">
@@ -47,11 +44,11 @@
   <div id="options">
     <div id="session">
       <!-- <i id="incrSession" class="fas fa-angle-double-up"></i> -->
-      <span class="option-title">Your session is</span>
+      <!-- <span class="option-title">Your session is</span>
       <input id="sessionInput" type="number" value="25" max="25" min="25">
       <span class="option-title" style="margin-top: 0px;">minutes</span>
-      <!-- <i id="decrSession" class="fas fa-angle-double-down"></i> -->
-    </div>
+      <i id="decrSession" class="fas fa-angle-double-down"></i>
+    </div> -->
     <!-- <div id="break"> -->
       <!-- <i id="incrBreak" class="fas fa-angle-double-up"></i> -->
       <!-- <span class="option-title">Break</span> -->
