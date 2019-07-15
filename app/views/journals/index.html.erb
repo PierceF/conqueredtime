@@ -1,13 +1,3 @@
-<div class="card-create-journal">
-  <div class="image-create">
-    <div class="group-new">
-      <img src="https://res.cloudinary.com/doem0zjpf/image/upload/v1563001489/nice_try_bzisao.png" alt="">
-      <p>Select which journal to track your goal in, or create a new journal at the bottom.</p>
-    </div>
-  </div>
-</div>
-
-
 <% @journals.each do |journal| %>
   <%= link_to journal_entries_path(journal) do %>
     <div class="card-journal">

@@ -10,6 +10,7 @@ class JournalsController < ApplicationController
   # end
 
   def new
+    @journals = Journal.all
     @journal = Journal.new
   end
 
