@@ -46,6 +46,7 @@ class MilestonesController < ApplicationController
       if achievement.trophy.shown == false
         @trophies << achievement.trophy
         achievement.trophy.shown = true
+        achievement.save!
       end
     end
   end
