@@ -1,7 +1,7 @@
 <% title "Milestone Summary" %>
 <div class="scroll-effect">
 <div class="card-large">
-Good job!  You've worked on<h3><%= @entry.goal.split.map(&:capitalize).join(' ') %></h3> for (time)
+Good job!  You've worked on<h3><%= @entry.goal.split.map(&:capitalize).join(' ') %></h3> for <%= @milestone.time %>
 How was the quality of your focus?
 <%= @milestone.stars %>
 <%= simple_form_for [@pomodoro] do |f| %>

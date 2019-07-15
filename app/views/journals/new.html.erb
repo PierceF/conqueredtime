@@ -9,7 +9,7 @@
 
 
 <% @journals.each do |journal| %>
-  <%= link_to journal_entries_path(journal) do %>
+  <%= link_to new_journal_entry_path(journal) do %>
     <div class="card-journal">
     <!-- <div class="card-journal-profile">
        <img src="https://source.unsplash.com/random/100x100" alt="">
