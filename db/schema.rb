@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_14_094321) do
+ActiveRecord::Schema.define(version: 2019_07_15_085435) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "achievements", force: :cascade do |t|
+    t.bigint "trophy_id"
+    t.bigint "journal_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["journal_id"], name: "index_achievements_on_journal_id"
+    t.index ["trophy_id"], name: "index_achievements_on_trophy_id"
+  end
 
   create_table "entries", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -55,6 +64,14 @@ ActiveRecord::Schema.define(version: 2019_07_14_094321) do
     t.index ["user_id"], name: "index_pomodoros_on_user_id"
   end
 
+  create_table "trophies", force: :cascade do |t|
+    t.string "name"
+    t.string "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.boolean "shown", default: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -73,6 +90,8 @@ ActiveRecord::Schema.define(version: 2019_07_14_094321) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "achievements", "journals"
+  add_foreign_key "achievements", "trophies"
   add_foreign_key "entries", "journals"
   add_foreign_key "milestones", "entries"
   add_foreign_key "pomodoros", "milestones"
