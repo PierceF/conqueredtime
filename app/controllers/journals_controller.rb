@@ -17,7 +17,9 @@ class JournalsController < ApplicationController
   def create
     @journal = Journal.new(journal_params)
     @journal.user = current_user
-    if @journal.save
+    if @journal.save && params[:helpUser] == "true"
+      redirect_to new_journal_entry_path(@journal)
+    elsif @journal.save
       redirect_to journal_entries_path(@journal)
     else
       render :new
