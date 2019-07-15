@@ -1,3 +1,6 @@
+<% title "Journals" %>
+
+<h2 style="text-align:center">Journals</h2>
 <div class="card-create-journal">
   <div class="image-create">
     <div class="group-new">
@@ -6,6 +9,7 @@
     </div>
   </div>
 </div>
+
 
 <% @journals.each do |journal| %>
   <%= link_to journal_entries_path(journal) do %>

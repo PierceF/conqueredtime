@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 2019_07_14_094321) do
     t.datetime "start"
     t.datetime "end"
     t.string "state"
+    t.integer "stars", default: 0
     t.index ["milestone_id"], name: "index_pomodoros_on_milestone_id"
     t.index ["user_id"], name: "index_pomodoros_on_user_id"
   end
