@@ -1,20 +1,24 @@
-.button-small-red {
-  margin: 10px 0px;
-}
 
-.button-small-red a {
+
+.button-small-red  {
   font-size:16px;
   padding:25px 50px;
   background-color: #EF959D;
   color:white;
   text-decoration:none;
   font-weight:800;
-  border-radius:4px;
+  border-radius:15px;
+  border-bottom:7px solid #C47A81;
 }
 
 .button-small-red a:hover {
   background-color:#DA888F;
   transition:0.3s;
+}
+
+.button-small-red:active {
+  background-color:#C47A81;
+  border:none;
 }
 
 

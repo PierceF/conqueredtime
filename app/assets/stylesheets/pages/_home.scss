@@ -1,14 +1,17 @@
 // Specific CSS for your home-page
 
-.content-group1, .content-group2, .content-group3, .content-group4,{
+.content-group1, .content-group2, .content-group3, .content-group4{
   text-align: center;
-  min-height:500px;
+
+  height:500px;
  background: #fafafa;
  box-shadow: 0 0 15px rgba(0,0,0,0.2);
  border-radius:15px;
  margin:30px auto;
  border-bottom: 10px solid #E5E5E5;
+ width:400px;
 }
+
 
 .content-group1 p, .content-group2 p, .content-group3 p, .content-group4 p, .content-group5 p,   {
   width:300px;
@@ -25,7 +28,6 @@
    display: flex;
    align-items: center;
    justify-content: center;
-   margin-bottom:20px;
 }
 
 body {
@@ -56,15 +58,13 @@ body {
 .content-group5 {
   margin:0 auto;
   width:400px;
-  margin-bottom:70px;
-  margin-top:100px;
+  margin-top:40vh;
 }
 
 
 
 .button-mainpage-group {
-  text-align: center;
-  margin-bottom:20px;
+margin-bottom:20px;
 }
 
 .content-group5 h3 {

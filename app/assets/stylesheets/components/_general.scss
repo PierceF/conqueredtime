@@ -11,7 +11,7 @@ border-bottom:1px solid #C6C6C6;
 
 .container-main {
   width:450px;
-  margin: 0 auto;
+  margin: 40px auto;
   height:100%;
 }
 
@@ -31,6 +31,8 @@ border-bottom:1px solid #C6C6C6;
 h1, h2, h3 {
   margin:0px;
   color:#3d3c38;
+  font-family: 'Nunito', sans-serif;
+
 }
 
 
@@ -54,14 +56,17 @@ h3 {
 
 h4 {
   font-size: 24px;
+  font-family: 'Nunito', sans-serif;
+
+
 }
 
 p, a{
   font-size:16px;
   margin:0px;
   color:black;
-  font-family: 'Poppins', sans-serif;
-  font-weight:200;
+  font-family: 'Nunito', sans-serif;
+
 }
 
 
@@ -79,4 +84,9 @@ p, a{
 
 .margin-paragraph {
   margin-bottom:5vh;
+}
+
+.space-between { 
+  scroll-behavior: smooth;
+  height:100vh;
 }
