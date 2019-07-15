@@ -24,12 +24,17 @@
 
 
 
+
 .hidden {
   display: none;
 }
 
 input:focus {
     outline-width: 0;
+}
+
+.collapsible:focus {
+  outline-width:0;
 }
 
 ::placeholder {
