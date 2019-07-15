@@ -1,46 +1,57 @@
 <% title  @journal.title.capitalize %>
 <h2><%= @journal.title.capitalize %></h2>
 <div class="box">
-  <a class="button" href="#popup1">Add A New Goal</a>
+  <a class="button" href="#popup1">Add A Goal</a>
 </div>
+
 <div id="popup1" class="overlay">
   <div class="popup">
-    <div class="group-new">
-  <img src="https://res.cloudinary.com/doem0zjpf/image/upload/v1563001489/nice_try_bzisao.png" alt="">
-  <p>**This journal will track progress towards your goals.** Your journal title should be an area of your life you wish to improve such as Fitness, Relationships, or Spirituality.</p>
-  </div>
+    <h2>Goal</h2>
     <a class="close" href="#">&times;</a>
     <div class="content">
-      <form action="/journals" method="post">
-    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-    <label class="hidden" for="title">Title:
-    </label>
-
-    <input class="form-textfield form-textfield-new" placeholder="" type="text" name="journal[title]" id="title">
-    <div class="button-mainpage-group">
-    <input class="form-submit" value="New Journal" type="submit">
-    </div>
-  </form>
+      <%= simple_form_for [@journal, @entry] do |m| %>
+      <%= m.input :goal %>
+      <% end %>
     </div>
   </div>
 </div>
+
 <% @entries.each do |entry| %>
-  <button class="collapsible"><h4><%= entry.goal %></h4></button>
+  <button class="collapsible">
+    <h4><%= entry.goal %></h4>
+    <a class="button" href="#popup<%= entry.id %>">+</a>
+  </button>
+
   <div class="content">
     <%# <%=  link_to entry.goal.capitalize, entry_path(entry), :class => "link-title" %>
     <% entry.last_three_milestones.each do |milestone| %>
       <%= simple_form_for([milestone, Pomodoro.new]) do |m| %>
-    <div class="group-collapse">
-          <!-- <i class="far fa-clock"></i> -->
-        <p><%= milestone.title %></p>
-        <%= button_tag do %>
-          <i class="far fa-clock"></i>
-        <% end %>
+        <div class="group-collapse">
+            <!-- <i class="far fa-clock"></i> -->
+          <p><%= milestone.title %></p>
+          <%= button_tag do %>
+            <i class="far fa-clock"></i>
+          <% end %>
+        </div>
       <% end %>
-      </div>
     <% end %>
   </div>
+
+  <div id="popup<%= entry.id %>" class="overlay">
+    <div class="popup">
+      <h2>Enter a Milestone for <%= entry.goal %></h2>
+      <a class="close" href="#">&times;</a>
+      <div class="content">
+        <%= simple_form_for [entry, Milestone.new] do |m| %>
+            <%= m.input :title, label: false, :class => "form-textfield" %>
+            <% end %>
+      </div>
+    </div>
+  </div>
 <% end %>
-</div>
+
+<!-- </div> -->
+
+
 
 
