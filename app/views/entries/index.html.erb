@@ -1,7 +1,7 @@
 <% title  @journal.title.capitalize %>
 <h2><%= @journal.title.capitalize %></h2>
 <div class="box">
-  <a class="button" href="#popup1">Add A Goal</a>
+  <a class="button tester" href="#popup1">Add A Goal</a>
 </div>
 
 <div id="popup1" class="overlay">
@@ -40,7 +40,7 @@
 
   <div id="popup<%= entry.id %>" class="overlay">
     <div class="popup">
-      <h2>Enter a Milestone for <%= entry.goal %></h2>
+      <h2> <%= entry.goal %></h2>
       <a class="close" href="#">&times;</a>
       <div class="content">
         <%= simple_form_for [entry, Milestone.new] do |m| %>
@@ -52,7 +52,3 @@
 <% end %>
 
 <!-- </div> -->
-
-
-
-
