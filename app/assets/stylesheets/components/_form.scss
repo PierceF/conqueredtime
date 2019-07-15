@@ -32,6 +32,10 @@ input:focus {
     outline-width: 0;
 }
 
+.collapsible:focus {
+  outline-width:0;
+}
+
 ::placeholder {
   color:#495057;
   font-weight:200;
