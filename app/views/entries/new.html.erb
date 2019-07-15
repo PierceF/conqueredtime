@@ -3,22 +3,24 @@
 <div class="card-for-entries">
   <h2 style="text-align:center;"><%= @journal.title.capitalize %> Journal</h2>
   <% title "New Journal Entry" %>
- <p>Great! Let's create a goal that's specific to <%= @journal.title.capitalize %>, then we will create some milestones to help accomplish that goal.</p>  <div class="hidden">
- </div>
-
-<img class="img-test" src="https://res.cloudinary.com/doem0zjpf/image/upload/v1563012445/zxc_vvjt4c.png" alt="">
 <%= simple_form_for [@journal, @entry] do |m| %>
+<div class="card-for-entries-flex">
   <%= m.input :goal %>
-  <div style="margin-top:30px;" class="">
+  </div>
   <a href="#scroll-button" class="button-scroll form-submit" href="#">Create</a>
+  <div class="card-for-entries-text ">
+  <p>Great! Let's create a goal that's specific to <%= @journal.title.capitalize %>, then we will create some milestones to help accomplish that goal.</p>
+  <img class="img-test" src="https://res.cloudinary.com/doem0zjpf/image/upload/v1563012445/zxc_vvjt4c.png" alt="">
   </div>
+  <div class="hidden">
+    <p>Make sure your goal is S.M.A.R.T (Specific, Measurable, Achievable, Realistic, and Timely).</p>
   </div>
-  </div>
-    <div>
-<p>Make sure your goal is S.M.A.R.T (Specific, Measurable, Achievable, Realistic, and Timely).</p></div>
 
+
+  </div>
+  </div>
+  </div>
   <div class="space-between">
-
   </div>
 <div id="scroll-button" class="group-creation2">
   <div class="card-for-milestones">
@@ -36,7 +38,7 @@
     <%= p.input :title, label: false, :class => "form-textfield" %>
   <% end %>
   <%= m.submit "Create", :class => "form-submit"%>
-<% end %>
+<% end %></div>
 </div>
 </div>
 </div>
