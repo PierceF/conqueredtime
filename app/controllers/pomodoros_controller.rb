@@ -32,10 +32,16 @@ class PomodorosController < ApplicationController
   def update
     @pomodoro = Pomodoro.find(params[:id])
 
-    if params[:pomodoro][:action] == 'start'
-      @pomodoro.start = Time.now
-    elsif params[:pomodoro][:action] == 'done'
-      @pomodoro.end = Time.now
+    if params[:pomodoro]
+      if params[:pomodoro][:action] == 'start'
+        @pomodoro.start = Time.now
+      elsif params[:pomodoro][:action] == 'done'
+        @pomodoro.end = Time.now
+      end
+    else
+      @pomodoro.stars = params["stars"]
+      @pomodoro.save!
+      redirect_to root_path
     end
     @pomodoro.save!
   end

@@ -31,7 +31,7 @@
         </div>
 
         <div id="back">
-          <%= link_to milestone_path(@milestone) do %>
+          <%= link_to milestone_path(@milestone, pomodoro_id: @pomodoro.id) do %>
           <i class="fas fa-chevron-circle-left"></i> To journal
           <% end %>
         </div>

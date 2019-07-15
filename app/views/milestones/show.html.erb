@@ -3,11 +3,13 @@
 <div class="card-large">
 Good job!  You've worked on<h3><%= @entry.goal.split.map(&:capitalize).join(' ') %></h3> for (time)
 How was the quality of your focus?
-<%= simple_form_for [@milestone] do |f| %>
+<%= @milestone.stars %>
+<%= simple_form_for [@pomodoro] do |f| %>
 <div class="container">
   <div class="feedback">
     <div class="rating">
-      <input type="radio" name="stars" id="rating-5" value="5">
+
+      <!-- <input type="radio" name="stars" id="rating-5" value="5"> -->
       <label for="rating-5"></label>
       <input type="radio" name="stars" id="rating-4" value="4">
       <label for="rating-4"></label>
