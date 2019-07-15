@@ -1,4 +1,5 @@
 .card-for-entries {
+  margin: 0 auto;
   background-color:white;
   border-radius:15px;
   height:550px;
@@ -7,7 +8,7 @@
   border-right:  5px solid #E5E5E5;
   position:relative;
   box-shadow: 15px 10px 10px rgba(0,0,0,0.2);
-  padding:5px 10px 0px 15px;
+  // padding:5px 10px 0px 15px;
 }
 
 .group-creation1 {

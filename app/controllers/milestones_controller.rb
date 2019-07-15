@@ -14,6 +14,8 @@ class MilestonesController < ApplicationController
 
   def show
     @entry = @milestone.entry
+    @pomodoro = Pomodoro.find(params[:pomodoro_id])
+    # @pomodoro = Pomodoro.find(Milestone.find(params[:id]).pomodoro)
   end
 
   private

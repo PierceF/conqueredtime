@@ -31,11 +31,18 @@ class PomodorosController < ApplicationController
 
   def update
     @pomodoro = Pomodoro.find(params[:id])
+    @journal = @pomodoro.milestone.entry.journal
 
-    if params[:pomodoro][:action] == 'start'
-      @pomodoro.start = Time.now
-    elsif params[:pomodoro][:action] == 'done'
-      @pomodoro.end = Time.now
+    if params[:pomodoro]
+      if params[:pomodoro][:action] == 'start'
+        @pomodoro.start = Time.now
+      elsif params[:pomodoro][:action] == 'done'
+        @pomodoro.end = Time.now
+      end
+    else
+      @pomodoro.stars = params["stars"]
+      @pomodoro.save!
+      redirect_to journal_entries_path(@journal)
     end
     @pomodoro.save!
   end
