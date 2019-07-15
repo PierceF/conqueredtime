@@ -1,8 +1,6 @@
 // Specific CSS for your home-page
 
 .content-group1, .content-group2, .content-group3, .content-group4{
-  text-align: center;
-
   height:500px;
  background: #fafafa;
  box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -13,27 +11,33 @@
  border-bottom: 5px solid #E5E5E5;
  border-right: 5px solid #E5E5E5;
  border-radius:15px;
-  box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+ box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
 }
 
 
 .content-group1 p, .content-group2 p, .content-group3 p, .content-group4 p, .content-group5 p,   {
   width:300px;
-  margin: 30px auto;
-  padding-bottom: 10px;
+  margin: 20px auto;
 }
+.content-group1 h3, .content-group2 h3, .content-group3 h3, .content-group4 h3, .content-group5 h3,   {
+  text-align: center;
+}
+
+
 
 .content-group5 {
   background-color: white;
   border-bottom: 5px solid #E5E5E5;
   border-right: 5px solid #E5E5E5;
   border-radius:20px;
-   box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
    width:400px;
+   height:550px;
    margin:0 auto;
 }
 
 body {
+  font-family: 'Nunito', sans-serif !important;
   background:#B1EDE8;
 }
 
@@ -41,12 +45,12 @@ body {
 
 .content-group1 img, .content-group2 img , .content-group3 img, .content-group4 img    {
   width:450px;
-  margin: 0 auto;
+  // margin: 0 auto;
 }
 
 .content-group5 img {
   width:300px;
-  margin:0 auto;
+  // margin:0 auto;
 }
 
 .image-wrap {
@@ -55,7 +59,7 @@ body {
 }
 
 .title-margin {
-  margin-top:40px;
+  // margin-top:40px;
 }
 
 .content-group5 p {
@@ -66,11 +70,11 @@ body {
 
 
 .button-mainpage-group {
-margin-bottom:20px;
+// margin-bottom:20px;
 text-align: center;
 }
 
 .content-group5 h3 {
 text-align: center;
-margin-top:10px;
+// margin-top:10px;
 }
