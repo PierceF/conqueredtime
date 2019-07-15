@@ -44,9 +44,9 @@ class MilestonesController < ApplicationController
   def find_achievements
     @achievements.each do |achievement|
       if achievement.trophy.shown == false
-        @trophies << achievement.trophy
         achievement.trophy.shown = true
-        achievement.save!
+        achievement.trophy.save!
+        @trophies << achievement.trophy
       end
     end
   end
