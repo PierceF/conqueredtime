@@ -1,7 +1,9 @@
 <% title  @journal.title.capitalize %>
 <h2><%= @journal.title.capitalize %></h2>
 <% @entries.each do |entry| %>
-  <button class="collapsible"><h4><%= entry.goal %></h4></button>
+  <button class="collapsible"><h4><%= entry.goal %>
+    <%= @entry.entry_minutes %>
+  </h4></button>
   <div class="content">
     <%# <%=  link_to entry.goal.capitalize, entry_path(entry), :class => "link-title" %>
     <% entry.last_three_milestones.each do |milestone| %>

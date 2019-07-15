@@ -6,4 +6,13 @@ class Entry < ApplicationRecord
   def last_three_milestones
     self.milestones.order("DATE_TRUNC('second', updated_at) desc, id asc").limit(3)
   end
+
+  def entry_minutes
+    total = 0
+    milestones.each do |m|
+      total += m.minutes
+    end
+    total
+  end
+
 end
