@@ -41,22 +41,25 @@
 
 .group-collapse {
   height:100%;
-  width:100%;
+  width:380px;
   padding:10px 0px;
   display: flex;
   justify-content: space-between;
+  margin:0 auto;
 }
 
 .group-collapse button {
   color:white;
   border:none;
   background:rgba(0,0,0,0.0);
+  margin: 0px;
+  padding: 0px;
 }
 
 .group-collapse i {
   font-size:16px;
   color:white;
-  margin:0px !important;
+  margin:0px;
 }
 
 .group-collapse p {
@@ -64,4 +67,5 @@
   border:none;
   font-weight:800;
   font-size:16px;
+
 }

@@ -15,6 +15,10 @@ border-bottom:1px solid #C6C6C6;
   height:100%;
 }
 
+button {
+  margin:0px;
+}
+
 .grid-main {
   display:grid;
   grid-template-columns: 1fr;
@@ -86,7 +90,7 @@ p, a{
   margin-bottom:5vh;
 }
 
-.space-between { 
+.space-between {
   scroll-behavior: smooth;
   height:100vh;
 }
