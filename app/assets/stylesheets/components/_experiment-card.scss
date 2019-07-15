@@ -1,21 +1,56 @@
 .collapsible {
-  background-color: #f4f4f4;
+  background-color: #EF959D;
   color: white;
   cursor: pointer;
   padding: 18px;
-  width: 100%;
+  width: 400px;
+  height:100px;
   border: none;
   text-align: left;
   outline: none;
   font-size: 15px;
+  border-radius:10px;
+  box-shadow: 15px 10px 10px rgba(0,0,0,0.2);
+  border-bottom: 7px solid #C47A81;
+  border-right: 7px solid #C47A81;
+  margin-top:10px;
 }
-.active, .collapsible:hover {
-  background-color: #555;
+
+.active {
+  background: #C47A81;
 }
+
+
 .content {
-  padding: 0 18px;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
-  background-color: #f1f1f1;
+  background-color: #F4BBC0;
+  border-radius:10px;
+  width:400px;
+}
+
+.content:active {
+}
+
+.group-collapse {
+  padding:10px 0px;
+}
+
+.group-collapse button {
+  color:white;
+  border:none;
+  background:rgba(0,0,0,0.0);
+}
+
+.group-collapse i {
+  font-size:16px;
+  color:white;
+}
+
+.group-collapse p {
+  color:white;
+  border:none;
+  font-weight:800;
+  font-size:16px;
 }

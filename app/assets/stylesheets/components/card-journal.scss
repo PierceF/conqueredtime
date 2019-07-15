@@ -26,11 +26,6 @@ width:140px;
 }
 
 
-.card-journal-profile img {
-  border-radius:50%;
-  height:100px;
-  width:100px;
-}
 
 .card-journal-text {
   display: flex;
@@ -115,4 +110,41 @@ margin:0 10px;
 
 .group-trophies {
   display:flex;
+}
+
+.card-own-journal {
+  margin: 0 auto;
+  background: white;
+  height:500px;
+  width:400px;
+  border-radius:20px;
+  box-shadow: 15px 10px 10px rgba(0,0,0,0.2);
+  border-bottom: 7px solid #E8E8E8;
+  border-right: 7px solid #E8E8E8;
+}
+
+.card-own-journal-text {
+  display:flex;
+  height:300px;
+  width:100%;
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.card-own-journal-text p {
+    font-size:18px;
+    font-weight:200;
+}
+
+.card-own-journal img {
+  width:63px;
+  height:224px;
+}
+
+.card-own-journal-button {
+  width:100%;
+  text-align: center;
+  border-top:none !important;
 }
