@@ -9,9 +9,6 @@
   // text-align: center;
 }
 
-.tester {
-  position: absolute;
-}
 
 .button {
   font-size: 20px;
@@ -20,9 +17,7 @@
   // border-radius: 20px/50px;
   text-decoration: none;
   cursor: pointer;
-  position: absolute;
-  bottom:5px;
-  right:5px;
+
 }
 
 
@@ -75,14 +70,14 @@
   overflow: auto;
 }
 
-@media screen and (max-width: 700px){
-  .box{
-    width: 20px;
-  }
-  .popup{
-    width: 400px;
-  }
-}
+// @media screen and (max-width: 700px){
+//   .box{
+//     width: 20px;
+//   }
+//   .popup{
+//     width: 400px;
+//   }
+// }
 
 
 .popup2 {
@@ -118,11 +113,11 @@
   overflow: auto;
 }
 
-@media screen and (max-width: 700px){
-  .box{
-    width: 20px;
-  }
-  .popup2{
-    width: 400px;
-  }
-}
+// @media screen and (max-width: 700px){
+//   .box{
+//     width: 20px;
+//   }
+//   .popup2{
+//     width: 400px;
+//   }
+// }
