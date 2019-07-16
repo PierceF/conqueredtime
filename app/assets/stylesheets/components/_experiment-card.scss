@@ -2,14 +2,14 @@
   background-color: #EF959D;
   color: white;
   cursor: pointer;
-  width: 400px;
-  height:100px;
+  width: 250px;
+  height:60px;
   border: none;
   outline: none;
-  border-radius:10px;
-  box-shadow: 15px 10px 10px rgba(0,0,0,0.2);
-  border-bottom: 5px solid #C47A81;
-  border-right: 5px solid #C47A81;
+  border-radius:0px 15px 15px 0px;
+  // box-shadow: 15px 10px 10px rgba(0,0,0,0.2);
+  // border-bottom: 5px solid #C47A81;
+  // border-right: 5px solid #C47A81;
   margin:10px auto;
   position: relative;
 
@@ -32,15 +32,18 @@
   transition: max-height 0.3s ease-out;
   background-color: #F4BBC0;
   border-radius:10px;
-  width:400px;
+  width:250px;
+
 }
+
+
 
 .content:active {
 }
 
 .group-collapse {
   height:100%;
-  width:380px;
+  width:230px;
   padding:10px 0px;
   display: flex;
   justify-content: space-between;
@@ -65,6 +68,6 @@
   color:white;
   border:none;
   font-weight:800;
-  font-size:16px;
+  font-size:14px;
 
 }
