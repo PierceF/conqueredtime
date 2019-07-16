@@ -24,6 +24,7 @@
   padding: 10px 0px 10px 0px;
 }
 
+
 .card-create-journal img {
   width:63px;
   height:224px;
@@ -50,4 +51,33 @@
 .group-new {
   display: flex;
   align-items:center;
+}
+
+// Card own journal
+
+.card-own-journal img {
+  width:63px;
+  height:224px;
+}
+
+.card-own-journal {
+  margin:0 auto;
+  background-color:white;
+  height:60vh;
+  width:400px;
+  border-radius:15px;
+  border-right:5px solid #E5E5E5;
+  border-bottom:5px solid #E5E5E5;
+  box-shadow: 15px 10px 10px rgba(0,0,0,0.2);
+}
+
+.card-own-journal-text {
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  margin-left:20px;
+}
+
+.card-own-journal-button {
+  margin:10px 20px;
 }
