@@ -37,7 +37,7 @@ class EntriesController < ApplicationController
     params.require(:entry).permit(:goal, milestones_attributes: [:title])
   end
 
-    def star_average
+  def star_average
     if milestones.pomodoros.all.count.positive?
       rating = 0
       milestones.each do |milestone|
