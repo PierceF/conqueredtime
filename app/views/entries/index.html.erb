@@ -2,10 +2,9 @@
     <div class="card-journal-book-top">
       <div class="card-journal-book-text">
           <h2><%= @journal.title.capitalize %></h2>
-          <a href="#popup1">Add A Goal</a>
       </div>
     <div class="card-journal-book-trophies">
-      NICE
+      TROPHIES GOES HERE
     </div>
       </div>
     <div id="popup1" class="overlay">
@@ -20,8 +19,10 @@
   </div>
     <% @entries.each do |entry| %>
       <button class="collapsible">
+        <div class="card-journal-book-entries">
         <h3><%= entry.goal %><br></h3>
           <h4><%= entry.time %></h4>
+          </div>
         <a class="button" href="#popup<%= entry.id %>">+</a>
       </button>
       <div class="content">
@@ -36,7 +37,6 @@
         <% end %>
       <% end %>
     </div>
-
   <div id="popup<%= entry.id %>" class="overlay">
     <div class="popup">
       <h2>
@@ -50,4 +50,7 @@
   </div>
 </div>
 <% end %>
+<div class="card-journal-book-add">
+<a href="#popup1">Add A Goal</a>
+</div>  
 </div>
