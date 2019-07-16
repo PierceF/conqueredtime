@@ -64,16 +64,18 @@
 </div>
 </div>
 </div>
-<audio loop autoplay src="https://joeweaver.me/codepenassets/freecodecamp/challenges/build-a-pomodoro-clock/forest.mp3"></audio>
+<audio loop autostart="0" src="https://joeweaver.me/codepenassets/freecodecamp/challenges/build-a-pomodoro-clock/forest.mp3"></audio>
 
 <script>
 const time = 25;
 window.time = time;
 const up = document.getElementById("incrSession");
 up.addEventListener("click", (event)=> {
-  window.time += 1;
-  document.getElementById("minutes").innerText = window.time;
-  document.getElementById("sessionInput").value = window.time;
+  if (window.time <= 59) {
+    window.time += 1;
+    document.getElementById("minutes").innerText = window.time;
+    document.getElementById("sessionInput").value = window.time;
+  }
 });
 const down = document.getElementById("decrSession");
 down.addEventListener("click", (event)=> {
@@ -81,11 +83,11 @@ down.addEventListener("click", (event)=> {
   document.getElementById("minutes").innerText = window.time;
   document.getElementById("sessionInput").value = window.time;
 });
-const start = document.querySelector("#start");
-start.addEventListener("click", (event)=> {
-  const myAudio = document.querySelector("audio");
-  myAudio.play();
-  myAudio.pause();
-});
+// const start = document.querySelector("#start");
+// start.addEventListener("click", (event)=> {
+//   const myAudio = document.querySelector("audio");
+//   myAudio.play();
+//   //myAudio.pause();
+// });
 </script>
 
