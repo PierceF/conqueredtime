@@ -50,10 +50,14 @@ class Journal < ApplicationRecord
   def star_average
     if pomodoros.count.positive?
       rating = 0
+      count = 0
       pomodoros.each do |pomodoro|
+        unless pomodoro.stars == nil
         rating += pomodoro.stars
+        count += 1
+        end
       end
-      (rating.to_f / pomodoros.count).round(2)
+      (rating.to_f / count).round(2)
     else
       nil
     end
