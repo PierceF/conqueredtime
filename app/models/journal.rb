@@ -53,8 +53,8 @@ class Journal < ApplicationRecord
       count = 0
       pomodoros.each do |pomodoro|
         unless pomodoro.stars == nil
-        rating += pomodoro.stars
-        count += 1
+          rating += pomodoro.stars
+          count += 1
         end
       end
       (rating.to_f / count).round(2)
