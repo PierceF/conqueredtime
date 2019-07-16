@@ -43,4 +43,12 @@ class Entry < ApplicationRecord
       "#{seconds} sec"
     end
   end
+
+  def star_average
+    average = 0
+    .milestones.each do |milestone|
+      average += milestone.star_average
+    end
+    average / milestones.all.count
+  end
 end

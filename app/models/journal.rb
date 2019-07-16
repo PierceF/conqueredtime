@@ -45,4 +45,12 @@ class Journal < ApplicationRecord
       "#{seconds} sec"
     end
   end
+
+  def star_average
+    average = 0
+    entries.each do |entry|
+      average += entry.star_average
+    end
+    average / entries.all.count
+  end
 end
