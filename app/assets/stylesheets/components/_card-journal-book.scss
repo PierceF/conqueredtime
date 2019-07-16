@@ -32,6 +32,9 @@ padding: 20px 20px;
   background: #EFEFEF;
   height:120px;
   width:150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card-journal-book h4 {
@@ -45,4 +48,10 @@ padding: 20px 20px;
   font-weight:800;
   color:white;
   text-align:left;
+}
+
+.card-journal-book-entries {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
