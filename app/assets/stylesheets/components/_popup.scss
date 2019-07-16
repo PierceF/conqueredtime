@@ -1,4 +1,5 @@
-
+#milestone_title {
+}
 
 .box {
   // width: 40%;
@@ -11,10 +12,8 @@
 
 
 .button {
-  font-size: 20px;
+  font-size: 24px;
   color: #fff;
-  // border: 2px solid #06D85F;
-  // border-radius: 20px/50px;
   text-decoration: none;
   cursor: pointer;
 
@@ -30,7 +29,7 @@
   background: rgba(0, 0, 0, 0.7);
   transition: opacity 500ms;
   visibility: hidden;
-  opacity: 0;
+  opacity: 0.0;
 }
 .overlay:target {
   visibility: visible;
@@ -41,17 +40,14 @@
   margin: 70px auto;
   padding: 20px;
   background: #fff;
-  border-radius: 5px;
-  width: 30%;
+  border-radius: 15px;
+  border-right:5px solid #E5E5E5;
+  border-bottom:5px solid #E5E5E5;
+  width: 400px;
   position: relative;
-  transition: all 5s ease-in-out;
 }
 
-.popup h2 {
-  margin-top: 0;
-  color: #333;
-  font-family: Tahoma, Arial, sans-serif;
-}
+
 .popup .close {
   position: absolute;
   top: 20px;
@@ -63,22 +59,13 @@
   color: #333;
 }
 .popup .close:hover {
-  color: #06D85F;
+  color: #B8D8BA;
 }
 .popup .content {
-  max-height: 30%;
+    max-height: 150px;
   overflow: auto;
+  width:300px;
 }
-
-// @media screen and (max-width: 700px){
-//   .box{
-//     width: 20px;
-//   }
-//   .popup{
-//     width: 400px;
-//   }
-// }
-
 
 .popup2 {
   margin: 70px auto;
@@ -90,11 +77,6 @@
   transition: all 5s ease-in-out;
 }
 
-.popup2 h2 {
-  margin-top: 0;
-  color: #333;
-  font-family: Tahoma, Arial, sans-serif;
-}
 .popup2 .close {
   position: absolute;
   top: 20px;
@@ -103,10 +85,10 @@
   font-size: 30px;
   font-weight: bold;
   text-decoration: none;
-  color: #333;
+  color: #B8D8BA;
 }
 .popup2 .close:hover {
-  color: #06D85F;
+  color: #B8D8BA;
 }
 .popup2 .content2 {
   max-height: 30%;
