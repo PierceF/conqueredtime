@@ -59,8 +59,13 @@
       <i id="decrBreak" class="fas fa-angle-double-down"></i>
     </div> -->
   </div>
+  <div id="note">
+  <p> * max time 60 min </p>
 </div>
 </div>
+</div>
+<audio loop autoplay src="https://joeweaver.me/codepenassets/freecodecamp/challenges/build-a-pomodoro-clock/rain.mp3"></audio>
+
 <script>
 const time = 25;
 window.time = time;
@@ -76,4 +81,11 @@ down.addEventListener("click", (event)=> {
   document.getElementById("minutes").innerText = window.time;
   document.getElementById("sessionInput").value = window.time;
 });
+const start = document.querySelector("#start");
+start.addEventListener("click", (event)=> {
+  const myAudio = document.querySelector("audio");
+  myAudio.play();
+  myAudio.pause();
+});
 </script>
+
