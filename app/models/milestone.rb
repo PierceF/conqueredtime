@@ -36,4 +36,16 @@ class Milestone < ApplicationRecord
       "#{seconds} sec"
     end
   end
+
+  def star_average
+    if pomodoros.count.positive?
+      rating = 0
+      pomodoros.each do |pomodoro|
+        rating += pomodoro.stars
+      end
+      (rating.to_f / pomodoros.all.count).round(2)
+    else
+      nil
+    end
+  end
 end
