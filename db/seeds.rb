@@ -126,3 +126,6 @@ pomodoro33 = Pomodoro.create!(milestone_id: 33, start: (DateTime.now - 225.minut
 pomodoro34 = Pomodoro.create!(milestone_id: 34, start: (DateTime.now - 325.minutes), end: DateTime.now)
 pomodoro35 = Pomodoro.create!(milestone_id: 35, start: (DateTime.now - 1225.minutes), end: DateTime.now)
 pomodoro36 = Pomodoro.create!(milestone_id: 36, start: (DateTime.now - 225.minutes), end: DateTime.now)
+
+
+trophy1 = Trophy.create!(name: "Wow awesome job! Have a trophy.", image:"")
