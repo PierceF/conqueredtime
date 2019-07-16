@@ -10,11 +10,9 @@
     <div id="popup1" class="overlay">
       <div class="popup">
         <a class="close" href="#">&times;</a>
-        <div class="content">
           <%= simple_form_for [@journal, @entry] do |m| %>
           <%= m.input :goal %>
         <% end %>
-      </div>
     </div>
   </div>
     <% @entries.each do |entry| %>
@@ -39,14 +37,10 @@
     </div>
   <div id="popup<%= entry.id %>" class="overlay">
     <div class="popup">
-      <h2>
-        <%= entry.goal %></h2>
       <a class="close" href="#">&times;</a>
-      <div class="content">
         <%= simple_form_for [entry, Milestone.new] do |m| %>
         <%= m.input :title, label: false, :class => "form-textfield" %>
       <% end %>
-    </div>
   </div>
 </div>
 <% end %>

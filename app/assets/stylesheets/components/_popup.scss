@@ -1,13 +1,9 @@
 #milestone_title {
 }
 
+
 .box {
-  // width: 40%;
   margin: 0 auto;
-  // padding: 35px;
-  // border-radius: 20px/50px;
-  // background-clip: padding-box;
-  // text-align: center;
 }
 
 
@@ -41,7 +37,7 @@
 
 .popup {
   margin: 70px auto;
-  padding: 20px;
+  padding: 50px 0px 30px 0px;
   background: #fff;
   border-radius: 15px;
   border-right:5px solid #E5E5E5;
@@ -49,6 +45,7 @@
   width: 400px;
   position: relative;
 }
+
 
 
 .popup .close {
@@ -97,12 +94,3 @@
   max-height: 30%;
   overflow: auto;
 }
-
-// @media screen and (max-width: 700px){
-//   .box{
-//     width: 20px;
-//   }
-//   .popup2{
-//     width: 400px;
-//   }
-// }
