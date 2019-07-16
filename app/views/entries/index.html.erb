@@ -1,58 +1,53 @@
-<% title  @journal.title.capitalize %>
-<h2><%= @journal.title.capitalize %></h2>
-<div class="box">
-  <a class="button" href="#popup1">Add A Goal</a>
-</div>
-
-<div id="popup1" class="overlay">
-  <div class="popup">
-    <h2>Goal</h2>
-    <a class="close" href="#">&times;</a>
-    <div class="content">
-      <%= simple_form_for [@journal, @entry] do |m| %>
-      <%= m.input :goal %>
-      <% end %>
+<div class="card-journal-book">
+    <div class="card-journal-book-top">
+      <div class="card-journal-book-text">
+          <h2><%= @journal.title.capitalize %></h2>
+          <a href="#popup1">Add A Goal</a>
+      </div>
+    <div class="card-journal-book-trophies">
+      NICE
     </div>
-  </div>
-</div>
-
-<% @entries.each do |entry| %>
-
-  <button class="collapsible">
-    <h4><%= entry.goal %><%= entry.time %></h4>
-    <a class="button" href="#popup<%= entry.id %>">+</a>
-  </button>
-
-  <div class="content">
-    <%# <%=  link_to entry.goal.capitalize, entry_path(entry), :class => "link-title" %>
-    <% entry.milestones.each do |milestone| %>
-      <%= simple_form_for([milestone, Pomodoro.new]) do |m| %>
-        <div class="group-collapse">
-            <!-- <i class="far fa-clock"></i> -->
-          <p><%= milestone.title %></p>
-          <%= button_tag do %>
-            <i class="far fa-clock"></i>
-          <% end %>
-        </div>
-      <% end %>
-    <% end %>
-  </div>
-
-  <div id="popup<%= entry.id %>" class="overlay">
-    <div class="popup">
-      <h2>Enter a Milestone for <%= entry.goal %></h2>
-      <a class="close" href="#">&times;</a>
-      <div class="content">
-        <%= simple_form_for [entry, Milestone.new] do |m| %>
-            <%= m.input :title, label: false, :class => "form-textfield" %>
-            <% end %>
+      </div>
+    <div id="popup1" class="overlay">
+      <div class="popup">
+        <a class="close" href="#">&times;</a>
+        <div class="content">
+          <%= simple_form_for [@journal, @entry] do |m| %>
+          <%= m.input :goal %>
+        <% end %>
       </div>
     </div>
   </div>
+    <% @entries.each do |entry| %>
+      <button class="collapsible">
+        <h3><%= entry.goal %><br></h3>
+          <h4><%= entry.time %></h4>
+        <a class="button" href="#popup<%= entry.id %>">+</a>
+      </button>
+      <div class="content">
+          <% entry.milestones.each do |milestone| %>
+            <%= simple_form_for([milestone, Pomodoro.new]) do |m| %>
+            <div class="group-collapse">
+              <p><%= milestone.title %></p>
+              <%= button_tag do %>
+              <i class="far fa-clock"></i>
+            <% end %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+
+  <div id="popup<%= entry.id %>" class="overlay">
+    <div class="popup">
+      <h2>
+        <%= entry.goal %></h2>
+      <a class="close" href="#">&times;</a>
+      <div class="content">
+        <%= simple_form_for [entry, Milestone.new] do |m| %>
+        <%= m.input :title, label: false, :class => "form-textfield" %>
+      <% end %>
+    </div>
+  </div>
+</div>
 <% end %>
-
-<!-- </div> -->
-
-
-
-
+</div>
