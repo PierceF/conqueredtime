@@ -41,20 +41,39 @@
       </div>
     </div>
   </div>
+
   <div id="options">
     <div id="session">
-      <!-- <i id="incrSession" class="fas fa-angle-double-up"></i> -->
-      <!-- <span class="option-title">Your session is</span>
-      <input id="sessionInput" type="number" value="25" max="25" min="25">
-      <span class="option-title" style="margin-top: 0px;">minutes</span>
+      <span class="option-title">time up</span>
+      <i id="incrSession" class="fas fa-angle-double-up"></i>
+      <input class="hidden" id="sessionInput" type="number" value="25" max="25" min="25">
+
       <i id="decrSession" class="fas fa-angle-double-down"></i>
+      <span class="option-title" style="margin-top: -3px;">time down</span>
+    </div>
+
+    <!-- <div id="break">
+      <i id="incrBreak" class="fas fa-angle-double-up"></i>
+      <span class="option-title">Break</span>
+      <input id="breakInput" type="number" value="5" max="5" min="5">
+      <i id="decrBreak" class="fas fa-angle-double-down"></i>
     </div> -->
-    <!-- <div id="break"> -->
-      <!-- <i id="incrBreak" class="fas fa-angle-double-up"></i> -->
-      <!-- <span class="option-title">Break</span> -->
-      <!-- <input id="breakInput" type="number" value="5" max="5" min="5"> -->
-      <!-- <i id="decrBreak" class="fas fa-angle-double-down"></i> -->
-    <!-- </div> -->
   </div>
 </div>
 </div>
+<script>
+const time = 25;
+window.time = time;
+const up = document.getElementById("incrSession");
+up.addEventListener("click", (event)=> {
+  window.time += 1;
+  document.getElementById("minutes").innerText = window.time;
+  document.getElementById("sessionInput").value = window.time;
+});
+const down = document.getElementById("decrSession");
+down.addEventListener("click", (event)=> {
+  window.time -= 1;
+  document.getElementById("minutes").innerText = window.time;
+  document.getElementById("sessionInput").value = window.time;
+});
+</script>
