@@ -31,7 +31,7 @@ $(() => {
   init();
 
   function init() {
-    // $audio.prop("volume", 0);
+    $audio.prop("volume", 0);
     console.log($incrSession);
     $incrSession.click(() => incrSession());
     $decrSession.click(() => decrSession());
@@ -86,12 +86,14 @@ $(() => {
         if (countType === 'session') {
           // startBreak(breakLength);
           // if sessiong finished by time Display the button Confirm your session
+          $audio[0].play();
+          $audio.animate({ volume: 1 }, 3000);
           done();
         } else {
           startSession();
         }
       }
-    }, 20);
+    }, 1);
   }
   function done() {
     sessionNum--;
