@@ -17,7 +17,7 @@
           <%= simple_form_for @pomodoro, remote: true do |f| %>
             <%= f.input :action, as: :hidden, input_html: { value: 'start' } %>
             <%= button_tag :class => 'btn-tag' do %>
-              <i class="fas fa-play"></i> Start
+            <p>Start</p>
             <% end %>
           <% end %>
         </div>
@@ -26,14 +26,14 @@
           <%= simple_form_for @pomodoro, remote: true do |f| %>
             <%= f.input :action, as: :hidden, input_html: { value: 'done' } %>
             <%= button_tag :class => 'btn-tag' do %>
-              <i class="fas fa-check"></i> I am done
+            <p>Done</p>
             <% end %>
           <% end %>
         </div>
 
         <div id="back">
           <%= link_to milestone_path(@milestone, pomodoro_id: @pomodoro.id) do %>
-          <i class="fas fa-chevron-circle-left"></i> To journal
+          <p>To Entries</p>
           <% end %>
         </div>
       </div>
