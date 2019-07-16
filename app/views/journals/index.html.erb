@@ -8,7 +8,6 @@
       </div>
       <div class="card-journal-trophies">
         <div class="trophies">
-          <p>9 m</p>
           <i class="fas fa-clock"></i>
         </div>
 
@@ -19,12 +18,12 @@
 
         <div class="times">
           <p><%= journal.focus_sessions %></p>
-          <i class="fab fa-apple"></i>
+          <i class="fas fa-history"></i>
         </div>
 
         <div class="something">
           <p> <%= journal.star_average %> </p>
-          <i class="fas fa-address-book"></i>
+        <i class="fas fa-star"></i>
         </div>
       </div>
 
@@ -51,7 +50,7 @@
     <label class="hidden" for="title">Title:
     </label>
 
-    <input class="form-textfield" type="text" placeholder="Eg: Health, Fitness, School, Career.. " name="journal[title]" id="title">
+    <input class="form-textfield" type="text" name="journal[title]" id="title">
  <input type="hidden" id="helpUser" name="helpUser" value=true>
 <div class="button-margin">
     <input class="form-submit" value="Make a new Journal" type="submit">
