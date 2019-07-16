@@ -1,6 +1,7 @@
 class Entry < ApplicationRecord
   belongs_to :journal
   has_many :milestones, dependent: :destroy
+  has_many :pomodoros, through: :milestones
   accepts_nested_attributes_for :milestones, reject_if: proc { |attributes| attributes['title'].blank? }
 
   def last_three_milestones
@@ -45,18 +46,14 @@ class Entry < ApplicationRecord
   end
 
   def star_average
-    if entries.pomodoros.all.count.positive?
-      count = 0
+    if pomodoros.count.positive?
       rating = 0
-      entries.each do |entry|
-        if entry.stars.integer?
-          rating += entry.stars
-          count += 1
-        end
+      pomodoros.each do |pomodoro|
+        rating += pomodoro.stars
       end
-      rating / count
+      (rating.to_f / pomodoros.count).round(2)
     else
-      "placeholder"
+      nil
     end
   end
 end

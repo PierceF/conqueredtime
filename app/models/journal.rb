@@ -3,6 +3,7 @@ class Journal < ApplicationRecord
   has_many :entries, dependent: :destroy
   has_many :achievements, dependent: :destroy
   has_many :trophies, through: :achievements
+  has_many :pomodoros, through: :entries
 
   def last_three_entries
     entries.order("DATE_TRUNC('second', updated_at) desc, id asc").limit(3)
@@ -47,10 +48,14 @@ class Journal < ApplicationRecord
   end
 
   def star_average
-    average = 0
-    entries.each do |entry|
-      average += entry.star_average
+    if pomodoros.count.positive?
+      rating = 0
+      pomodoros.each do |pomodoro|
+        rating += pomodoro.stars
+      end
+      (rating.to_f / pomodoros.count).round(2)
+    else
+      nil
     end
-    average / entries.all.count
   end
 end

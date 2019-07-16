@@ -38,14 +38,14 @@ class Milestone < ApplicationRecord
   end
 
   def star_average
-    if pomodoros.all.count.positive?
+    if pomodoros.count.positive?
       rating = 0
       pomodoros.each do |pomodoro|
         rating += pomodoro.stars
       end
-      rating / pomodoros.all.count
+      (rating.to_f / pomodoros.all.count).round(2)
     else
-      "placeholder"
+      nil
     end
   end
 end
