@@ -1,139 +1,91 @@
 .card-journal {
+
   width:400px;
-  height:270px;
+  min-height:90vh;
+  background:white;
   border-radius:15px;
   box-shadow: 15px 10px 10px rgba(0,0,0,0.2);
-  background: #EF959D;
-  border-bottom: 5px solid #C47A81;
-  border-right: 5px solid #C47A81;
+  background: white;
+  border-bottom: 5px solid #E5E5E5;
+  border-right: 5px solid #E5E5E5;
   margin:30px auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
 }
 
-.card-create-journal p {
-  font-size:18px;
-  font-weight:200;
-}
-
-
-
-.card-journal-text {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width:400px ;
-  height:40px;
-  margin:10px 0px;
-}
-
-
-.card-journal-entries {
-  width:400px;
+.card-journal-top h2 {
+  color:#69585F;
   font-weight:800;
-  height:50px;
+}
+
+.card-journal-top {
+  height:100px;
+  background: #f4f4f4;
+  border-radius:15px 15px 0px 0px;
+  width:100%;
   display: flex;
-  flex-direction: column;
-  margin:10px 20px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card-journal-top img {
+  width:80px;
+  height:80px;
+  border-radius:50%;
+
 }
 
 .card-journal-trophies {
   display:flex;
-  align-items:flex-end;
-  justify-content:center;
-  height:30px;
+  height:100px;
   width:100%;
-}
-
-.trophies, .time, .times, .something {
-  margin: 5px 10px;
-}
-
-.trophies {
-  display: flex;
-  flex-direction: column;
-  font-size:30px;
-  color:white;
+  background: #EF959D;
+  justify-content: space-around;
   text-align: center;
+  color:white;
+  // border-bottom:5px solid #DA888F;
 }
-.trophies p {
+
+.card-journal-trophies p {
+  color:white;
   font-weight:800;
 }
 
-.time p {
-  font-weight:800;
-}
-
-.time {
+.card-journal-entries {
+  margin:20px 20px;
   display: flex;
-  flex-direction: column;
-  font-size:30px;
-  color:white;
-  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+      border-bottom:1px solid #ECECEC;
 }
 
-.times {
-  display:flex;
-  flex-direction: column;
-  font-size:30px;
-  color:white;
+.card-journal-entries p {
   font-weight:800;
+  color:#69585F;
 }
 
-.something {
-  display: flex;
-  flex-direction: column;
-  font-size:30px;
-  color:white;
-  font-weight:800;
+.card-journal-entries h3 {
+  font-weight:400;
+  color:#69585F;
+  font-size:16px;
 }
 
-
-.card-journal p {
-  color:white;
-
-}
-
-.card-journal h2 {
-  color:white;
-}
-
-.group-trophies {
+.card-journal-show-entries {
+  background: #B8D8BA;
+  width: 250px;
+  height:60px;
+  border-radius:0px 15px 15px 0px;
   display:flex;
-}
-
-.card-own-journal {
-  margin: 0 auto;
-  background: white;
-  height:500px;
-  width:400px;
-  border-radius:20px;
-  box-shadow: 15px 10px 10px rgba(0,0,0,0.2);
-  border-bottom: 5px solid #E8E8E8;
-  border-right: 5px solid #E8E8E8;
-}
-
-.card-own-journal-text {
-  display:flex;
-  width:100%;
-  display: flex;
+  justify-content: center;
   align-items:center;
-  text-align: center;
 }
 
-.card-own-journal-text p {
-    font-size:18px;
-    font-weight:200;
+.card-journal-show-entries p {
+  font-weight:800;
+  color:white;
+
 }
 
-.card-own-journal img {
-  width:63px;
-  height:224px;
-}
-
-.card-own-journal-button {
-  width:100%;
-  text-align: center;
-  border-top:none !important;
+.card-journal-show-entries-wrapper {
+  display: flex;
+  height:400px;
+  align-items: center;
 }

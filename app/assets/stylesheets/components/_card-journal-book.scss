@@ -6,6 +6,7 @@
   border-radius:15px;
   border-right:5px solid #E5E5E5;
   border-bottom:5px solid #E5E5E5;
+  box-shadow: 15px 10px 10px rgba(0,0,0,0.2);
 }
 
 .card-journal-book-top {
@@ -27,11 +28,20 @@ padding: 20px 20px;
   font-size:16px;
 }
 
+.card-journal-book-text a:hover {
+  color:#959595;
+  font-weight: 800;
+  font-size:16px;
+}
+
 .card-journal-book-trophies {
   border-radius:15px 0px 0px 15px;
   background: #EFEFEF;
   height:120px;
   width:150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card-journal-book h4 {
@@ -39,10 +49,37 @@ padding: 20px 20px;
   text-align: left;
 }
 
+.card-journal-book h2 {
+  color:#69585F;
+  font-weight:800;
+}
 
 .card-journal-book h3{
   font-size:16px;
   font-weight:800;
   color:white;
   text-align:left;
+}
+
+.card-journal-book-entries {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card-journal-book-add {
+  background: #B8D8BA;
+  height:60px;
+  width:230px;
+  border-radius:0px 15px 15px 0px;
+  display: flex;
+  align-items: center;
+  padding:0 20px;
+  margin-bottom:10px;
+}
+
+.card-journal-book-add a{
+  font-weight:800;
+  color:white;
+  font-size:16px;
 }
