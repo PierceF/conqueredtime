@@ -45,10 +45,14 @@ class Entry < ApplicationRecord
   end
 
   def star_average
-    average = 0
-    milestones.each do |milestone|
-      average += milestone.star_average
+    if entries.pomodoros.all.count.positive?
+      rating = 0
+      entries.each do |entry|
+        rating += entry.stars
+      end
+      rating / entry.all.count
+    else
+      "placeholder"
     end
-    average / milestones.all.count
   end
 end
