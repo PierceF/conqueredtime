@@ -31,15 +31,12 @@
           <i class="fas fa-address-book"></i>
         </div>
       </div>
-      <% journal.last_three_entries.each do |entry| %>
-  <div class="card-journal-entries">
-    <p><%= entry.goal %></p>
-    <h3> <%= journal.time %></h3>
-  </div>
-<% end %>
+
+<div class="card-journal-show-entries-wrapper">
 <div class="card-journal-show-entries"">
-  <p>All Entries</p>
+  <p>Continue</p>
 </div>
+  </div>
   </div>
 <% end %>
 <% end %>
