@@ -41,9 +41,9 @@ class Journal < ApplicationRecord
     elsif seconds >= 60
       minutes = seconds / 60
       seconds = seconds % 60
-      "#{minutes} min #{seconds} sec"
+      "#{minutes} m #{seconds} s"
     else
-      "#{seconds} sec"
+      "#{seconds} s"
     end
   end
 
