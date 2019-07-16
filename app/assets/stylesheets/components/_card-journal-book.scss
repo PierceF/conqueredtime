@@ -6,6 +6,7 @@
   border-radius:15px;
   border-right:5px solid #E5E5E5;
   border-bottom:5px solid #E5E5E5;
+  box-shadow: 15px 10px 10px rgba(0,0,0,0.2);
 }
 
 .card-journal-book-top {
@@ -48,6 +49,10 @@ padding: 20px 20px;
   text-align: left;
 }
 
+.card-journal-book h2 {
+  color:#69585F;
+  font-weight:800;
+}
 
 .card-journal-book h3{
   font-size:16px;
