@@ -3,12 +3,12 @@
     <div class="scroll-effect">
       <div class="card-large">
         <div class="card-pomodoro-inner">
-          <h3>Great job!</h3>
-          <h4>You've worked on
+          <h3>Great Job!</h3>
+          <p>You've worked on
             <%= @entry.goal.split.map(&:capitalize).join(' ') %>
             for
             <%= @milestone.time %>
-            How was the quality of your focus?</h4>
+            How was the quality of your focus?</p>
           <%= @milestone.stars %>
           <%= simple_form_for [@pomodoro] do |f| %>
           <div class="container">
@@ -130,13 +130,7 @@
   </div>
 </div>
 
-Click here to do another focus session
-        <%= simple_form_for([@milestone, Pomodoro.new]) do |m| %>
-          <!-- <i class="far fa-clock"></i> -->
-          <%= button_tag do %>
-          <i class="far fa-clock"></i>
-          <% end %>
-          <% end %>
+
   </div>
 </div>
 </div>
