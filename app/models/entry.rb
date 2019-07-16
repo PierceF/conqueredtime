@@ -46,11 +46,15 @@ class Entry < ApplicationRecord
 
   def star_average
     if entries.pomodoros.all.count.positive?
+      count = 0
       rating = 0
       entries.each do |entry|
-        rating += entry.stars
+        if entry.stars.integer?
+          rating += entry.stars
+          count += 1
+        end
       end
-      rating / entry.all.count
+      rating / count
     else
       "placeholder"
     end
