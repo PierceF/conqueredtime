@@ -58,4 +58,8 @@ class Journal < ApplicationRecord
       nil
     end
   end
+
+  def focus_sessions
+    pomodoros.all.count
+  end
 end
