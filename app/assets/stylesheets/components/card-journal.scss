@@ -30,7 +30,7 @@
   width:80px;
   height:80px;
   border-radius:50%;
-
+  background: white;
 }
 
 .card-journal-trophies {
@@ -39,14 +39,24 @@
   width:100%;
   background: #EF959D;
   justify-content: space-around;
+  align-items: center;
   text-align: center;
   color:white;
   // border-bottom:5px solid #DA888F;
 }
 
+.card-journal-trophies i {
+  font-size:30px;
+}
+
+.card-journal i {
+  color:white;
+}
+
 .card-journal-trophies p {
   color:white;
   font-weight:800;
+  color:white;
 }
 
 .card-journal-entries {

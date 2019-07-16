@@ -35,17 +35,18 @@ class MilestonesController < ApplicationController
   end
 
   def create_badge
-    Trophy.find_by Trophy.name == "Wow awesome job! Have a trophy.".nil?
-    if @journal.journal_minutes >= 300
-      Achievement.create!(journal_id: @journal.id, trophy: (Trophy.find_by Trophy.name == "Wow awesome job! Have a trophy."))
-    end
+    return false unless (@journal.trophies.find_by name: "Wow awesome job! Have a trophy.").nil?
+
+    return false unless @journal.journal_minutes >= 300
+
+    Achievement.create!(journal_id: @journal.id, trophy: (Trophy.find_by name: "Wow awesome job! Have a trophy."))
   end
 
   def find_achievements
     @achievements.each do |achievement|
-      if achievement.trophy.shown == false
-        achievement.trophy.shown = true
-        achievement.trophy.save!
+      if achievement.shown == false
+        achievement.shown = true
+        achievement.save!
         @trophies << achievement.trophy
       end
     end

@@ -35,7 +35,7 @@ class Entry < ApplicationRecord
       minutes = minutes % 60
       seconds = seconds % 60
 
-      "#{hours}h #{minutes}m #{seconds}s"
+      "#{hours}h #{minutes}m"
     elsif seconds >= 60
       minutes = seconds / 60
       seconds = seconds % 60
@@ -48,10 +48,14 @@ class Entry < ApplicationRecord
   def star_average
     if pomodoros.count.positive?
       rating = 0
+      count = 0
       pomodoros.each do |pomodoro|
-        rating += pomodoro.stars
+        unless pomodoro.stars == nil
+          rating += pomodoro.stars
+          count += 1
+        end
       end
-      (rating.to_f / pomodoros.count).round(2)
+      (rating.to_f / count).round(2)
     else
       nil
     end
