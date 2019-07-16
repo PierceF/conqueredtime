@@ -11,18 +11,18 @@ $(() => {
   const $done = $('#done');
   const $reset = $('#reset');
   const $back = $('#back');
-  // $incrSession = $("#incrSession"),
+  const $incrSession = $("#incrSession");
   const $sessionInput = $('#sessionInput');
-  // $decrSession = $("#decrSession"),
+  const $decrSession = $("#decrSession");
   // $incrBreak = $("#incrBreak"),
   // $breakInput = $("#breakInput"),
   // $decrBreak = $("#decrBreak"),
   // breakLength = 5 * 60,
   // breakMax = 5,
   // breakMin = 5,
-  let sessionLength = 25 * 60;
-  const sessionMax = 25;
-  const sessionMin = 25;
+  let sessionLength = window.time * 60;
+  const sessionMax = 60;
+  const sessionMin = 1;
   let sessionNum = 0;
   let countdown;
   let countType;
@@ -32,8 +32,9 @@ $(() => {
 
   function init() {
     // $audio.prop("volume", 0);
-    // $incrSession.click(() => incrSession());
-    // $decrSession.click(() => decrSession());
+    console.log($incrSession);
+    $incrSession.click(() => incrSession());
+    $decrSession.click(() => decrSession());
     // $incrBreak.click(() => incrBreak());
     // $decrBreak.click(() => decrBreak());
     // $sessionInput.on("change", e => updateSession(e.target.value));
@@ -90,7 +91,7 @@ $(() => {
           startSession();
         }
       }
-    }, 1000);
+    }, 20);
   }
   function done() {
     sessionNum--;
@@ -121,24 +122,25 @@ $(() => {
   //   $title.html("Ready?");
   //   remainingTime = sessionLength;
   // }
-  // function incrSession(){
-  //   let num = Number($sessionInput.val());
-  //   num = num + (num === sessionMax ? 0 : 1);
-  //   sessionLength = num * 60;
-  //   updateSession(num);
-  //   updateMinutes(num);
-  //   updateSeconds("00");
-  //   reset();
-  // }
-  // function decrSession(){
-  //   let num = Number($sessionInput.val());
-  //   num = num - (num === sessionMin ? 0 : 1);
-  //   sessionLength = num * 60;
-  //   updateSession(num);
-  //   updateMinutes(num);
-  //   updateSeconds("00");
-  //   reset();
-  // }
+
+  function incrSession(){
+    let num = Number($sessionInput.val());
+    num = num + (num === sessionMax ? 0 : 1);
+    sessionLength = num * 60;
+    updateSession(num);
+    updateMinutes(num);
+    updateSeconds("00");
+    reset();
+  }
+  function decrSession(){
+    let num = Number($sessionInput.val());
+    num = num - (num === sessionMin ? 0 : 1);
+    sessionLength = num * 60;
+    updateSession(num);
+    updateMinutes(num);
+    updateSeconds("00");
+    reset();
+  }
   // function incrBreak(){
   //   let num = Number($breakInput.val());
   //   num = num + (num === breakMax ? 0 : 1);
@@ -167,9 +169,9 @@ $(() => {
     sessionLength = num * 60;
     reset();
   }
-  function updateBreak(num) {
-    $breakInput.val(num < breakMin ? breakMin : num > breakMax ? breakMax : num).blur();
-    breakLength = num * 60;
-    reset();
-  }
+  // function updateBreak(num) {
+  //   $breakInput.val(num < breakMin ? breakMin : num > breakMax ? breakMax : num).blur();
+  //   breakLength = num * 60;
+  //   reset();
+  // }
 });
