@@ -1,3 +1,6 @@
+
+
+
 .card-journal-book {
   margin:0 auto;
   min-height:90vh;
@@ -7,6 +10,16 @@
   border-right:5px solid #E5E5E5;
   border-bottom:5px solid #E5E5E5;
   box-shadow: 15px 10px 10px rgba(0,0,0,0.2);
+}
+
+
+.card-journal-book i {
+  font-size:24px;
+}
+
+.card-journal-book p {
+  font-size:20px;
+  font-weight:400;
 }
 
 .card-journal-book-top {
