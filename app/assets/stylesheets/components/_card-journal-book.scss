@@ -66,3 +66,18 @@ padding: 20px 20px;
   justify-content: center;
   flex-direction: column;
 }
+
+.card-journal-book-add {
+  background: #B8D8BA;
+  height:60px;
+  width:250px;
+  border-radius:0px 15px 15px 0px;
+  display: flex;
+  align-items: center;
+}
+
+.card-journal-book-add a{
+  font-weight:800;
+  color:white;
+  font-size:16px;
+}
