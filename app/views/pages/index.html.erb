@@ -1,10 +1,21 @@
 
 
-<%= @users.first.username %>
-<%= @users.second.username %>
-<%= @users.third.username %>
+<p>1st PLACE! GOOD JOB <%= @users.first.username %> with <%= @users.first.user_minutes %> minutes</p>
+<img src=<%= @users.first.avatar %> alt="Avatar" class="avatar">
+<p>2nd PLACE! GOOD JOB <%= @users.second.username %> with <%= @users.second.user_minutes %> minutes</p>
+<img src=<%= @users.second.avatar %> alt="Avatar" class="avatar">
 
+
+<p>3rd PLACE! GOOD JOB <%= @users.third.username %> with <%= @users.third.user_minutes %> minutes</p>
+<img src=<%= @users.third.avatar %> alt="Avatar" class="avatar">
+<br>
           <% @not_podium.each do |user| %>
-
+<% if user.avatar == nil %>
+<% then %>
+<p> <%= user.username %>: <%= user.user_minutes %> minutes</p>
+<img src="https://res.cloudinary.com/doem0zjpf/image/upload/v1562650336/maskCopy2_3x_vreuag.png" alt="Avatar" class="avatar">
+            <% else %>
             <p><%= user.username %>: <%= user.user_minutes %> minutes</p>
+            <img src=<%= user.avatar %> alt="Avatar" class="avatar">
               <% end %>
+<% end %>
