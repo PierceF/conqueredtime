@@ -1,7 +1,7 @@
 <div class="card-create-journal">
     <div class="group-new">
       <img class="fade-in" src="https://res.cloudinary.com/doem0zjpf/image/upload/v1563001489/nice_try_bzisao.png" alt="">
-      <p>Select which journal to track your goal in, or create a new journal at the bottom.</p>
+      <p> <span class="style-inline"> Let's begin! </span><br> Select which journal to track your goal in, or create a new journal at the bottom.</p>
     </div>
 </div>
 
@@ -15,12 +15,15 @@
       <% end %>
       <div class="card-journal-trophies">
           <div class="times">
-          <i class="fas fa-trophy"></i>
+              <p><%= journal.time %></p>
+            <i class="fas fa-hourglass-end"></i>
           </div>
-        <div class="time">
-          <i class="fas fa-hourglass-end"></i>
+          <div class="time">
+          <p><%= journal.focus_sessions %></p>
+          <i class="fas fa-history"></i>
           </div>
           <div class="apple">
+            <p> <%= journal.star_average %> </p>
           <i class="fas fa-star"></i>
           </div>
       </div>
@@ -38,7 +41,7 @@
 
 <div class="card-own-journal">
 <div class="card-own-journal-text">
-<p>Feel free to create your own journal. Remember the title should be a broad subject you wish to work on, like the examples above.</p>
+<p> <span class="style-inline">Hey!</span><br> Feel free to create your own journal. Remember the title should be a broad subject you wish to work on, like the examples above.</p>
 <div class="image-create">
   <img src="https://res.cloudinary.com/doem0zjpf/image/upload/v1563108730/reverze_cuytoz.png" alt="">
 </div>
