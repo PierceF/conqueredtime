@@ -39,6 +39,7 @@
   padding:10px 20px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .group-collapse button {
@@ -50,7 +51,7 @@
 }
 
 .group-collapse i {
-  font-size:16px;
+  font-size:30px;
   color:white;
   margin:0px;
 }
