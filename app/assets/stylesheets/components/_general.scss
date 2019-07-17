@@ -16,12 +16,17 @@ border-bottom:1px solid #C6C6C6;
   margin: 40px auto;
 }
 
-html { 
+html {
   scroll-behavior: smooth;
 }
 
 button {
   margin:0px;
+}
+
+i {
+  outline-color:none !important;
+  outline: none !important;
 }
 
 .style-inline {
@@ -44,6 +49,7 @@ button {
 h1, h2, h3 {
   margin:0px;
   color:#3d3c38;
+  font-weight:800;
 }
 
 
