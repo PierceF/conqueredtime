@@ -29,7 +29,7 @@ class Entry < ApplicationRecord
 
   def time
     seconds = self.entry_minutes
-    if seconds >= 60 * 60
+    if seconds >= 60
       minutes = seconds / 60
       hours = minutes / 60
       minutes = minutes % 60
