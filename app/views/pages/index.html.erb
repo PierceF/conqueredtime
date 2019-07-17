@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="leaderboard-card">
   <h2>Leaderboard</h2>
 <% @users.each_with_index do |user| %>
@@ -7,3 +8,15 @@
     </div>
 <% end %>
 </div>
+=======
+
+
+<%= @users.first.username %>
+<%= @users.second.username %>
+<%= @users.third.username %>
+
+          <% @not_podium.each do |user| %>
+
+            <p><%= user.username %>: <%= user.user_minutes %> minutes</p>
+              <% end %>
+>>>>>>> 7e6eeaa3e4172adbbf844bea38db4c5377a3ab5a

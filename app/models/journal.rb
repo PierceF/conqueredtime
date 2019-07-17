@@ -66,4 +66,8 @@ class Journal < ApplicationRecord
   def focus_sessions
     pomodoros.all.count
   end
+
+  def trophies
+    achievements.all.count
+  end
 end
