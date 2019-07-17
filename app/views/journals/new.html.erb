@@ -15,12 +15,15 @@
       <% end %>
       <div class="card-journal-trophies">
           <div class="times">
-          <i class="fas fa-trophy"></i>
+              <p><%= journal.time %></p>
+            <i class="fas fa-hourglass-end"></i>
           </div>
-        <div class="time">
-          <i class="fas fa-hourglass-end"></i>
+          <div class="time">
+          <p><%= journal.focus_sessions %></p>
+          <i class="fas fa-history"></i>
           </div>
           <div class="apple">
+            <p> <%= journal.star_average %> </p>
           <i class="fas fa-star"></i>
           </div>
       </div>
