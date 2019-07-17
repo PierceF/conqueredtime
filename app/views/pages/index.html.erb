@@ -1,0 +1,10 @@
+
+
+<%= @users.first.username %>
+<%= @users.second.username %>
+<%= @users.third.username %>
+
+          <% @not_podium.each do |user| %>
+
+            <p><%= user.username %>: <%= user.user_minutes %> minutes</p>
+              <% end %>

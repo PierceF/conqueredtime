@@ -14,4 +14,3 @@ window.$ = $;
 import { initCollapsible } from '../components/collapsible.js';
 
 initCollapsible();
-

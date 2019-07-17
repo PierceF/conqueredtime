@@ -4,11 +4,11 @@
       <div class="card-large">
         <div class="card-pomodoro-inner">
           <h3>Great Job!</h3>
-          <p>You've worked on
+          <p>This session was <%= @pomodoro.time %> long and you have worked on
             <%= @entry.goal.split.map(&:capitalize).join(' ') %>
             for
-            <%= @milestone.time %>
-            How was the quality of your focus?</p>
+            <%= @milestone.time %> total.</p>
+            <p>How was the quality of your focus?</p>
           <%= @milestone.stars %>
           <%= simple_form_for [@pomodoro] do |f| %>
           <div class="container">
