@@ -42,6 +42,7 @@
 
 .first-place-boi {
   display: flex;
+  flex-direction: column;
 }
 
 
@@ -59,6 +60,16 @@
 
 .rest-place {
   font-size:20px;
+}
+
+.last-places {
+  margin-top:20px;  
+}
+
+.last-places p {
+    font-weight:800;
+    color:#69585F;
+
 }
 
 .top-3 {
