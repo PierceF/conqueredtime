@@ -37,7 +37,7 @@ class PomodorosController < ApplicationController
       if params[:pomodoro][:action] == 'start'
         @pomodoro.start = Time.now
       elsif params[:pomodoro][:action] == 'done'
-        @pomodoro.end = Time.now
+        @pomodoro.end = @pomodoro.start + 25.minutes
       end
     else
       @pomodoro.stars = params["stars"]
@@ -47,3 +47,5 @@ class PomodorosController < ApplicationController
     @pomodoro.save!
   end
 end
+
+# line 40 - change back after prezi @pomodoro.end = Time.now

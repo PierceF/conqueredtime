@@ -57,7 +57,7 @@ $(() => {
   function startSession() {
     sessionNum++;
     countType = 'session';
-    $options.slideUp(143);
+    // $options.slideUp(143);
     $controls.removeClass().addClass('started');
     $title.fadeOut(43, function () {
     $(this).html(`Session`).fadeIn();    });
@@ -94,7 +94,7 @@ $(() => {
           startSession();
         }
       }
-    }, 10);
+    }, 80);
   }
   function done() {
     sessionNum--;

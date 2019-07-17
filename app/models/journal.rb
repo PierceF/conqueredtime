@@ -67,7 +67,7 @@ class Journal < ApplicationRecord
     pomodoros.all.count
   end
 
-  def trophies
+  def trophies_number
     achievements.all.count
   end
 end
