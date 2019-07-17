@@ -65,9 +65,6 @@
 
 .card-journal-entries {
 width:400px;
-display: flex;
-
-
 }
 .card-journal-entries p {
   font-weight:800;
@@ -94,5 +91,11 @@ display: flex;
 .card-journal-show-entries p {
   font-weight:800;
   color:white;
+}
 
+.card-journal-entries-group {
+  display: flex;
+  justify-content: space-between;
+  width:300px;
+  margin:0 auto;
 }
