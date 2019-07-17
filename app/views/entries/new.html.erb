@@ -4,14 +4,14 @@
       <% title "New Journal Entry" %>
       <div class="card-for-entries-inner ">
           <img src="https://res.cloudinary.com/doem0zjpf/image/upload/v1563001489/nice_try_bzisao.png" alt="">
-        <p>Great! Let's create a goal that's specific to
+        <p><span class="style-inline">Great choice!</span><br> Let's create a goal that's specific to
           <%= @journal.title.capitalize %>, then we will create some milestones to help accomplish that goal.</p>
       </div>
       <div class="card-for-entries-form">
         <%= simple_form_for [@journal, @entry] do |m| %>
           <%= m.input :goal %>
           <div class="card-for-entries-button">
-        <a href="#" class="button-scroll form-submit">Create</a>
+        <a href="#scroll-button" class="form-submit">Create</a>
         </div>
       </div>
     </div>
@@ -20,7 +20,7 @@
   <div id="scroll-button" class="group-creation2">
     <div class="card-for-milestones">
       <div class="card-for-milestones-inner">
-        <p>Last step! List 1, 2, or 3 actions, habits, or benchmarks that will bring you closer to your goal.</p>
+        <p><span class="style-inline"> Last step!</span><br> List 1, 2, or 3 actions, habits, or benchmarks that will bring you closer to your goal.</p>
         <img src="https://res.cloudinary.com/doem0zjpf/image/upload/v1563108730/reverze_cuytoz.png" alt="">
         </div>
         <%= m.simple_fields_for :milestones do |p| %>

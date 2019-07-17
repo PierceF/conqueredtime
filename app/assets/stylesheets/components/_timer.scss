@@ -1,4 +1,8 @@
 
+#session {
+  margin-right:80px;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -13,34 +17,31 @@ a {
 #milestone {
   h2 {
     padding-top: 20px;
-    color: #FF4980;
-    font-size: 28px;
+    color: #69585F;
+    font-size: 40px;
     line-height: 28px;
     margin: 3px 0 1px;
+    text-align: center;
+    font-weight:800;
   }
 }
 #pomodoro {
   margin-top: -65px;
   margin-bottom: 43px;
   max-width: 512px;
+  margin-left:38px;
   width: 100%;
   position: relative;
   right: 40px;
   #clock {
-    background: url(http://joeweaver.me/codepenassets/freecodecamp/challenges/build-a-pomodoro-clock/bg.png) no-repeat center center;
     background-size: contain;
     display: flex;
     justify-content: center;
     margin-bottom: -6.25vw;
-    padding: 40vw 0;
+    padding: 45vw 0;
     @media all and (min-width: 512px){
       margin-bottom: -32px;
-      padding: 204px 0;
-    }
-    @media all and (max-width: 184px){
-      margin-bottom: -20px;
-      margin-bottom: -11.5px;
-      padding: 73px 0;
+      padding: 213px 0;
     }
     #timer {
       $hover: 5;
@@ -49,7 +50,7 @@ a {
       display: flex;
       flex-direction: column;
       #title {
-        color: #FF8B8A;
+        color: #EF959D;
         font-size: 28px;
         line-height: 28px;
         margin: 3px 0 1px;
@@ -63,7 +64,7 @@ a {
         }
       }
       #countdown {
-        color: #ff778d;
+        color: #EF959D;
         display: flex;
         font-size: 43px;
         font-weight: 600;
@@ -83,7 +84,7 @@ a {
       #controls {
         align-items: center;
         display: flex;
-        color: #FF6292;
+        color: #EF959D;
         flex-direction: column;
         font-size: 15px;
         font-weight: 700;
@@ -103,7 +104,7 @@ a {
             top: -1px;
           }
           &:hover {
-            color: darken(#FF6292, $hover);
+            // color: darken(#FF6292, $hover);
           }
         }
 
@@ -114,11 +115,11 @@ a {
             transform: scaleX(.84);
           }
           &:hover {
-            color: darken(#FF6292, $hover);
+            // color: darken(#FF6292, $hover);
           }
         }
         .btn-tag {
-           color: #FF6292;
+           color: #EF959D;
            border: none;
            font-size: 16px;
            margin: 0px;
@@ -133,7 +134,7 @@ a {
             transform: scaleX(.84);
           }
           &:hover {
-            color: darken(#FF6292, $hover);
+            // color: darken(#FF6292, $hover);
           }
         }
         #reset {
@@ -144,7 +145,7 @@ a {
             font-size: 84%;
           }
           &:hover {
-            color: darken(#FF6292, $hover);
+            // color: darken(#FF6292, $hover);
           }
         }
         &.reset {
@@ -218,7 +219,7 @@ a {
     right: -30px;
     top: 200px;
     position: absolute;
-    color: #FF6292;
+    color: #EF959D;
     display: flex;
     font-size: 28px;
     font-weight: normal;
@@ -226,7 +227,7 @@ a {
     margin-bottom: 28px;
     text-align: center;
     .option-title {
-      color: #FF6F8A;
+      color: #EF959D;
       font-size: 14px;
       font-weight: bold;
       margin-top: 5px;
@@ -236,12 +237,12 @@ a {
       text-transform: uppercase;
     }
     .fa-angle-double-up {
-      color: #FF848A;
+      color: #EF959D;
       cursor: pointer;
       padding-bottom: 20px;
     }
     .fa-angle-double-down {
-      color: #FF5792;
+      color: #EF959D;
       cursor: pointer;
     }
     #session, #break {
@@ -250,11 +251,11 @@ a {
       flex-direction: column;
     }
     input[type=number]{
-      background: linear-gradient(lighten(#FF8B8A, 20), lighten(#FF6292, 22));
+      // background: linear-gradient(lighten(#EF959D, 20), lighten(#FF6292, 22));
       border: none;
       border-bottom: calc(3px + .28vw) solid #FF6292;
       border-radius: 10px;
-      color: #FF6292;
+      color: #EF959D;
       font: bold calc(21px + 1.43vw) "Open Sans", sans-serif;
       margin: calc(5px + .43vw) calc(3px + .43vw);
       padding: calc(3px + .43vw) calc(5px + .43vw);
@@ -281,42 +282,3 @@ a {
 audio {
   display: none;
 }
-// #audio-selector {
-//   display: flex;
-//   left: 0;
-//   position: fixed;
-//   top: 0;
-//   width: 100vw;
-//   .theme {
-//     background: linear-gradient(to bottom, rgba(255,99,127,0.28) 0%, rgba(255,99,127,0.28) 1%, rgba(255,98,143,0) 84%, rgba(255,98,146,0) 100%);
-//     color: darken(desaturate(#FF7B8A, 30), 10);
-//     cursor: pointer;
-//     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#47ff637f', endColorstr='#00ff6292', GradientType=0);
-//     flex: 1 1 25%;
-//     font: 600 calc(9px + 1vw) "Open Sans", sans-serif;
-//     margin: 0 2px 0 0;
-//     padding: 2vw 1vw 5vw;
-//     text-align: center;
-//     transition: all .43s;
-//     white-space: nowrap;
-//     &:last-child {
-//       margin-right: 0;
-//     }
-//     &:hover, &.selected {
-//       background: linear-gradient(to bottom, rgba(255,99,127,0.43) 0%, rgba(255,99,127,0.43) 1%, rgba(255,98,143,0) 84%, rgba(255,98,146,0) 100%);
-//       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6eff637f', endColorstr='#00ff6292', GradientType=0);
-//     }
-//     @media all and (min-width: 512px){
-//       font-size: 15.33px;
-//       padding: 9px 5px 25px;
-//     }
-//   }
-//   @media all and (max-width: 300px){
-//     flex-wrap: wrap;
-//     .theme {
-//       flex: 1 0 100%;
-//       font-size: 14px;
-//       padding: 7px;
-//     }
-//   }
-// }
