@@ -14,6 +14,20 @@
   box-shadow: 15px 10px 10px rgba(0,0,0,0.2);
 }
 
+.logo {
+  width:60px;
+  display: block;
+  margin: 0 auto;
+}
+
+.image-box p {
+  color:white;
+  font-size:20px;
+  text-align: center;
+  font-weight:800;
+}
+
+
 
 .content-group1 p, .content-group2 p, .content-group3 p, .content-group4 p, .content-group5 p,   {
   width:350px;
@@ -55,16 +69,12 @@ body {
 
 .content-group5 img {
   width:300px;
-  // margin:0 auto;
 }
 
 .image-wrap {
   text-align: center;
 }
 
-.title-margin {
-  // margin-top:40px;
-}
 
 .content-group5 p {
   font-size: 20px;
