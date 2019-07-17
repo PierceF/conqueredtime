@@ -14,12 +14,54 @@
   margin:0 auto;
 }
 
+.leaderboard-card img {
+  width:60px;
+  height:60px;
+}
+
+.leaderboard-card p {
+  text-align: center;
+}
+
 .leaderboard-card h2 {
   text-align: center;
-  margin:20px 0px;
+  font-weight:800;
+  text-align: center;
 }
 
 .leaderbord-card-inner {
   display: flex;
-  align-items: center;
+
+}
+
+.first-place {
+  font-size:40px;
+  font-weight: 800;
+  color:#B8D8BA;
+}
+
+.first-place-boi {
+  display: flex;
+}
+
+
+.second-place {
+  font-size:32px;
+  font-weight:800;
+  color:#EF959D;
+}
+
+.third-place {
+  font-size:26px;
+  font-weight:800;
+  color:#FCDDBC;
+}
+
+.rest-place {
+  font-size:20px;
+}
+
+.top-3 {
+  display: flex;
+  flex-direction: column;
 }

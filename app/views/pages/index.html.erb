@@ -1,22 +1,16 @@
-<<<<<<< HEAD
 <div class="leaderboard-card">
   <h2>Leaderboard</h2>
-<% @users.each_with_index do |user| %>
-<div class="leaderboard-card-inner">
-  <p><%= user.username %></p>
-    <p><%= user.user_minutes %>m</p>
+  <div class="top-3">
+    <div class="first-place-boi">
+      <p class="first-place">1. <%= @users.first.username %></p>
+  <p class="second-place">2. <%= @users.second.username %></p>
+  <p class="third-place"> 3. <%= @users.third.username %></p>
     </div>
-<% end %>
+  </div>
+  <% @not_podium.each do |user| %>
+    <p class="rest-place"><%= user.username %>:
+      <%= user.user_minutes %>
+      minutes</p>
+  <% end %>
+
 </div>
-=======
-
-
-<%= @users.first.username %>
-<%= @users.second.username %>
-<%= @users.third.username %>
-
-          <% @not_podium.each do |user| %>
-
-            <p><%= user.username %>: <%= user.user_minutes %> minutes</p>
-              <% end %>
->>>>>>> 7e6eeaa3e4172adbbf844bea38db4c5377a3ab5a
