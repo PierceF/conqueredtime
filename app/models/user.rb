@@ -12,4 +12,16 @@ class User < ApplicationRecord
     Journal.create!(title: "Lifestyle", user: self)
     Journal.create!(title: "Career", user: self)
   end
+
+  def user_minutes
+    total = 0
+    journals.each do |e|
+      total += e.journal_minutes
+    end
+    total
+  end
+
+  def self.top_ten
+    User.all.sort_by(&:user_minutes).reverse!
+  end
 end
