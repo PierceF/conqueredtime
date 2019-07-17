@@ -140,6 +140,19 @@
 </div>
 </div>
 
+<div class="achievement-banner">
+  <div class="achievement-icon ">
+    <span class="icon"><span class="icon-trophy"></span></span>
+  </div>
+  <div class="achievement-text">
+    <p class="achievement-notification">Achievement unlocked</p>
+    <p class="achievement-name">25G &ndash;
+      <% @trophies.each do |trophy| %>
+        <%= trophy %>
+      <% end %>
+    </p>
+  </div>
+</div>
 
 
 <!-- Try a focus session for another milestone under this entry: Or go back to your journal. -->
@@ -148,7 +161,18 @@
   <% @trophies.each do |trophy| %>
     setTimeout(() => {
       alert("<%= trophy.name %>");
+
   }, 1000);
   <% end %>
 
 </script>
+
+<script>
+  document.addEventListener("keyup", (event) => {
+    document.querySelectorAll("div.achievement-banner, div.achievement-icon, div.achievement-text").forEach( (div) => {
+    div.classList.add("activated");
+  });
+});
+
+</script>
+
