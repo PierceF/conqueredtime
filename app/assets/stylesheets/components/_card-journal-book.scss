@@ -24,11 +24,11 @@
 
 .card-journal-book-top {
  background: #f4f4f4;
- height:150px;
+ height:120px;
  border-radius:15px 15px 0px 0px;
  display: flex;
- justify-content: space-between;
  align-items: center;
+ justify-content: center;
 }
 
 .card-journal-book-text {
@@ -36,9 +36,9 @@ padding: 20px 20px;
 }
 
 .card-journal-book-text a {
-  color:#ABABAB;
-  font-weight: 800;
-  font-size:16px;
+  // color:#ABABAB;
+  // font-weight: 800;
+  // font-size:16px;
 }
 
 .card-journal-book-text a:hover {
@@ -48,13 +48,16 @@ padding: 20px 20px;
 }
 
 .card-journal-book-trophies {
-  border-radius:15px 0px 0px 15px;
   background: #EFEFEF;
-  height:120px;
-  width:150px;
+  min-height:100px;
+  width:395px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+}
+
+.card-journal-book-trophies img  {
+  width:70px;
 }
 
 .card-journal-book h4 {
