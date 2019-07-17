@@ -1,10 +1,16 @@
+<div class="leaderboard-card">
+  <h2>Leaderboard</h2>
+    <div class="first-place-boi">
+      <p class="first-place">1. <%= @users.first.username %></p>
+  <p class="second-place">2. <%= @users.second.username %></p>
+  <p class="third-place"> 3. <%= @users.third.username %></p>
+    </div>
+      <div class="last-places">
+  <% @not_podium.each do |user| %>
+    <p class="rest-place"><%= user.username %>:
+      <%= user.user_minutes %>
+      minutes</p>
+  <% end %>
+        </div>
 
-
-<%= @users.first.username %>
-<%= @users.second.username %>
-<%= @users.third.username %>
-
-          <% @not_podium.each do |user| %>
-
-            <p><%= user.username %>: <%= user.user_minutes %> minutes</p>
-              <% end %>
+</div>
