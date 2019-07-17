@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
 
+  resources :pages, only: [:index, :home]
+
   resources :journals, only: [:show, :index, :new, :create] do
     resources :entries, only: [:index, :new, :create]
   end
