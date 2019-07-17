@@ -14,7 +14,7 @@ class Journal < ApplicationRecord
     entries.each do |e|
       total += e.entry_minutes
     end
-    total / 60
+    total
   end
 
   # def time
