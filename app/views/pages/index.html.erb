@@ -1,4 +1,9 @@
-          <% @users.each do |user| %>
-
-            <p><%= user.username %>: <%= user.user_minutes %> minutes</p>
-              <% end %>
+<div class="leaderboard-card">
+  <h2>Leaderboard</h2>
+<% @users.each_with_index do |user| %>
+<div class="leaderboard-card-inner">
+  <p><%= user.username %></p>
+    <p><%= user.user_minutes %>m</p>
+    </div>
+<% end %>
+</div>

@@ -1,2 +1,25 @@
 // Import page-specific CSS files here.
 @import "home";
+
+
+.leaderboard-card {
+  background: white;
+  border-radius:15px;
+  border-right:5px solid #E5E5E5;
+  border-bottom: 5px solid #E5E5E5;
+  margin:20px 0px;
+  box-shadow: 15px 10px 10px rgba(0, 0, 0, 0.2);
+  height:550px;
+  width:400px;
+  margin:0 auto;
+}
+
+.leaderboard-card h2 {
+  text-align: center;
+  margin:20px 0px;
+}
+
+.leaderbord-card-inner {
+  display: flex;
+  align-items: center;
+}
