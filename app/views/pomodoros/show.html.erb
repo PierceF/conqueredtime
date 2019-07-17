@@ -1,12 +1,11 @@
 <div class="content-group2">
 <div id="milestone">
-  <h2> Focus on <%=@milestone.title %> </h2>
+  <h2>  <%=@milestone.title %> </h2>
 </div>
-
+<!-- <div class="card-pomodoro"> -->
 <div id="pomodoro">
   <div id="clock">
     <div id="timer">
-      <div id="title">Ready?</div>
       <div id="countdown">
         <span id="minutes">25</span>
         <span id="seconds">00</span>
@@ -17,7 +16,7 @@
           <%= simple_form_for @pomodoro, remote: true do |f| %>
             <%= f.input :action, as: :hidden, input_html: { value: 'start' } %>
             <%= button_tag :class => 'btn-tag' do %>
-              <i class="fas fa-play"></i> Start
+            <p>Start</p>
             <% end %>
           <% end %>
         </div>
@@ -26,18 +25,16 @@
           <%= simple_form_for @pomodoro, remote: true do |f| %>
             <%= f.input :action, as: :hidden, input_html: { value: 'done' } %>
             <%= button_tag :class => 'btn-tag' do %>
-              <i class="fas fa-check"></i> I am done
+            <p>Done</p>
             <% end %>
           <% end %>
         </div>
 
         <div id="back">
           <%= link_to milestone_path(@milestone, pomodoro_id: @pomodoro.id) do %>
-          <i class="fas fa-chevron-circle-left"></i> To journal
+          <p>Evaluate Your Session</p>
           <% end %>
         </div>
-       <!--  <div id="pause"><i class="fas fa-pause"></i> Pause</div>
-        <div id="reset"><i class="fas fa-sync-alt"></i> Reset</div> -->
       </div>
     </div>
   </div>
@@ -51,16 +48,9 @@
       <i id="decrSession" class="fas fa-angle-double-down"></i>
       <span class="option-title" style="margin-top: -3px;">time down</span>
     </div>
-
-    <!-- <div id="break">
-      <i id="incrBreak" class="fas fa-angle-double-up"></i>
-      <span class="option-title">Break</span>
-      <input id="breakInput" type="number" value="5" max="5" min="5">
-      <i id="decrBreak" class="fas fa-angle-double-down"></i>
-    </div> -->
   </div>
   <div id="note">
-  <p> * max time 60 min </p>
+</div>
 </div>
 </div>
 </div>
@@ -90,4 +80,3 @@ const start = document.querySelector("#start");
   // myAudio.pause();
 // });
 </script>
-

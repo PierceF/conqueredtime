@@ -29,3 +29,20 @@ text-align: center;
   margin-top: 10px;
 
 }
+
+
+.fade-in {
+  @keyframes fadein {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+  }
+}
+
+.animate-180 {
+  transition: 0.3s;
+}
+
+.animate-180:hover {
+transform: rotate(180deg);
+transition: 0.3s;
+}

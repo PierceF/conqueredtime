@@ -1,6 +1,6 @@
 <div class="card-create-journal">
     <div class="group-new">
-      <img src="https://res.cloudinary.com/doem0zjpf/image/upload/v1563001489/nice_try_bzisao.png" alt="">
+      <img class="fade-in" src="https://res.cloudinary.com/doem0zjpf/image/upload/v1563001489/nice_try_bzisao.png" alt="">
       <p>Select which journal to track your goal in, or create a new journal at the bottom.</p>
     </div>
 </div>
@@ -15,19 +15,13 @@
       <% end %>
       <div class="card-journal-trophies">
           <div class="times">
-            <p>Time</p>
-          <p>9</p>
           <i class="fas fa-trophy"></i>
           </div>
         <div class="time">
-          <p>Times</p>
-          <p>4m</p>
           <i class="fas fa-hourglass-end"></i>
           </div>
           <div class="apple">
-            <p>Apple</p>
-          <p>5 m</p>
-          <i class="fab fa-apple"></i>
+          <i class="fas fa-star"></i>
           </div>
       </div>
       <% journal.last_three_entries.each do |entry| %>
@@ -36,7 +30,7 @@
 <% end %>
 <div class="card-journal-book-add-container">
 <div class="card-journal-book-add">
-<p style="color:white; font-weight:800;">Work on <%= journal.title.capitalize %></p>
+<p style="color:white; font-weight:800;">Open Journal</p>
 </div>
 </div>
 </div>
