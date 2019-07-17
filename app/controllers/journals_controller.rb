@@ -10,7 +10,7 @@ class JournalsController < ApplicationController
   # end
 
   def new
-    @journals = Journal.all
+    @journals = current_user.journals
     @journal = Journal.new
   end
 
