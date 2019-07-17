@@ -1,4 +1,18 @@
 <% title "Milestone Summary" %>
+  <div class="achievement-banner">
+  <div class="achievement-icon ">
+    <span class="icon"><span class="icon-trophy"></span></span>
+  </div>
+  <div class="achievement-text">
+    <p class="achievement-notification">Achievement unlocked</p>
+    <p class="achievement-name">25G &ndash;
+      <% @trophies.each do |trophy| %>
+        <%= trophy.name %>
+      <% end %>
+    </p>
+  </div>
+</div>
+
   <div class="card-pomodoro">
     <div class="scroll-effect">
       <div class="card-large">
@@ -146,9 +160,20 @@
 
 <script>
   <% @trophies.each do |trophy| %>
-    setTimeout(() => {
-      alert("<%= trophy.name %>");
-  }, 1000);
+    document.querySelectorAll("div.achievement-banner, div.achievement-icon, div.achievement-text").forEach( (div) => {
+    div.classList.add("activated");
+  });
   <% end %>
+
+</script>
+
+
+
+<script>
+  document.addEventListener("load", (event) => {
+    document.querySelectorAll("div.achievement-banner, div.achievement-icon, div.achievement-text").forEach( (div) => {
+    div.classList.add("activated");
+  });
+});
 
 </script>
