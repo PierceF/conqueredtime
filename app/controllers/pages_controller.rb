@@ -8,5 +8,6 @@ class PagesController < ApplicationController
 
   def index
     @users = User.top_ten
+    @not_podium = User.top_ten[3..@users.length]
   end
 end
