@@ -1,2 +1,143 @@
 // Import page-specific CSS files here.
 @import "home";
+
+.the-leaderboard {
+  background: white;
+  height:80px;
+  width:400px;
+  border-right: 5px solid #E5E5E5;
+  border-bottom: 5px solid #E5E5E5;
+  border-radius:15px;
+    box-shadow: 15px 10px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.card-scoreboard {
+  margin: 0 auto;
+  width:400px;
+}
+
+.card-scoreboard h2 {
+  text-align: center;
+  font-weight:800;
+  color:#69585F;
+}
+
+.card-scoreboard p {
+  color:#69585F;
+  font-weight:800;
+}
+
+.card-scoreboard img {
+  width:40px;
+  height:40px;
+  border-radius:50%;
+}
+
+
+.first-place-group, .second-place-group, .third-place-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  border-right: 5px solid #E5E5E5;
+  border-bottom: 5px solid #E5E5E5;
+  border-radius:15px;
+  height:80px;
+  width:400px;
+  box-shadow: 15px 10px 10px rgba(0, 0, 0, 0.2);
+  margin:10px 0px;
+  padding:0px 10px;
+}
+
+.first-place-group:hover, .second-place-group:hover, .third-place-group:hover {
+  transform: scale(1.1);
+  transition:0.5s;
+}
+
+.first-place-group:hover, .second-place-group:hover, .third-place-group:hover {
+  transition:0.5s;
+ }
+
+
+
+.first-place {
+font-size:32px;
+
+}
+
+.first-place-group p{
+  color:#EF959D
+}
+
+.second-place-group p{
+  color:#B8D8BA;
+}
+
+.third-place-group p{
+  color:#FCDDBC;
+}
+
+.second-place {
+  font-size: 28px;
+}
+
+.third-place {
+  font-size: 24px;
+
+}
+
+.peasants-group {
+  margin:10px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  border-right: 5px solid #E5E5E5;
+  border-bottom: 5px solid #E5E5E5;
+  border-radius:15px;
+  height:80px;
+  width:400px;
+  box-shadow:15px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.peasants-group:hover {
+  transform:scale(1.1);
+  transition:0.3s;
+}
+
+.peasants-group:active {
+  transform:scale(1.1);
+  transition:0.3s;
+}
+
+.peasants-group {
+  transition:0.3s;
+}
+
+
+.first-place-group {
+  color:#EF959D;
+
+}
+
+.peasants-group3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 10px;
+  width:400px;
+  height:80px;
+}
+
+.the-leaderboard:hover {
+  transform:scale(1.1);
+  transition:0.3s;
+}
+
+.the-leaderboard {
+  transition: 0.3s;
+}
