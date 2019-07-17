@@ -2,20 +2,27 @@
   height: 500px;
   max-width:400px;
   background: white;
-  border-radius:15px;
   border-bottom:5px solid #E5E5E5;
   border-right:5px solid #E5E5E5;
   box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.2);
+  border-radius:15px;
   margin-bottom:30px;
+  margin: 0 auto;
 }
 
 .card-pomodoro h3 {
   text-align: center;
   margin-bottom:30px;
+  color:#69585F;
+  font-weight:800;
 }
 
 .card-pomodoro h4 {
   font-weight:200;
+}
+
+.card-pomodoro p {
+  margin:0px 20px;
 }
 
 .card-pomodoro {

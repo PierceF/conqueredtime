@@ -1,6 +1,5 @@
 
 
-
 .border-bottom {
 border-bottom:1px solid #C6C6C6;
 }
@@ -20,6 +19,10 @@ html {
 
 button {
   margin:0px;
+}
+
+.style-inline {
+  font-weight:800;
 }
 
 .grid-main {
@@ -80,9 +83,6 @@ p, a{
 
 }
 
-//   .paragraph-margin {
-//   margin:5vh 0px;
-// }
 
 .margin-paragraph {
   margin-bottom:5vh;

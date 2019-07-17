@@ -3,44 +3,40 @@
   <div class="card-journal">
     <!-- <div class="card-journal-profile"> <img src="https://source.unsplash.com/random/100x100" alt=""> </div> -->
     <div class="card-journal-top">
-      <h2><%= journal.title.capitalize %> <br> <span class="text-special">Journal</span></h2>
+      <h2><%= journal.title.capitalize %> <br> <span class="text-special"></span></h2>
       <img src="https://res.cloudinary.com/doem0zjpf/image/upload/v1563012445/zxc_vvjt4c.png" alt="">
       </div>
       <div class="card-journal-trophies">
         <div class="trophies">
-          <p>Trophies</p>
-          <p>9 m</p>
           <i class="fas fa-clock"></i>
         </div>
 
         <div class="time">
-          <p>Time</p>
           <p><%= journal.time %></p>
           <i class="fas fa-hourglass-end"></i>
         </div>
 
         <div class="times">
-          <p>Times</p>
           <p><%= journal.focus_sessions %></p>
-          <i class="fab fa-apple"></i>
+          <i class="fas fa-history"></i>
         </div>
 
         <div class="something">
-          <p>rating</p>
-          <!-- <p> journal.star_average </p> -->
-          <i class="fas fa-address-book"></i>
+          <p> <%= journal.star_average %> </p>
+        <i class="fas fa-star"></i>
         </div>
       </div>
 
+
 <div class="card-journal-show-entries-wrapper">
-<div class="card-journal-show-entries"">
-  <p>Continue</p>
+<div class="card-journal-show-entries">
+  <p>Open Journal</p>
 </div>
   </div>
   </div>
 <% end %>
 <% end %>
-  </div>
+</div>
 
  <div class="card-own-journal">
 <div class="card-own-journal-text">
@@ -54,12 +50,9 @@
     <label class="hidden" for="title">Title:
     </label>
 
-    <input class="form-textfield" type="text" placeholder="Eg: Health, Fitness, School, Career.. " name="journal[title]" id="title">
+    <input class="form-textfield" type="text" name="journal[title]" id="title">
  <input type="hidden" id="helpUser" name="helpUser" value=true>
-<div class="margin-paragraph">
+<div class="button-margin">
     <input class="form-submit" value="Make a new Journal" type="submit">
   </form>
   </div>
-</div>
-</div>
-</div>

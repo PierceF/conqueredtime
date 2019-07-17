@@ -18,8 +18,12 @@
   font-weight:400;
   color:#69585F;
   background-color:#f4f4f4 !important;
-
 }
+
+.form-control:focus {
+  outline-color:none !important;
+}
+
 
 .hidden {
   display: none;
@@ -43,12 +47,12 @@ input:focus {
 
 
 .form-submit {
-background-color: #EF959D;
+background-color: #B8D8BA;
 color:white;
 font-weight:800;
-font-size:16px;
+font-size:20px;
 border-radius:15px;
-border-bottom: 7px solid #C47A81 !important;
+border-bottom: 7px solid #A8C5AA !important;
 display: inline-block;
 border:NONE;
 width:200px;
@@ -64,8 +68,8 @@ justify-content: center;
 
 .form-submit:active {
 border:none !important;
-background-color:#DA888F;
-border-top: 7px solid #DA888F;
+background-color:#A8C5AA;
+border-top: 7px solid #A8C5AA;
 }
 
 .form-submit-blue {

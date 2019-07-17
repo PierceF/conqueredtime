@@ -1,5 +1,4 @@
 .card-journal {
-
   width:400px;
   min-height:90vh;
   background:white;
@@ -17,7 +16,7 @@
 }
 
 .card-journal-top {
-  height:100px;
+  height:150px;
   background: #f4f4f4;
   border-radius:15px 15px 0px 0px;
   width:100%;
@@ -42,11 +41,14 @@
   align-items: center;
   text-align: center;
   color:white;
-  // border-bottom:5px solid #DA888F;
 }
 
 .card-journal-trophies i {
   font-size:30px;
+}
+
+.card-journal-trophies img {
+  width:40px;
 }
 
 .card-journal i {
@@ -60,13 +62,12 @@
 }
 
 .card-journal-entries {
-  margin:20px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-      border-bottom:1px solid #ECECEC;
+  //
+  // display: flex;
+  // height:50px;
+  // justify-content: space-around;
+  // align-items: center;
 }
-
 .card-journal-entries p {
   font-weight:800;
   color:#69585F;
