@@ -58,7 +58,7 @@
   transition:0.5s;
 }
 
-.first-place-group:hover, .second-place-group:hover, .third-place-group:hover {
+.first-place-group, .second-place-group, .third-place-group {
   transition:0.5s;
  }
 
@@ -70,15 +70,15 @@ font-size:32px;
 }
 
 .first-place-group p{
-  color:#EF959D
+  color:#FFD700;
 }
 
 .second-place-group p{
-  color:#B8D8BA;
+  color:#C0C0C0;
 }
 
 .third-place-group p{
-  color:#FCDDBC;
+  color:#cd7f32;
 }
 
 .second-place {
