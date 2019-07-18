@@ -46,6 +46,16 @@
   <p>Open Journal</p>
 </div
 <% end %>
+  <h3>Last Three Goals</h3>
+
+<% journal.last_three_entries.each do |entry| %>
+    <div class="group-it">
+        <p class="journal-last-three"><%= entry.goal %></p>
+        <p><%= entry.time %></p>
+        </div>
+      <% end %>
+
+        </div>
   </div>
 
   </div>
