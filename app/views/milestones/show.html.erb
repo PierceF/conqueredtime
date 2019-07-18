@@ -1,13 +1,13 @@
 <% content_for :meta_title, "#{@milestone.title.capitalize} - #{DEFAULT_META["meta_product_name"]}" %>
 
-<div id="popup1" class="overlay">
-  <div class="popup">
-    <h2>Here i am</h2>
+<div id="popup5" class="overlay">
+  <div class="popup5">
+    <h2>Achievement Unlocked</h2>
     <a class="close" href="#">&times;</a>
     <div class="content">
       <% @trophies.each do |trophy| %>
+        <img src= "<%= trophy.image %>" alt="nothing">
         <%= trophy.name %>
-        <img src= "<% trophy.image %>" alt="nothing">
       <% end %>
     </div>
   </div>
@@ -174,13 +174,13 @@
   if (<%= !@trophies.empty? %>) {
     document.addEventListener('DOMContentLoaded', (event) => {
       console.log("hell");
-      document.querySelectorAll("#popup1").forEach((div) => {
+      document.querySelectorAll("#popup5").forEach((div) => {
         div.classList.remove("overlay");
       });
 
       const cross = document.querySelector('.close');
       cross.addEventListener("click", (event) => {
-        document.querySelectorAll("#popup1").forEach( (div) => {
+        document.querySelectorAll("#popup5").forEach( (div) => {
           div.classList.add("overlay");
         });
       });

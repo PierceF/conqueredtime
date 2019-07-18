@@ -1,5 +1,49 @@
+#milestone_title {
+}
 
-.popup-notification {
+
+.box {
+  margin: 0 auto;
+}
+
+
+.button {
+  font-size: 35px;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: 4px;
+  right: 11px;
+}
+
+.button:hover {
+  color:white;
+}
+
+.button:active {
+  color:white;
+}
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0.0;
+  z-index: 3;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup5 {
   margin: 70px auto;
   padding: 50px 0px 30px 0px;
   background: #fff;
@@ -7,5 +51,41 @@
   border-right:5px solid #E5E5E5;
   border-bottom:5px solid #E5E5E5;
   width: 400px;
+  height:200px;
   position: relative;
+}
+
+#start p {
+  font-weight:800;
+  color:#EF959D;
+}
+
+#done p {
+  font-weight:800;
+  color:#EF959D;
+}
+
+#back p {
+  font-weight:800;
+  color:#EF959D;
+}
+
+
+.popup5 .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup5 .close:hover {
+  color: #B8D8BA;
+}
+.popup5 .content {
+    max-height: 150px;
+  overflow: auto;
+  width:300px;
 }
