@@ -1,8 +1,8 @@
-<% content_for :meta_title, "#{@entry.title.capitalize} - #{DEFAULT_META["meta_product_name"]}" %>
+<% content_for :meta_title, "#{@entry.goal.capitalize} - #{DEFAULT_META["meta_product_name"]}" %>
 
 <% title "Milestone Summary" %>
       <% @trophies.each do |trophy| %>
-        <%= trophy.name %>  
+        <%= trophy.name %>
       <% end %>
 
 
