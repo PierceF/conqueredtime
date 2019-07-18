@@ -175,5 +175,5 @@ trophy2 = Trophy.create!(name: "Got started on a new journey.", image:"https://r
 
 
 pierce.journals.each do |journal|
-  Achievement.create!(journal: journal, trophy: (Trophy.find_by name: "Got started on a new journey."))
+  Achievement.create!(journal: journal, trophy: (Trophy.find_by name: "Got started on a new journey."), shown: true)
 end
