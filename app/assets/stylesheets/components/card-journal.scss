@@ -3,11 +3,22 @@
   min-height:90vh;
   background:white;
   border-radius:15px;
-  box-shadow: 15px 10px 10px rgba(0,0,0,0.2);
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
   background: white;
   border-bottom: 5px solid #E5E5E5;
   border-right: 5px solid #E5E5E5;
-  margin:30px auto;
+  margin:60px auto;
+}
+
+
+.card-journal-book-add-container {
+  display: flex;
+  height:425px;
+  align-items: center;
+}
+
+.card-journal-book-add:active {
+  background: #B8D8BA; 
 }
 
 .card-journal-show-entries-wrapper h3 {
@@ -35,6 +46,7 @@ justify-content: space-between;
 .three-last-entries-yep {
   display: flex;
   flex-direction: column;
+
 }
 
 .card-journal-top h2 {
