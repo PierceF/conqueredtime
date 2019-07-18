@@ -7,19 +7,19 @@
     <div class="first-place-group">
       <img src="<%= @users.first.avatar %>" alt="Avatar" class="avatar">
       <p class="first-place"><%= @users.first.username %></p>
-      <p><%= @users.first.user_minutes %>m</p>
+      <p><%= @users.first.user_minutes %>min</p>
     </div>
 
     <div class="second-place-group">
       <img src="<%= @users.second.avatar %>" alt="Avatar" class="avatar">
       <p class="second-place"><%= @users.second.username %></p>
-      <p><%= @users.second.user_minutes %>m</p>
+      <p><%= @users.second.user_minutes %>min</p>
     </div>
 
     <div class="third-place-group">
       <img src="<%= @users.third.avatar %>" alt="Avatar" class="avatar">
       <p class="third-place"><%= @users.third.username %></p>
-      <p><%= @users.third.user_minutes %>m</p>
+      <p><%= @users.third.user_minutes %>min</p>
     </div>
 
     <% @not_podium.each do |user| %>
@@ -28,13 +28,13 @@
           <div class="peasants-group">
             <img src="https://res.cloudinary.com/doem0zjpf/image/upload/v1562650336/maskCopy2_3x_vreuag.png" alt="Avatar" class="avatar">
             <p><%= user.username %></p>
-            <p><%= user.user_minutes %>m</p>
+            <p><%= user.user_minutes %>min</p>
           </div>
         <% else %>
           <div class="peasants-group3">
             <img src="<%= user.avatar %>" alt="Avatar" class="avatar">
             <p><%= user.username %></p>
-            <p><%= user.user_minutes %>m</p>
+            <p><%= user.user_minutes %>min</p>
           </div>
         <% end %>
       <% end %>
