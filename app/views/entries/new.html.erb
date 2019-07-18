@@ -10,6 +10,7 @@
       <div class="card-for-entries-form">
         <%= simple_form_for [@journal, @entry] do |m| %>
           <%= m.input :goal %>
+          <% end %>
           <div class="card-for-entries-button">
         <a href="#scroll-button" class="form-submit">Create</a>
         </div>
@@ -55,7 +56,6 @@
       <% end %>
     </div>
   <% end %>
-<% end %>
 </div>
 <div id="popup<%= @journal.title.capitalize %>" class="overlay">
 <div class="popup">
@@ -66,11 +66,8 @@
 <% end %>
 </div>
 </div>
-<% end %>
 
 <a class="card-journal-book-add" href="#popup1">New Goal</a>
-
-</div>
 
 
 <script>
