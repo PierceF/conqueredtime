@@ -20,6 +20,7 @@ class MilestonesController < ApplicationController
     @achievements = @journal.achievements.all
     # @pomodoro = Pomodoro.find(Milestone.find(params[:id]).pomodoro)
     create_badge
+    get_started
     @trophies = []
     find_achievements
   end
@@ -32,6 +33,12 @@ class MilestonesController < ApplicationController
 
   def set_milestone
     @milestone = Milestone.find(params[:id])
+  end
+
+  def get_started
+    return false unless (@journal.trophies.find_by name: "Got started on a new journey.").nil?
+
+    Achievement.create!(journal_id: @journal.id, trophy: (Trophy.find_by name: "Got started on a new journey."))
   end
 
   def create_badge

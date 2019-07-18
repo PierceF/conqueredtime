@@ -5,6 +5,7 @@ class EntriesController < ApplicationController
     @entries = @journal.entries
     @entry = Entry.new
     @entry.milestones.build
+    @trophies = @journal.trophies
   end
 
   def show
