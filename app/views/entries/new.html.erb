@@ -24,13 +24,13 @@
         <img src="https://res.cloudinary.com/doem0zjpf/image/upload/v1563108730/reverze_cuytoz.png" alt="">
         </div>
         <%= m.simple_fields_for :milestones do |p| %>
-        <%= p.input :title, :class => "form-textfield" %>
+        <%= p.input :title, :class => "form-textfield-milestone" %>
       <% end %>
       <%= m.simple_fields_for :milestones do |p| %>
-      <%= p.input :title, label: false, :class => "form-textfield" %>
+      <%= p.input :title, label: false, :class => "form-textfield-milestone" %>
     <% end %>
     <%= m.simple_fields_for :milestones do |p| %>
-    <%= p.input :title, label: false, :class => "form-textfield" %>
+    <%= p.input :title, label: false, :class => "form-textfield-milestone" %>
   <% end %>
   <div class="card-for-milestones-inner">
   <%= m.submit "Create", :class => "form-submit"%>
