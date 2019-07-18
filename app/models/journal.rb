@@ -57,7 +57,7 @@ class Journal < ApplicationRecord
       end
       (rating.to_f / count).round(2)
     else
-      nil
+      0
     end
   end
 
