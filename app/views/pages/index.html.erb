@@ -1,19 +1,48 @@
-<div class="leaderboard-card">
+
+<!-- <p class="first-place">1. <%= @users.first.username %></p> <p class="second-place">2. <%= @users.second.username %></p> <p class="third-place"> 3. <%= @users.third.username %></p> -->
+<!-- <div class="last-places"> <% @not_podium.each do |user| %> <p class="rest-place"><%= user.username %>: <%= user.user_minutes %> minutes</p> <% end %> </div> -->
+<div class="card-scoreboard">
+<div class="the-leaderboard">
   <h2>Leaderboard</h2>
-  <div class="first-place-boi">
-    <p class="first-place">1.
-      <%= @users.first.username %></p>
-    <p class="second-place">2.
-      <%= @users.second.username %></p>
-    <p class="third-place">
-      3.
-      <%= @users.third.username %></p>
   </div>
-  <div class="last-places">
-    <% @not_podium.each do |user| %>
-      <p class="rest-place"><%= user.username %>:
-        <%= user.user_minutes %>
-        minutes</p>
+  <div class="first-place-group">
+    <img src=<%= @users.first.avatar %> alt="Avatar" class="avatar">
+    <p class="first-place"><%= @users.first.username %></p>
+      <p><%= @users.first.user_minutes %>m</p>
+  </div>
+
+  <div class="second-place-group">
+    <img src=<%= @users.second.avatar %> alt="Avatar" class="avatar">
+    <p class="second-place"><%= @users.second.username %></p>
+    <p><%= @users.second.user_minutes %>m</p>
+  </div>
+
+
+  <div class="third-place-group">
+    <img src=<%= @users.third.avatar %> alt="Avatar" class="avatar">
+    <p class="third-place"><%= @users.third.username %></p>
+    <p><%= @users.third.user_minutes %>m</p>
+  </div>
+
+  <% @not_podium.each do |user| %>
+  <div class="peasants-group">
+    <% if user.avatar == nil %>
+      <% then %>
+      <img src="https://res.cloudinary.com/doem0zjpf/image/upload/v1562650336/maskCopy2_3x_vreuag.png" alt="Avatar" class="avatar">
+        <p><%= user.username %></p>
+        <p><%= user.user_minutes %>m</p>
+        </div>
+      <% else %>
+      <div class="peasants-group2">
+
+      </div>
+      <div class="peasants-group3">
+        <img src=<%= user.avatar %> alt="Avatar" class="avatar">
+        <p><%= user.username %></p>
+          <p><%= user.user_minutes %>m</p>
+          </div>
+          </div>
+      <% end %>
     <% end %>
   </div>
 </div>

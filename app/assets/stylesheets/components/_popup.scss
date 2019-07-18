@@ -8,13 +8,21 @@
 
 
 .button {
-  font-size: 24px;
+  font-size: 35px;
   color: #fff;
   text-decoration: none;
   cursor: pointer;
   position: absolute;
-  bottom:0px;
-  right:15px;
+  bottom: 4px;
+  right: 11px;
+}
+
+.button:hover {
+  color:white;
+}
+
+.button:active {
+  color:white;
 }
 
 
@@ -43,6 +51,7 @@
   border-right:5px solid #E5E5E5;
   border-bottom:5px solid #E5E5E5;
   width: 400px;
+  height:200px;
   position: relative;
 }
 

@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   resources :pages, only: [:index, :home]
 
+  resources :messages, only: [:index, :new, :create]
+
   resources :journals, only: [:show, :index, :new, :create] do
     resources :entries, only: [:index, :new, :create]
   end

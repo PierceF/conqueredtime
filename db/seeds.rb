@@ -9,16 +9,16 @@
 User.destroy_all
 Trophy.destroy_all
 
-pierce = User.create!(email: 'pierce@pierce.com', password: '123456', username: 'PIERCE9000', bio: 'Born in Bangalore, I brought the best of India to America where I am focusing on allowing my users to conquer time.  I adopted Benjamin Franklins last name in order to super duper own procrastination.', location: 'Kyoto', age: 25, gender: 'male')
-pontus = User.create!(email: 'pontus@pontus.com', password: '123456', username: 'THE_PONT5000', bio: 'Born in Sweden, I brought the best of Ikea to Kyoto where I am focusing on bringing beauty to even the dullest websites!  I am sick of Ikea and POTUS jokes!', location: 'Kyoto', age: 24, gender: 'male')
-lena = User.create!(email: 'lena@lena.com', password: '123456', username: 'The Lenanator')
-forrest = User.create!(email: 'forest@forest.com', password: '123456', username: 'Forrest Dweller')
-tanaka = User.create!(email: 'tanaka@tanaka.com', password: '123456', username: 'Tanaka you out')
-yann = User.create!(email: 'yann@yann.com', password: '123456', username: 'Yann Garde')
-sylvain = User.create!(email: 'sylvain@sylvain.com', password: '123456', username: 'SYLVAIN2000')
-alex = User.create!(email: 'alex@alex.com', password: '123456', username: 'CoCo Master')
-chris = User.create!(email: 'chris@chris.com', password: '123456', username: 'AlaBadaNada')
-leet = User.create!(email: 'leet@leet.com', password: '123456', username: 'LeEtSaWzE')
+pierce = User.create!(email: 'pierce@pierce.com', password: '123456', username: 'PIERCE9000', bio: 'Born in Bangalore, I brought the best of India to America where I am focusing on allowing my users to conquer time.  I adopted Benjamin Franklins last name in order to super duper own procrastination.', location: 'Kyoto', age: 25, gender: 'male', avatar: "https://res.cloudinary.com/dyeffcfck/image/upload/v1563344762/pierce_yzd7ae.png")
+pontus = User.create!(email: 'pontus@pontus.com', password: '123456', username: 'THE_PONT5000', bio: 'Born in Sweden, I brought the best of Ikea to Kyoto where I am focusing on bringing beauty to even the dullest websites!  I am sick of Ikea and POTUS jokes!', location: 'Kyoto', age: 24, gender: 'male', avatar: "https://res.cloudinary.com/dyeffcfck/image/upload/v1563344748/pontus_g070x5.jpg")
+lena = User.create!(email: 'lena@lena.com', password: '123456', username: 'The Lenanator', avatar: "https://res.cloudinary.com/dyeffcfck/image/upload/v1563344740/lena_cznwhg.png")
+forrest = User.create!(email: 'forest@forest.com', password: '123456', username: 'Forrest Dweller', avatar: "https://res.cloudinary.com/dyeffcfck/image/upload/v1563348296/forrest_gkpe5k.jpg")
+tanaka = User.create!(email: 'tanaka@tanaka.com', password: '123456', username: 'Tanaka you out', avatar: "https://res.cloudinary.com/letsbuildmuscles/image/upload/v1563348213/images/im1_quti8e.jpg")
+yann = User.create!(email: 'yann@yann.com', password: '123456', username: 'Yann Garde', avatar: "https://res.cloudinary.com/dyeffcfck/image/upload/v1563348282/yann_yc79ap.jpg")
+sylvain = User.create!(email: 'sylvain@sylvain.com', password: '123456', username: 'SYLVAIN2000', avatar: "https://res.cloudinary.com/dyeffcfck/image/upload/v1563349265/sylvain_q9c8so.png")
+alex = User.create!(email: 'alex@alex.com', password: '123456', username: 'CoCo Master 900', avatar: "https://res.cloudinary.com/dyeffcfck/image/upload/v1563348496/alex_dwkx1m.png")
+chris = User.create!(email: 'chris@chris.com', password: '123456', username: 'AlaBadaNada', avatar: "https://res.cloudinary.com/letsbuildmuscles/image/upload/v1563348212/images/im2_iotwpq.jpg")
+leet = User.create!(email: 'leet@leet.com', password: '123456', username: 'LeEtSaWzE', avatar: "https://res.cloudinary.com/letsbuildmuscles/image/upload/v1563348212/images/im7_l1upsv.jpg")
 
 entry1 = Entry.create!(goal: "Achieve 15% bodyfat", date: Date.today, journal: (pierce.journals.find_by title: "Fitness"))
 entry2 = Entry.create!(goal: "Be able to do a handstand", date: Date.today, journal: (pierce.journals.find_by title: "Fitness"))
@@ -164,7 +164,7 @@ pomodoro40 = Pomodoro.create!(milestone: milestone40, start: (DateTime.now - 321
 
 pomodoro41 = Pomodoro.create!(milestone: milestone41, start: (DateTime.now - 134.minutes), end: DateTime.now, stars: 3)
 pomodoro42 = Pomodoro.create!(milestone: milestone42, start: (DateTime.now - 122.minutes), end: DateTime.now, stars: 3)
-pomodoro43 = Pomodoro.create!(milestone: milestone43, start: (DateTime.now - 25.minutes), end: DateTime.now, stars: 4)
+pomodoro43 = Pomodoro.create!(milestone: milestone43, start: (DateTime.now - 225.minutes), end: DateTime.now, stars: 4)
 pomodoro44 = Pomodoro.create!(milestone: milestone44, start: (DateTime.now - 115.minutes), end: DateTime.now, stars: 4)
 pomodoro45 = Pomodoro.create!(milestone: milestone45, start: (DateTime.now - 45.minutes), end: DateTime.now, stars: 4)
 

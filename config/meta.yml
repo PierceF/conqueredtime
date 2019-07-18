@@ -1,0 +1,6 @@
+# config/meta.yml
+
+meta_product_name: "Conquer your time"
+meta_title: "Conquered Time - The Best Platform For Self-Improvement"
+meta_description: "The Best Platform For Self-Improvement"
+meta_image: "cover.png" # should exist in `app/assets/images/`
