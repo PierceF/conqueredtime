@@ -8,7 +8,14 @@
       </div>
       </div>
       <div class="card-journal-book-trophies">
-      <img src="https://res.cloudinary.com/doem0zjpf/image/upload/v1563321877/027-diploma_jsypu9.png" alt="">
+      <% if @journal.achievements.count == 0 %>
+          <% then %>
+            <img src="https://res.cloudinary.com/doem0zjpf/image/upload/v1563012445/zxc_vvjt4c.png" alt="">
+            <% else %>
+            <% @journal.trophies.each do |trophy| %>
+              <img src=<%= trophy.image %> alt="">
+                <% end %>
+          <% end %>
       </div>
     <div id="popup1" class="overlay">
       <div class="popup">

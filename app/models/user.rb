@@ -7,10 +7,10 @@ class User < ApplicationRecord
   has_many :pomodoros, dependent: :destroy
 
   after_create do
-    Journal.create!(title: "Fitness", user: self)
+    Journal.create!(title: "Fitness", user: self, image: "")
     Journal.create!(title: "Spirituality", user: self)
-    Journal.create!(title: "Lifestyle", user: self)
-    Journal.create!(title: "Career", user: self)
+    Journal.create!(title: "Lifestyle", user: self, image: "")
+    Journal.create!(title: "Career", user: self, image: "")
   end
 
   def user_minutes

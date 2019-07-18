@@ -36,8 +36,8 @@ class PomodorosController < ApplicationController
     if params[:pomodoro]
       if params[:pomodoro][:action] == 'start'
         @pomodoro.start = Time.now
-      elsif params[:pomodoro][:action] == 'done'
         @pomodoro.end = @pomodoro.start + 25.minutes
+      elsif params[:pomodoro][:action] == 'done'
       end
     else
       @pomodoro.stars = params["stars"]
@@ -48,4 +48,5 @@ class PomodorosController < ApplicationController
   end
 end
 
+# remove line 39 - hacky way to show 25 min on evaluation page
 # line 40 - change back after prezi @pomodoro.end = Time.now
