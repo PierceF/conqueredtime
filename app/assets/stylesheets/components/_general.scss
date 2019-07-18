@@ -92,6 +92,17 @@ p, a{
 
 }
 
+*:active {
+  outline-color: none !important;
+  outline: none !important;
+}
+
+
+*:focus   {
+  outline-color: none !important;
+  outline: none !important;
+}
+
 
 .margin-paragraph {
   margin-bottom:5vh;

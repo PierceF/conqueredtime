@@ -1,9 +1,6 @@
 <% content_for :meta_title, "#{@journal.title.capitalize} - #{DEFAULT_META["meta_product_name"]}" %>
 
 
-<div id="overlay">
-  <p>SHELLO</p>
-</div>
 <div class="card-journal-book">
     <div class="card-journal-book-top">
       <div class="card-journal-book-text">
@@ -16,7 +13,7 @@
     <div id="popup1" class="overlay">
       <div class="popup">
         <a class="close" href="#">&times;</a>
-        <p style="color:#69585F; text-align:center;">Add a New Goal</p>
+        <p class="add-goal" style="color:#69585F; text-align:center;">Add a New Goal</p>
           <%= simple_form_for [@journal, @entry] do |m| %>
           <%= m.input :goal %>
         <% end %>
@@ -44,16 +41,16 @@
   <div id="popup<%= entry.id %>" class="overlay">
     <div class="popup">
       <a class="close" href="#">&times;</a>
-        <p style="color:#69585F; text-align:center">Add a New Milestone</p>
+        <p  class="add-milestone" style="color:#69585F; text-align:center">Add a New Milestone</p>
         <%= simple_form_for [entry, Milestone.new] do |m| %>
         <%= m.input :title, label: false, :class => "form-textfield" %>
       <% end %>
   </div>
 </div>
 <% end %>
-<div class="card-journal-book-add">
-<a href="#popup1">New Goal</a>
-</div>
+
+<a class="card-journal-book-add" href="#popup1">New Goal</a>
+
 </div>
 
 

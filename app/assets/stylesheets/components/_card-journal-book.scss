@@ -34,12 +34,6 @@
 padding: 20px 20px;
 }
 
-.card-journal-book-text a {
-  // color:#ABABAB;
-  // font-weight: 800;
-  // font-size:16px;
-}
-
 .card-journal-book-text a:hover {
   color:#959595;
   font-weight: 800;
@@ -74,6 +68,7 @@ padding: 20px 20px;
   font-weight:800;
   color:white;
   text-align:left;
+
 }
 
 .card-journal-book-entries {
@@ -100,12 +95,12 @@ padding: 20px 20px;
   font-size:16px;
 }
 
-.card-journal-book-add-container {
-  display: flex;
-  align-items: center;
+.card-journal h3 {
+  padding:30px 0px 10px 0px;
 }
 
 
-.card-journal-book button {
-  font-size:35px;
+.card-journal-book-add-container {
+  display: flex;
+  align-items: center;
 }
