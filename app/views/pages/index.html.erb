@@ -1,6 +1,5 @@
+
 <% content_for :meta_title, "The Leaderboard of Conquered Time" %>
-<!-- <p class="first-place">1. <%= @users.first.username %></p> <p class="second-place">2. <%= @users.second.username %></p> <p class="third-place"> 3. <%= @users.third.username %></p> -->
-<!-- <div class="last-places"> <% @not_podium.each do |user| %> <p class="rest-place"><%= user.username %>: <%= user.user_minutes %> minutes</p> <% end %> </div> -->
 <div class="card-scoreboard">
 <div class="the-leaderboard">
   <h2>Leaderboard</h2>
@@ -25,25 +24,22 @@
     <p><%= @users.third.user_minutes %>m</p>
   </div>
 
+
+
   <% @not_podium.each do |user| %>
-  <div class="peasants-group">
     <% if user.avatar == nil %>
       <% then %>
+      <div class="peasants-group">
       <img src="https://res.cloudinary.com/doem0zjpf/image/upload/v1562650336/maskCopy2_3x_vreuag.png" alt="Avatar" class="avatar">
         <p><%= user.username %></p>
         <p><%= user.user_minutes %>m</p>
         </div>
       <% else %>
-      <div class="peasants-group2">
-
-      </div>
       <div class="peasants-group3">
         <img src=<%= user.avatar %> alt="Avatar" class="avatar">
         <p><%= user.username %></p>
           <p><%= user.user_minutes %>m</p>
           </div>
-          </div>
-      <% end %>
+                <% end %>
     <% end %>
-  </div>
-</div>
+          </div>
