@@ -170,8 +170,8 @@ pomodoro45 = Pomodoro.create!(milestone: milestone45, start: (DateTime.now - 45.
 
 
 
-trophy1 = Trophy.create!(name: "Wow awesome job! Have a trophy.", image:"")
-trophy2 = Trophy.create!(name: "Got started on a new journey.", image:"")
+trophy1 = Trophy.create!(name: "Wow awesome job! Have a trophy.", image:"https://res.cloudinary.com/dyeffcfck/image/upload/v1563416897/a_nice_medal_for_steven_gydqku.png")
+trophy2 = Trophy.create!(name: "Got started on a new journey.", image:"https://res.cloudinary.com/dyeffcfck/image/upload/v1563418087/047-winner_ykp8hn.eps")
 
 
 pierce.journals.each do |journal|
