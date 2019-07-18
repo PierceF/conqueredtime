@@ -1,4 +1,6 @@
-
+a {
+  text-decoration: none !important;
+}
 
 .border-bottom {
 border-bottom:1px solid #C6C6C6;
@@ -7,7 +9,6 @@ border-bottom:1px solid #C6C6C6;
 .height-viewport{
  height:100vh;
 }
-
 
 
 .container-main {
@@ -21,6 +22,11 @@ html {
 
 button {
   margin:0px;
+}
+
+i {
+  outline-color:none !important;
+  outline: none !important;
 }
 
 .style-inline {
@@ -43,6 +49,7 @@ button {
 h1, h2, h3 {
   margin:0px;
   color:#3d3c38;
+  font-weight:800;
 }
 
 

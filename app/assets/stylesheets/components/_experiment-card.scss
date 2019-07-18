@@ -7,9 +7,6 @@
   border: none;
   outline: none;
   border-radius:0px 15px 15px 0px;
-  // box-shadow: 15px 10px 10px rgba(0,0,0,0.2);
-  // border-bottom: 5px solid #C47A81;
-  // border-right: 5px solid #C47A81;
   margin-top:10px;
   position: relative;
 }
@@ -42,6 +39,7 @@
   padding:10px 20px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .group-collapse button {
@@ -53,7 +51,7 @@
 }
 
 .group-collapse i {
-  font-size:16px;
+  font-size:30px;
   color:white;
   margin:0px;
 }

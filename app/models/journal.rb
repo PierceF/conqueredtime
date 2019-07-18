@@ -37,13 +37,11 @@ class Journal < ApplicationRecord
       minutes = minutes % 60
       seconds = seconds % 60
 
-      "#{hours}h #{minutes}m "
-    elsif seconds >= 60
+      "#{hours}h #{minutes}min"
+    else seconds >= 60
       minutes = seconds / 60
       seconds = seconds % 60
-      "#{minutes} m #{seconds} s"
-    else
-      "#{seconds} s"
+      "#{minutes} min"
     end
   end
 
@@ -62,6 +60,28 @@ class Journal < ApplicationRecord
       nil
     end
   end
+
+# def time
+#     seconds = self.journal_minutes
+#     if seconds >= 60 * 60
+#       minutes = seconds / 60
+#       hours = minutes / 60
+#       minutes = minutes % 60
+#       seconds = seconds % 60
+
+#       "#{hours}h #{minutes}m "
+#     elsif seconds >= 60
+#       minutes = seconds / 60
+#       seconds = seconds % 60
+#       "#{minutes} m #{seconds} s"
+#     else
+#       "#{seconds} s"
+#     end
+#   end
+
+
+
+
 
   def focus_sessions
     pomodoros.all.count

@@ -10,9 +10,11 @@
   margin:30px auto;
 }
 
+
 .card-journal-top h2 {
   color:#69585F;
   font-weight:800;
+
 }
 
 .card-journal-top {
@@ -62,15 +64,12 @@
 }
 
 .card-journal-entries {
-  //
-  // display: flex;
-  // height:50px;
-  // justify-content: space-around;
-  // align-items: center;
+width:400px;
 }
 .card-journal-entries p {
   font-weight:800;
   color:#69585F;
+
 }
 
 .card-journal-entries h3 {
@@ -92,11 +91,12 @@
 .card-journal-show-entries p {
   font-weight:800;
   color:white;
-
 }
 
-.card-journal-show-entries-wrapper {
+.card-journal-entries-group {
   display: flex;
-  height:400px;
-  align-items: center;
+  justify-content: space-between;
+  width:240px;
+  margin:20px auto;
+
 }

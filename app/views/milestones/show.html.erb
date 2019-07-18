@@ -1,17 +1,10 @@
+<% content_for :meta_title, "#{@entry.title.capitalize} - #{DEFAULT_META["meta_product_name"]}" %>
+
 <% title "Milestone Summary" %>
-  <div class="achievement-banner">
-  <div class="achievement-icon ">
-    <span class="icon"><span class="icon-trophy"></span></span>
-  </div>
-  <div class="achievement-text">
-    <p class="achievement-notification">Achievement unlocked</p>
-    <p class="achievement-name">25G &ndash;
       <% @trophies.each do |trophy| %>
-        <%= trophy.name %>
+        <%= trophy.name %>  
       <% end %>
-    </p>
-  </div>
-</div>
+
 
   <div class="card-pomodoro">
     <div class="scroll-effect">

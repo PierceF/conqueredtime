@@ -1,7 +1,10 @@
+<% content_for :meta_title, "#{@milestone.title} is your focus now" %>
 <div class="content2">
-<div id="milestone">
+<div class="card-journal-book-top">
+  <div class="card-journal-book-text">
   <h2 align="center"> Focus Timer </h2>
   <!-- <h4>  Session <%=@milestone.title %> </h4> -->
+  </div>
 </div>
 <!-- <div class="card-pomodoro"> -->
 <div id="pomodoro">
@@ -45,7 +48,7 @@
         <%= link_to milestone_path(@milestone, pomodoro_id: @pomodoro.id) do %>
           <p>Evaluate Your Session</p>
           <div class="back-fade-in">
-          <img class="vert-move fade-in" src="https://res.cloudinary.com/doem0zjpf/image/upload/v1563012445/zxc_vvjt4c.png" alt="">
+          <!-- <img class="vert-move fade-in" src="https://res.cloudinary.com/doem0zjpf/image/upload/v1563012445/zxc_vvjt4c.png" alt=""> -->
           </div>
           <% end %>
         </div>
