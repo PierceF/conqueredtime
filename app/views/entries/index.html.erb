@@ -31,7 +31,7 @@
         <div class="card-journal-book-entries">
         <h3><%= entry.goal %><br></h3>
           </div>
-        <a class="button" href="#popup<%= entry.id %>">+</a>
+          <a class="button" href="#popup"<%= entry.id %>">+</a>
       </button>
       <div class="content">
           <% entry.milestones.each do |milestone| %>
@@ -57,7 +57,6 @@
 <% end %>
 
 <a class="card-journal-book-add" href="#popup1">New Goal</a>
-
 </div>
 
 
