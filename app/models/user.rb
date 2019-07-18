@@ -18,7 +18,7 @@ class User < ApplicationRecord
     journals.each do |e|
       total += e.journal_minutes
     end
-    total / 60
+    total
   end
 
   def self.top_ten
