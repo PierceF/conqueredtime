@@ -10,7 +10,6 @@
   margin:60px auto;
 }
 
-<<<<<<< HEAD
 .card-journal-book-add-container {
   display: flex;
   height:425px;
@@ -18,8 +17,9 @@
 }
 
 .card-journal-book-add:active {
-  background: #B8D8BA;
-=======
+  background: #B8D8BA; 
+}
+
 .card-journal-show-entries-wrapper h3 {
 display: block;
 text-align: center;
@@ -45,7 +45,7 @@ justify-content: space-between;
 .three-last-entries-yep {
   display: flex;
   flex-direction: column;
->>>>>>> 54f7161b43bc784355593eedea50d5d7da419682
+
 }
 
 .card-journal-top h2 {
