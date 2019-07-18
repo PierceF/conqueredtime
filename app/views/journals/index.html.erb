@@ -10,7 +10,12 @@
       </div>
       <div class="card-journal-trophies">
         <div class="trophies">
-          <p><%= journal.trophies_number + 3 %></p>
+          <% if journal.achievements.count == 0 %>
+          <% then %>
+            <p>Get started!</p>
+            <% else %>
+            <p><%= journal.trophies_number %></p>
+            <% end %>
           <i class="fas fa-trophy"></i>
         </div>
 
