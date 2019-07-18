@@ -7,7 +7,7 @@
   border-radius:15px;
   border-right:5px solid #E5E5E5;
   border-bottom:5px solid #E5E5E5;
-  box-shadow: 15px 10px 10px rgba(0,0,0,0.2);
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
 }
 
 
@@ -32,12 +32,6 @@
 
 .card-journal-book-text {
 padding: 20px 20px;
-}
-
-.card-journal-book-text a {
-  // color:#ABABAB;
-  // font-weight: 800;
-  // font-size:16px;
 }
 
 .card-journal-book-text a:hover {
@@ -74,6 +68,7 @@ padding: 20px 20px;
   font-weight:800;
   color:white;
   text-align:left;
+
 }
 
 .card-journal-book-entries {
@@ -86,26 +81,27 @@ padding: 20px 20px;
   background: #B8D8BA;
   height:60px;
   width:250px;
-  border-radius:0px 15px 15px 0px;
+  border-radius:0px 4px 4px 0px;
   display: flex;
   align-items: center;
-  padding:0 20px;
+  padding:0 10px;
   margin-bottom:10px;
   margin-top:20px;
 }
 
-.card-journal-book-add a{
-  font-weight:800;
+.card-journal-book-add {
   color:white;
-  font-size:16px;
 }
+
+
+
+
+.card-journal h3 {
+  padding:30px 0px 10px 0px;
+}
+
 
 .card-journal-book-add-container {
   display: flex;
   align-items: center;
-}
-
-
-.card-journal-book button {
-  font-size:35px;
 }

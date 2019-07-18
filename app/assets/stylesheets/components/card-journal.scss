@@ -3,13 +3,50 @@
   min-height:90vh;
   background:white;
   border-radius:15px;
-  box-shadow: 15px 10px 10px rgba(0,0,0,0.2);
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
   background: white;
   border-bottom: 5px solid #E5E5E5;
   border-right: 5px solid #E5E5E5;
-  margin:30px auto;
+  margin:60px auto;
 }
 
+.card-journal-book-add-container {
+  display: flex;
+  height:425px;
+  align-items: center;
+}
+
+.card-journal-book-add:active {
+  background: #B8D8BA; 
+}
+
+.card-journal-show-entries-wrapper h3 {
+display: block;
+text-align: center;
+}
+
+.group-it {
+display: flex;
+width:320px;
+justify-content: space-between;
+  margin: 0 auto;
+  border-bottom: 1px solid #F4F4F4;
+}
+
+
+
+.group-it p {
+  color:#69585F;
+  font-size:20px;
+  font-weight:800;
+  margin-top:15px;
+}
+
+.three-last-entries-yep {
+  display: flex;
+  flex-direction: column;
+
+}
 
 .card-journal-top h2 {
   color:#69585F;
@@ -82,10 +119,11 @@ width:400px;
   background: #B8D8BA;
   width: 250px;
   height:60px;
-  border-radius:0px 15px 15px 0px;
+  border-radius:0px 4px 4px 0px;
   display:flex;
   justify-content: center;
   align-items:center;
+  margin-top:20px;
 }
 
 .card-journal-show-entries p {
@@ -96,7 +134,8 @@ width:400px;
 .card-journal-entries-group {
   display: flex;
   justify-content: space-between;
-  width:240px;
+  width:320px;
   margin:20px auto;
+    border-bottom: 1px solid #F4F4F4;
 
 }

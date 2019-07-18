@@ -30,7 +30,7 @@ class Journal < ApplicationRecord
   # end
 
   def time
-    seconds = self.journal_minutes
+    seconds = self.journal_minutes * 60
     if seconds >= 60 * 60
       minutes = seconds / 60
       hours = minutes / 60
