@@ -1,17 +1,15 @@
 <% content_for :meta_title, "#{@milestone.title.capitalize} - #{DEFAULT_META["meta_product_name"]}" %>
 
-<% title "Milestone Summary" %>
-       <div class="achievement-banner">
-  <div class="achievement-icon ">
-    <span class="icon"><span class="icon-trophy"></span></span>
-  </div>
-  <div class="achievement-text">
-    <p class="achievement-notification">Achievement unlocked</p>
-    <p class="achievement-name">25G &ndash;
+<div id="popup1" class="overlay">
+  <div class="popup">
+    <h2>Here i am</h2>
+    <a class="close" href="#">&times;</a>
+    <div class="content">
       <% @trophies.each do |trophy| %>
         <%= trophy.name %>
+        <img src= "<% trophy.image %>" alt="nothing">
       <% end %>
-    </p>
+    </div>
   </div>
 </div>
 
@@ -173,10 +171,23 @@
 
 
 <script>
-  document.addEventListener("load", (event) => {
-    document.querySelectorAll("div.achievement-banner, div.achievement-icon, div.achievement-text").forEach( (div) => {
-    div.classList.add("activated");
-  });
-});
+  console.log("hell");
+  if (<%= !@trophies.empty? %>) {
+    document.addEventListener('DOMContentLoaded', (event) => {
+      console.log("hell");
+      document.querySelectorAll("#popup1").forEach((div) => {
+        div.classList.remove("overlay");
+      });
 
+      const cross = document.querySelector('.close');
+      cross.addEventListener("click", (event) => {
+        document.querySelectorAll("#popup1").forEach( (div) => {
+          div.classList.add("overlay");
+        });
+      });
+    });
+  }
 </script>
+
+
+
