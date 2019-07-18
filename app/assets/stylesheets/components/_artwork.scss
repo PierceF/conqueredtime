@@ -7,7 +7,7 @@ width:100%;
   width:230px;
 }
 
-img.vert-move {
+.vert-move {
     -webkit-animation: mover 1s infinite  alternate;
     animation: mover 1s infinite  alternate;
 }
@@ -50,4 +50,9 @@ transition: 0.3s;
 
 .animate-180 {
   outline-color:none !important;
+}
+
+
+.pomodoro-img {
+width:70%;
 }
