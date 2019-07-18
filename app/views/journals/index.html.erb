@@ -10,7 +10,7 @@
       </div>
       <div class="card-journal-trophies">
         <div class="trophies">
-          <% if journal.trophies_number == nil || 0 %>
+          <% if journal.achievements.count == 0 %>
           <% then %>
             <p>Get started!</p>
             <% else %>
