@@ -33,8 +33,8 @@ entry8 = Entry.create!(goal: 'Learn Japanese', date: Date.today, journal: (pierc
 entry9 = Entry.create!(goal: 'Learn Guitar', date: Date.today, journal: (pierce.journals.find_by title: "Lifestyle"))
 
 entry10 = Entry.create!(goal: 'Learn to program', date: Date.today, journal: (pierce.journals.find_by title: "Career"))
-entry11 = Entry.create!(goal: 'Scale up Business', date: Date.today, journal: (pierce.journals.find_by title: "Career"))
-entry12 = Entry.create!(goal: 'Explore alternative income', date: Date.today, journal: (pierce.journals.find_by title: "Career"))
+# entry11 = Entry.create!(goal: 'Scale up Business', date: Date.today, journal: (pierce.journals.find_by title: "Career"))
+# entry12 = Entry.create!(goal: 'Explore alternative income', date: Date.today, journal: (pierce.journals.find_by title: "Career"))
 
 entry13 = Entry.create!(goal: "Achieve 15% bodyfat", date: Date.today, journal: (pontus.journals.find_by title: "Fitness"))
 entry14 = Entry.create!(goal: "Achieve 15% bodyfat", date: Date.today, journal: (lena.journals.find_by title: "Fitness"))
@@ -99,14 +99,14 @@ milestone29 = Milestone.create!(title: 'Work on Conquered Time', entry: entry10)
 milestone30 = Milestone.create!(title: 'Ruby Wars', entry: entry10)
 
 
-milestone31 = Milestone.create!(title: 'SEO', entry: entry11)
-milestone32 = Milestone.create!(title: 'Reachout to Influencers', entry: entry11)
-milestone33 = Milestone.create!(title: 'Interview Customers', entry: entry11)
+milestone31 = Milestone.create!(title: 'SEO', entry: entry10)
+milestone32 = Milestone.create!(title: 'Reachout to Influencers', entry: entry10)
+milestone33 = Milestone.create!(title: 'Interview Customers', entry: entry10)
 
 
-milestone34 = Milestone.create!(title: 'Real Estate', entry: entry12)
-milestone35 = Milestone.create!(title: 'Stocks/crypto', entry: entry12)
-milestone36 = Milestone.create!(title: 'Freelance', entry: entry12)
+milestone34 = Milestone.create!(title: 'Real Estate', entry: entry10)
+milestone35 = Milestone.create!(title: 'Stocks/crypto', entry: entry10)
+milestone36 = Milestone.create!(title: 'Freelance', entry: entry10)
 
 milestone37 = Milestone.create!(title: 'Freelance', entry: entry13)
 milestone38 = Milestone.create!(title: 'Freelance', entry: entry14)
@@ -169,6 +169,19 @@ pomodoro44 = Pomodoro.create!(milestone: milestone44, start: (DateTime.now - 115
 pomodoro45 = Pomodoro.create!(milestone: milestone45, start: (DateTime.now - 45.minutes), end: DateTime.now, stars: 4)
 
 
+pomodoro46 = Pomodoro.create!(milestone: milestone1, start: (DateTime.now - 1.minutes), end: DateTime.now, stars: 3)
+pomodoro47 = Pomodoro.create!(milestone: milestone2, start: (DateTime.now - 1.minutes), end: DateTime.now, stars: 4)
+pomodoro48 = Pomodoro.create!(milestone: milestone3, start: (DateTime.now - 1.minutes), end: DateTime.now, stars: 4)
+pomodoro49 = Pomodoro.create!(milestone: milestone1, start: (DateTime.now - 1.minutes), end: DateTime.now, stars: 4)
+
+pomodoro50 = Pomodoro.create!(milestone: milestone2, start: (DateTime.now - 1.minutes), end: DateTime.now, stars: 3)
+pomodoro51 = Pomodoro.create!(milestone: milestone3, start: (DateTime.now - 1.minutes), end: DateTime.now, stars: 3)
+pomodoro52 = Pomodoro.create!(milestone: milestone1, start: (DateTime.now - 2.minutes), end: DateTime.now, stars: 4)
+pomodoro53 = Pomodoro.create!(milestone: milestone2, start: (DateTime.now - 1.minutes), end: DateTime.now, stars: 4)
+pomodoro54 = Pomodoro.create!(milestone: milestone3, start: (DateTime.now - 1.minutes), end: DateTime.now, stars: 4)
+
+
+
 
 trophy1 = Trophy.create!(name: "Wow awesome job! Have a trophy.", image:"https://res.cloudinary.com/dyeffcfck/image/upload/v1563416897/a_nice_medal_for_steven_gydqku.png")
 trophy2 = Trophy.create!(name: "Got started on a new journey.", image:"https://res.cloudinary.com/doem0zjpf/image/upload/v1563342626/052-medal-29_iraf0f.png")
@@ -177,3 +190,5 @@ trophy2 = Trophy.create!(name: "Got started on a new journey.", image:"https://r
 pierce.journals.each do |journal|
   Achievement.create!(journal: journal, trophy: (Trophy.find_by name: "Got started on a new journey."), shown: true)
 end
+
+Achievement.create!(journal: (pierce.journals.find_by title: "Fitness"), trophy: (Trophy.find_by name: "Wow awesome job! Have a trophy."), shown: true)
