@@ -38,14 +38,14 @@
             <%= simple_form_for([milestone, Pomodoro.new]) do |m| %>
             <div class="group-collapse">
               <p><%= milestone.title %></p>
+                        <label class="container">
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
               <%= button_tag do %>
               <i class="animate-180 fas fa-hourglass-end"></i>
             <% end %>
           </div>
-          <label class="container">
-  <input type="checkbox">
-  <span class="checkmark"></span>
-</label>
         <% end %>
       <% end %>
     </div>
