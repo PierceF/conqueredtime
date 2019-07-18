@@ -1,214 +1,92 @@
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+#milestone_title {
 }
 
-.achievement-banner {
-  opacity: 0;
+
+.box {
   margin: 0 auto;
-  font-size: 350%;
-  max-width: 10em;
-  color: #efefef;
-  background: #3d4142;
-  border-radius: 10em;
-  position: relative;
-  padding: .125em;
-  min-height: 1.5em;
-  overflow: hidden;
 }
-.achievement-banner .achievement-icon {
-  border-radius: 10em;
-  position: relative;
-  background: #000;
-  border: .125em solid #F5C4C3;
-  border-top-color: #45ca3d;
-  height: 1.25em;
-  width: 1.25em;
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  z-index: 100;
-}
-.achievement-banner .achievement-icon .icon {
-  display: block;
-  border-radius: 10em;
-  border: 4px solid #000;
-  text-align: center;
+
+
+.button {
+  font-size: 35px;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
   position: absolute;
+  bottom: 4px;
+  right: 11px;
+}
+
+.button:hover {
+  color:white;
+}
+
+.button:active {
+  color:white;
+}
+
+
+.overlay {
+  position: fixed;
   top: 0;
+  bottom: 0;
   left: 0;
-  width: 1em;
-  height: 1em;
-  line-height: 1;
-  z-index: 1000;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  transform: rotate(45deg);
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0.0;
+  z-index: 3;
 }
-.achievement-banner .achievement-icon .icon .icon-trophy {
-  font-size: 75%;
-  line-height: 1;
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup5 {
+  margin: 70px auto;
+  padding: 50px 0px 30px 0px;
+  background: #fff;
+  border-radius: 15px;
+  border-right:5px solid #E5E5E5;
+  border-bottom:5px solid #E5E5E5;
+  width: 400px;
+  height:250px;
   position: relative;
-  top: -.125em;
+  color: white !important;
 }
-.achievement-banner .achievement-text {
-  font-family: "Trebuchet MS";
-  text-shadow: 0 2px 0 #000;
+
+#start p {
+  font-weight:800;
+  color:#EF959D;
+}
+
+#done p {
+  font-weight:800;
+  color:#EF959D;
+}
+
+#back p {
+  font-weight:800;
+  color:#EF959D;
+}
+
+
+.popup5 .close {
   position: absolute;
-  top: .5em;
-  left: 4em;
-  font-size: 50%;
-  line-height: 1;
-  width: 400%;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
 }
-.achievement-banner .achievement-notification {
-  margin: 0;
+.popup5 .close:hover {
+  color: #B8D8BA;
 }
-.achievement-banner .achievement-name {
-  margin: 0;
-}
-
-/* Generated content */
-.achievement-banner .achievement-icon:before,
-.achievement-banner .achievement-icon:after,
-.achievement-banner .achievement-icon .icon:before,
-.achievement-banner .achievement-icon .icon:after {
-  content: "";
-  display: block;
-  position: absolute;
-}
-
-.achievement-banner .achievement-icon:before{
-  border-radius: 12em;
-  z-index: -100;
-  background: transparent;
-  border: 4px solid #000;
-  top: -.175em;
-  left: -.175em;
-  right: -.175em;
-  bottom: -.175em;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-/* Bars */
-.achievement-banner .achievement-icon .icon:before,
-.achievement-banner .achievement-icon .icon:after {
-  width: 150%;
-  height: .125em;
-  background: #000;
-  border-radius: .05em;
-  z-index: -10;
-  top: 42.5%;
-  left: -25%;
-}
-
-.achievement-banner .achievement-icon .icon:before {
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-
-/* Animations */
-
-/* open-close-banner */
-@-webkit-keyframes open-close-banner {
-  0% {width: 1.5em; opacity: 0;}
-  2% {width: 1.5em; opacity: 1;}
-  8% {width: 10em;}
-  80% {width: 10em;}
-  90% {width: 1.5em; opacity: 1;
-    -webkit-transform: rotate(0deg);
-  }
-  98% {
-    width: 1.5em;
-    -webkit-transform: rotate(720deg);
-  }
-  100% {width: 1.5em; opacity: 0;}
-}
-@-moz-keyframes open-close-banner {
-  0% {width: 1.5em; opacity: 0;}
-  2% {width: 1.5em; opacity: 1;}
-  8% {width: 10em;}
-  80% {width: 10em;}
-  90% {
-    width: 1.5em;
-    opacity: 1;
-    -moz-transform: rotate(0deg);
-  }
-  98% {
-    width: 1.5em;
-    -moz-transform: rotate(720deg);
-  }
-  100% {width: 1.5em; opacity: 0;}
-}
-@keyframes open-close-banner {
-  0% {width: 1.5em; opacity: 0;}
-  2% {width: 1.5em; opacity: 1;}
-  8% {width: 10em;}
-  80% {width: 10em;}
-  90% {
-    width: 1.5em;
-    opacity: 1;
-    transform: rotate(0deg);
-  }
-  98% {
-    width: 1.5em;
-    transform: rotate(720deg);
-  }
-  100% {width: 1.5em; opacity: 0;}
-}
-
-/* border-top-pulse */
-@-webkit-keyframes border-top-pulse {
-  0% {border-top-color: #F5C4C3;}
-  40% {border-top-color: #ffffff;}
-  80% {border-top-color: #00ff00;}
-  100% {border-top-color: #45ca3d;}
-}
-@-moz-keyframes border-top-pulse {
-  0% {border-top-color: #F5C4C3;}
-  40% {border-top-color: #ffffff;}
-  80% {border-top-color: #00ff00;}
-  100% {border-top-color: #45ca3d;}
-}
-@keyframes border-top-pulse {
-  0% {border-top-color: #F5C4C3;}
-  40% {border-top-color: #ffffff;}
-  80% {border-top-color: #00ff00;}
-  100% {border-top-color: #45ca3d;}
-}
-@-webkit-keyframes fade-in-text {
-  0% {opacity: 0;}
-  80% {opacity: 0;}
-  100% {opacity: 1;}
-}
-@-moz-keyframes fade-in-text {
-  0% {opacity: 0;}
-  80% {opacity: 0;}
-  100% {opacity: 1;}
-}
-@keyframes fade-in-text {
-  0% {opacity: 0;}
-  80% {opacity: 0;}
-  100% {opacity: 1;}
-}
-.achievement-banner.activated{
-  -webkit-animation: open-close-banner 5s 1;
-  -moz-animation: open-close-banner 5s 1;
-  animation: open-close-banner 5s 1;
-}
-
-.achievement-banner .achievement-icon.activated{
-  /* Make border-top pulse. */
-  -webkit-animation: border-top-pulse 1.25s 2;
-  -moz-animation: border-top-pulse 1.25s 2;
-  animation: border-top-pulse 1.25s 2;
-}
-/* fade-in-text */
-.achievement-banner .achievement-text.activated{
-  -webkit-animation: fade-in-text .5s 1;
-  -moz-animation: fade-in-text .5s 1;
-  animation: fade-in-text .5s 1;
+.popup5 .content {
+    max-height: 150px;
+  overflow: auto;
+  width:300px;
 }
