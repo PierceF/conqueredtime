@@ -1,11 +1,11 @@
 // Specific CSS for your home-page
 
 .content-group1, .content-group2, .content-group3, .content-group4{
-  height:500px;
+  height:580px;
  background: #fafafa;
  box-shadow: 0 0 15px rgba(0,0,0,0.2);
  border-radius:15px;
- margin:30px auto;
+ margin:20px auto 120px auto ;
  border-bottom: 10px solid #E5E5E5;
  width:400px;
  border-bottom: 5px solid #E5E5E5;
@@ -13,6 +13,11 @@
  border-radius:15px;
   box-shadow: 15px 10px 10px rgba(0,0,0,0.2);
 }
+
+.content-group1 {
+  height:650px !important;
+}
+
 
 .logo {
   width:60px;
@@ -35,10 +40,14 @@
 
 }
 .content-group1 h3, .content-group2 h3, .content-group3 h3, .content-group4 h3, .content-group5 h3,   {
-  margin-top:20px;
+  margin-top:50px;
   text-align: center;
   font-weight:800;
   color:#69585F;
+}
+
+.content-group1 p {
+  width:260px;
 }
 
 
@@ -51,8 +60,8 @@
   border-radius:20px;
   box-shadow: 15px 10px 10px rgba(0,0,0,0.2);
    width:400px;
-   height:550px;
-   margin:0 auto;
+   height:580px;
+   margin:40px auto;
 }
 
 body {
