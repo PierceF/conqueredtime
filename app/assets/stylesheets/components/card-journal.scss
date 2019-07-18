@@ -10,6 +10,32 @@
   margin:30px auto;
 }
 
+.card-journal-show-entries-wrapper h3 {
+display: block;
+text-align: center;
+}
+
+.group-it {
+display: flex;
+width:320px;
+justify-content: space-between;
+  margin: 0 auto;
+  border-bottom: 1px solid #F4F4F4;
+}
+
+
+
+.group-it p {
+  color:#69585F;
+  font-size:20px;
+  font-weight:800;
+  margin-top:15px;
+}
+
+.three-last-entries-yep {
+  display: flex;
+  flex-direction: column;
+}
 
 .card-journal-top h2 {
   color:#69585F;
@@ -82,10 +108,11 @@ width:400px;
   background: #B8D8BA;
   width: 250px;
   height:60px;
-  border-radius:0px 15px 15px 0px;
+  border-radius:0px 4px 4px 0px;
   display:flex;
   justify-content: center;
   align-items:center;
+  margin-top:20px;
 }
 
 .card-journal-show-entries p {
@@ -96,7 +123,8 @@ width:400px;
 .card-journal-entries-group {
   display: flex;
   justify-content: space-between;
-  width:240px;
+  width:320px;
   margin:20px auto;
+    border-bottom: 1px solid #F4F4F4;
 
 }

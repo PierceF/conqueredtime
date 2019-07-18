@@ -14,6 +14,12 @@
 
       <div class="card-journal-trophies">
         <div class="trophies">
+                    <% if journal.achievements.count == 0 %>
+          <% then %>
+            <p>Get started!</p>
+            <% else %>
+            <p><%= journal.trophies_number %></p>
+            <% end %>
           <i class="fas fa-trophy"></i>
         </div>
 
@@ -35,7 +41,7 @@
         </div>
 <% end %>
 <div class="card-journal-book-add-container">
-  <%= link_to journal_entries_path(journal) do %>
+  <%= link_to new_journal_entry_path(journal) do %>
   <div class="card-journal-book-add">
     <p style="color:white; font-weight:800;">Open Journal</p>
   </div>
