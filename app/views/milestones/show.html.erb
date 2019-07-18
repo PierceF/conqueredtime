@@ -1,8 +1,9 @@
-<% content_for :meta_title, "#{@entry.title.capitalize} - #{DEFAULT_META["meta_product_name"]}" %>
+
+<% content_for :meta_title, "#{@milestone.title}" %>
 
 <% title "Milestone Summary" %>
       <% @trophies.each do |trophy| %>
-        <%= trophy.name %>  
+        <%= trophy.name %>
       <% end %>
 
 
@@ -134,7 +135,7 @@
             </div>
           </div>
           <div class="button-center">
-          <%= f.submit "Add a Review", class: "button-small-red" %>
+          <%= f.submit "Add a Review", class: "form-submit" %>
         <% end %>
           </div>
       </div>
