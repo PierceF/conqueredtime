@@ -81,10 +81,10 @@ padding: 20px 20px;
   background: #B8D8BA;
   height:60px;
   width:250px;
-  border-radius:0px 15px 15px 0px;
+  border-radius:0px 4px 4px 0px;
   display: flex;
   align-items: center;
-  padding:0 20px;
+  padding:0 10px;
   margin-bottom:10px;
   margin-top:20px;
 }
@@ -92,7 +92,15 @@ padding: 20px 20px;
 .card-journal-book-add a{
   font-weight:800;
   color:white;
-  font-size:16px;
+  font-size:20px;
+}
+
+
+
+.card-journal-book-add a:hover{
+  font-weight:800;
+    color:white !important;
+  font-size:20px;
 }
 
 .card-journal h3 {
