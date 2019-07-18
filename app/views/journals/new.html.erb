@@ -27,34 +27,19 @@
           <i class="fas fa-trophy"></i>
         </div>
 
-        <div class="times">
-          <p><%= journal.time %></p>
-          <i class="fas fa-hourglass-end"></i>
-        </div>
-        <div class="time">
+          <div class="times">
+              <p><%= journal.time %></p>
+            <i class="fas fa-hourglass-end"></i>
+          </div>
+          <div class="time">
           <p><%= journal.focus_sessions %></p>
           <i class="fas fa-history"></i>
-        </div>
-        <div class="apple">
-          <p>
-            <%= journal.star_average %>
-          </p>
+          </div>
+          <div class="apple">
+            <p> <%= journal.star_average %> </p>
           <i class="fas fa-star"></i>
-        </div>
+          </div>
       </div>
-      <% journal.last_three_entries.each do |entry| %>
-        <div class="card-journal-entries"></div>
-      <% end %>
-      <div class="card-journal-book-add-container">
-        <%= link_to journal_entries_path(journal) do %>
-        <div class="card-journal-book-add">
-          <p style="color:white; font-weight:800;">Open Journal</p>
-        </div>
-<<<<<<< HEAD
-      <% end %>
-    </div>
-=======
-<% end %>
 <div class="card-journal-book-add-container">
   <%= link_to new_journal_entry_path(journal) do %>
   <div class="card-journal-book-add">
@@ -62,14 +47,8 @@
   </div>
   <% end %>
 </div>
-<div class="band-book">
-  <h3 style="text-align:center; color:#69585F;">Last Three Goals</h3>
-  <% journal.last_three_entries.each do |entry| %>
-<div class="card-journal-entries">
-  <div class="card-journal-entries-group">
-<p><%= entry.goal %></p> <p> <%= journal.time %></p>
->>>>>>> 54f7161b43bc784355593eedea50d5d7da419682
-  </div>
+</div>
+</div>
 <% end %>
 
 <div class="card-own-journal">
