@@ -13,7 +13,7 @@ class Entry < ApplicationRecord
     milestones.each do |m|
       total += m.seconds
     end
-    total
+    total / 60
   end
   # def time
   #   minutes = self.entry_minutes
@@ -28,7 +28,7 @@ class Entry < ApplicationRecord
   # end
 
   def time
-    seconds = self.entry_minutes
+    seconds = self.entry_minutes * 60
     if seconds >= 60
       minutes = seconds / 60
       hours = minutes / 60
