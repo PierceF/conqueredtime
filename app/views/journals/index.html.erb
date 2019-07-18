@@ -1,7 +1,6 @@
 <!-- app/views/offers/show.html.erb -->
 
 <% @journals.each do |journal| %>
-  <%= link_to journal_entries_path(journal) do %>
   <div class="card-journal">
     <!-- <div class="card-journal-profile"> <img src="https://source.unsplash.com/random/100x100" alt=""> </div> -->
     <div class="card-journal-top">
@@ -42,10 +41,21 @@
 
 
 <div class="card-journal-show-entries-wrapper">
+  <%= link_to journal_entries_path(journal) do %>
 <div class="card-journal-show-entries">
   <p>Open Journal</p>
 </div
 <% end %>
+  <h3>Last Three Goals</h3>
+
+<% journal.last_three_entries.each do |entry| %>
+    <div class="group-it">
+        <p class="journal-last-three"><%= entry.goal %></p>
+        <p><%= entry.time %></p>
+        </div>
+      <% end %>
+
+        </div>
   </div>
 
   </div>
