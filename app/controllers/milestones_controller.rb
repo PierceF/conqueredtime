@@ -44,7 +44,7 @@ class MilestonesController < ApplicationController
   def create_badge
     return false unless (@journal.trophies.find_by name: "You've spent 5 hours on this journal").nil?
 
-    return false unless @journal.journal_minutes >= 300
+    return false unless @journal.journal_minutes >= 5
 
     Achievement.create!(journal_id: @journal.id, trophy: (Trophy.find_by name: "You've spent 5 hours on this journal"))
   end
