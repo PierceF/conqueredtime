@@ -43,7 +43,7 @@
 .group-collapse {
   height:100%;
   width:100%;
-  padding:10px 20px;
+  padding: 20px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -58,7 +58,7 @@
 }
 
 .group-collapse i {
-  font-size:30px;
+  font-size:35px !important;
   color:white;
   margin:0px;
 }
@@ -67,6 +67,6 @@
   color:white;
   border:none;
   font-weight:800;
-  font-size:16px;
+  font-size:20px !important;
 
 }
