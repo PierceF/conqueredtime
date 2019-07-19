@@ -1,5 +1,5 @@
 <!-- app/views/offers/show.html.erb -->
-
+<div class="container-main">
 <% @journals.each do |journal| %>
   <div class="card-journal">
     <!-- <div class="card-journal-profile"> <img src="https://source.unsplash.com/random/100x100" alt=""> </div> -->
@@ -42,7 +42,7 @@
 
 <div class="card-journal-book-add-container">
   <%= link_to journal_entries_path(journal) do %>
-  <p class="button-fast">Work On Fitness</p>
+  <p style="color:white; font-weight:800;">Work on <%= journal.title %></p>
 <% end %>
   </div>
 
@@ -68,3 +68,7 @@
     <input class="form-submit" value="Make a new Journal" type="submit">
   </form>
   </div>
+</div>
+<div class="hello" style="margin-bottom:40px;">
+
+</div>

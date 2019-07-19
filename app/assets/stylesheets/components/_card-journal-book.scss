@@ -1,12 +1,12 @@
 .card-journal-book {
   margin:0 auto;
   min-height:100vh;
-  width:450px;
+  width:100%;
   background: white;
-  width:400px;
-  border-radius:15px;
-  border-right:5px solid #E5E5E5;
-  border-bottom:5px solid #E5E5E5;
+  padding-bottom:20px;
+  // border-radius:15px;
+  // border-right:5px solid #E5E5E5;
+  // border-bottom:5px solid #E5E5E5;
   box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
 }
 
@@ -41,9 +41,9 @@ padding: 20px 20px;
 }
 
 .card-journal-book-trophies {
-  background: #EFEFEF;
+  background: #CDE9F6;
   min-height:100px;
-  width:395px;
+  width:100%;
   display: flex;
   align-items: flex-start;
   justify-content: space-around;
@@ -83,12 +83,12 @@ padding: 20px 20px;
 .card-journal-book-add {
   background: #B8D8BA;
   height:60px;
-  width:250px;
+  width:50%;
   border-radius:0px 4px 4px 0px;
   display: flex;
   align-items: center;
   padding:0 10px;
-  margin-bottom:10px;
+  margin-bottom:0px;
   margin-top:20px;
 }
 

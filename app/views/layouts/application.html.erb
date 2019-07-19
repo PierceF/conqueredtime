@@ -2,8 +2,8 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=450px">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"
+     <meta name="viewport" content="width=100%">
 
    <title><%= meta_title %></title>
     <meta name="description" content="
@@ -35,12 +35,10 @@
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
   <body>
-    <div class="container-main">
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
     <%= yield %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
-    </div>
   </body>
 </html>
