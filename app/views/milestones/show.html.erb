@@ -1,14 +1,14 @@
 <% content_for :meta_title, "#{@milestone.title.capitalize} - #{DEFAULT_META["meta_product_name"]}" %>
 <div class="container-main">
-  <div class="popup overlay">
+  <div class="trophypopup trophyoverlay">
 
     <h2>Congratulations!</h2>
     <a class="close" href="#">&times;</a>
-    <div class="content content-wrap style-text-trophy">
+    <div class="trophycontent content-wrap style-text-trophy">
       <% @trophies.each do |trophy| %>
-        <p><%= trophy.name %></p>
-        <div style="background: #E4E4E4;" class="trophy-image">
-          <img style="width: 50px;" class="trophy-popup" src=<%= trophy.image %> alt="">
+        <%= trophy.name %>
+        <div style="background: #E4E4E4;black;" class="trophy-image">
+          <img style="width: 50px;" class="trophy-popup" src=<%= trophy.image %> alt="Trophy">
         </div>
       <% end %>
     </div>
@@ -167,15 +167,15 @@
   <% unless @trophies.empty? %>
     document.addEventListener('DOMContentLoaded', (event) => {
       setTimeout(() => {
-        document.querySelectorAll(".popup").forEach((div) => {
-          div.classList.remove("overlay");
+        document.querySelectorAll(".trophypopup").forEach((div) => {
+          div.classList.remove("trophyoverlay");
         });
       }, 1500);
 
       const cross = document.querySelector('.close');
       cross.addEventListener("click", (event) => {
-        document.querySelectorAll(".popup").forEach( (div) => {
-          div.classList.add("overlay");
+        document.querySelectorAll(".trophypopup").forEach( (div) => {
+          div.classList.add("trophyoverlay");
         });
       });
     });
