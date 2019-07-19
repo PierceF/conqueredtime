@@ -22,14 +22,14 @@
 }
 
 .card-journal-book-top {
- background:url("https://res.cloudinary.com/doem0zjpf/image/upload/v1563510171/FAK_JA_hh8c5y.png");
- background-size:100%;
- height:200px;
+ height:120px;
  border-radius:15px 15px 0px 0px;
  display: flex;
  align-items: center;
  justify-content: center;
 }
+
+
 
 .card-journal-book-text {
 padding: 20px 20px;
@@ -39,6 +39,10 @@ padding: 20px 20px;
   color:#959595;
   font-weight: 800;
   font-size:16px;
+}
+
+.card-journal-book-text h2 {
+  color:#69585F !important;
 }
 
 .card-journal-book-trophies {
