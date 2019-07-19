@@ -105,3 +105,51 @@ justify-content: center;
 .target-button-mainpage button {
   padding:20px 70px;
 }
+
+
+.card-journal-book-add-container {
+  display: flex;
+  height:323px;
+  align-items: center;
+  width:100%;
+  justify-content: center;
+}
+
+
+.button-fast {
+  border-left:none;
+  border-right:none;
+  border-top:none;
+  font-size:16px;
+  padding:25px 50px;
+  background-color: #B8D8BA;
+  color:white;
+  text-decoration:none;
+  font-weight:800;
+  border-radius:15px;
+  border-bottom:7px solid #A8C5AA;
+}
+
+.button-fast a:hover {
+  background-color:#DA888F;
+  transition:0.3s;
+}
+
+.button-fast:active {
+  background-color:#A8C5AA;
+  border:none;
+}
+
+.button-fast-second {
+  border-left:none;
+  border-right:none;
+  border-top:none;
+  font-size:16px;
+  padding:25px 50px;
+  background-color: #B8D8BA;
+  color:white;
+  text-decoration:none;
+  font-weight:800;
+  border-radius:15px;
+  border-bottom:7px solid #A8C5AA;
+}

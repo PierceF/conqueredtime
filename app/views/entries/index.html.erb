@@ -10,10 +10,12 @@
       <div class="card-journal-book-trophies">
       <% if @journal.achievements.count == 0 %>
           <% then %>
-            <img src="https://res.cloudinary.com/doem0zjpf/image/upload/v1563012445/zxc_vvjt4c.png" alt="">
+          <div class="nice-trophy">
+            <img src="https://res.cloudinary.com/doem0zjpf/image/upload/v1563342622/092-medal-7_qqfxqg.png" alt="">
+            </div>
             <% else %>
             <% @journal.trophies.each do |trophy| %>
-              <img src=<%= trophy.image %> alt="">
+              <img  class="medals-fix" src=<%= trophy.image %> alt="">
                 <% end %>
           <% end %>
       </div>

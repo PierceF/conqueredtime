@@ -1,13 +1,18 @@
 <% content_for :meta_title, "#{@milestone.title.capitalize} - #{DEFAULT_META["meta_product_name"]}" %>
 
-<div id="popup1" class="overlay">
+<!-- <div id="popup1" class="overlay"> -->
   <div class="popup">
-    <h2>Here i am</h2>
+    <div class="popup-image">
+    <!-- <img src="https://res.cloudinary.com/doem0zjpf/image/upload/v1563001489/nice_try_bzisao.png" alt=""> -->
+      </div>
+    <h2>Congratulations!</h2>
     <a class="close" href="#">&times;</a>
     <div class="content">
       <% @trophies.each do |trophy| %>
         <%= trophy.name %>
+        <div class="trophy-image">
         <img src= "<% trophy.image %>" alt="nothing">
+        </div>
       <% end %>
     </div>
   </div>
@@ -188,6 +193,3 @@
     });
   }
 </script>
-
-
-
