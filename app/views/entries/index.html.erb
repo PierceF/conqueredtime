@@ -8,7 +8,7 @@
       <div class="card-journal-book-trophies">
       <% if @journal.achievements.count == 0 %>
           <% then %>
-<p>No trophies yet.</p>
+<p style="color: #A1C9DC; line-height: 100px;">No trophies yet!</p>
 
             <% else %>
               <% @journal.trophies.each do |trophy| %>
