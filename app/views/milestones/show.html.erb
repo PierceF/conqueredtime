@@ -4,11 +4,11 @@
 
     <h2>Congratulations!</h2>
     <a class="close" href="#">&times;</a>
-    <div class="content">
+    <div class="content content-wrap style-text-trophy">
       <% @trophies.each do |trophy| %>
-        <%= trophy.name %>
+        <p><%= trophy.name %></p>
         <div style="background: #E4E4E4;" class="trophy-image">
-          <img class="trophy-popup" src=<%= trophy.image %> alt="">
+          <img style="width: 50px;" class="trophy-popup" src=<%= trophy.image %> alt="">
         </div>
       <% end %>
     </div>

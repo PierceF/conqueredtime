@@ -22,8 +22,9 @@
 }
 
 .card-journal-book-top {
- background: #f4f4f4;
- height:120px;
+ background:url("https://res.cloudinary.com/doem0zjpf/image/upload/v1563510171/FAK_JA_hh8c5y.png");
+ background-size:100%;
+ height:200px;
  border-radius:15px 15px 0px 0px;
  display: flex;
  align-items: center;
@@ -59,7 +60,7 @@ padding: 20px 20px;
 }
 
 .card-journal-book h2 {
-  color:#69585F;
+  color:white;
   font-weight:800;
 }
 
