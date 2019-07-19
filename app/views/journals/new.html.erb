@@ -1,3 +1,4 @@
+<div class="container-main">
 <div class="card-create-journal">
     <div class="group-new">
       <img class="fade-in" src="https://res.cloudinary.com/doem0zjpf/image/upload/v1563001489/nice_try_bzisao.png" alt="">
@@ -44,7 +45,7 @@
       </div>
 <div class="card-journal-book-add-container">
   <%= link_to new_journal_entry_path(journal) do %>
-  <p class="button-fast">Work On Fitness</p>
+  <p class="button-fast" style="font-weight:800;">Work on <%= journal.title %></p>
   <!-- <div class="card-journal-book-add"> -->
   <!-- <div class="something"> -->
     <!-- <a class="button-goals" href="#">See Your Goals</a> -->
@@ -73,3 +74,8 @@
     <input class="form-submit" value="Make a new Journal" type="submit">
   </form>
   </div>
+</div>
+
+<div class="" style="margin-bottom:40px;">
+
+</div>
