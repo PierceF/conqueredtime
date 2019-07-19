@@ -25,6 +25,11 @@
   color:white;
 }
 
+.trophy-image {
+    display: flex;
+  align-items: center;
+}
+
 
 .overlay {
   position: fixed;
@@ -37,6 +42,16 @@
   visibility: hidden;
   opacity: 0.0;
   z-index: 3;
+  display: none;
+}
+
+.trophy-popup {
+  max-height: 102px;
+  max-width: 102px;
+}
+
+.hidden {
+  display: none;
 }
 .overlay:target {
   visibility: visible;
@@ -53,7 +68,7 @@
   width: 400px;
   height:250px;
   position: relative;
-  color: white !important;
+
 }
 
 #start p {
@@ -89,6 +104,9 @@
     max-height: 150px;
   overflow: auto;
   width:300px;
+  background: none;
+  padding: 10px 10px;
+   align-items: center;
 }
 
 .popup2 {
