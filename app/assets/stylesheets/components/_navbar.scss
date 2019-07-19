@@ -8,13 +8,21 @@
   text-align: center;
 }
 
+ul li a {
+  font-size:28px !important;
+}
+
+
+
+ul {
+  padding:0px !important;
+}
 
 :root {
  --primary-color: rgba(244, 244, 244, 1);
  --overlay-color: rgba(244, 244, 244, 1);
  --menu-speed: 0.75s;
 }
-
 
 .showcase {
  background: var(--primary-color);
@@ -42,12 +50,14 @@
 }
 
 .showcase h1 {
- font-size: 4rem;
+ font-size: 6rem;
 }
 
 .showcase p {
- font-size: 1.3rem;
+ font-size: 1.7rem;
 }
+
+
 
 .btn {
  display: inline-block;
@@ -95,6 +105,8 @@
  align-items: center;
  justify-content: center;
 }
+
+
 
 /* Hamburger Line */
 .menu-wrap .hamburger > div {

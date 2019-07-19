@@ -37,13 +37,14 @@
 }
 
 .group-collapse p {
-  font-size:16px !important;
+  font-size:18px !important;
 }
 
 .group-collapse {
   height:100%;
   width:100%;
-  padding:10px 20px;
+  margin-top:30px;
+  padding:0px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -58,7 +59,7 @@
 }
 
 .group-collapse i {
-  font-size:30px;
+  font-size:30px !important;
   color:white;
   margin:0px;
 }
