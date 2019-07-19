@@ -192,7 +192,6 @@ trophy2 = Trophy.create!(name: "Got started on a new journey.", image:"https://r
 # end
 
 Achievement.create!(journal: (pierce.journals.find_by title: "Fitness"), trophy: (Trophy.find_by name: "You've spent 5 hours on this journal"), shown: true)
-Achievement.create!(journal: (pierce.journals.find_by title: "Fitness"), trophy: (Trophy.find_by name: "Got started on a new journey."), shown: true)
 
 Achievement.create!(journal: (pierce.journals.find_by title: "Spirituality"), trophy: (Trophy.find_by name: "Got started on a new journey."), shown: true)
 Achievement.create!(journal: (pierce.journals.find_by title: "Spirituality"), trophy: (Trophy.find_by name: "You've spent 5 hours on this journal"), shown: true)
