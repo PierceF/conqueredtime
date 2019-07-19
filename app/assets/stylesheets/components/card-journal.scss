@@ -10,6 +10,20 @@
   margin:90px auto;
 }
 
+.card-journal-book-banner {
+  padding: 60px;
+  background: white;
+  text-shadow: 2px 2px white;
+  color: white;
+  font-size: 30px;
+  background-image: url("https://res.cloudinary.com/dyeffcfck/image/upload/v1563512869/undraw_tree_swing_646s_qtdfap.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain, cover;
+}
+.card-journal-book-banner h2 {
+  text-align: left !important;
+}
 
 .card-journal-book-add-container {
   display: flex;
