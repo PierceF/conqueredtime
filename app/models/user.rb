@@ -21,6 +21,34 @@ class User < ApplicationRecord
     total
   end
 
+  # def time
+  #   minutes = self.journal_minutes
+  #   if minutes >= 60
+  #     hours = minutes / 60
+  #     minutes = minutes % 60
+
+  #     "#{hours} hour(s) #{minutes} min(s)"
+  #   else
+  #     "#{minutes} min(s)"
+  #   end
+  # end
+
+  def time
+    seconds = self.user_minutes * 60
+    if seconds >= 60 * 60
+      minutes = seconds / 60
+      hours = minutes / 60
+      minutes = minutes % 60
+      seconds = seconds % 60
+
+      "#{hours}h #{minutes}min"
+    else seconds >= 60
+      minutes = seconds / 60
+      seconds = seconds % 60
+      "#{minutes} min"
+    end
+  end
+
   def self.top_ten
     User.all.sort_by(&:user_minutes).reverse!
   end
