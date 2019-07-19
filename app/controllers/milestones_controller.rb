@@ -20,7 +20,7 @@ class MilestonesController < ApplicationController
     @achievements = @journal.achievements.all
     # @pomodoro = Pomodoro.find(Milestone.find(params[:id]).pomodoro)
     create_badge
-    get_started
+    # get_started
     @trophies = []
     find_achievements
   end
