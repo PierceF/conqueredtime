@@ -1,22 +1,21 @@
 <% content_for :meta_title, "#{@milestone.title.capitalize} - #{DEFAULT_META["meta_product_name"]}" %>
 
 <!-- <div id="popup1" class="overlay"> -->
-  <div class="popup">
-    <div class="popup-image">
-    <!-- <img src="https://res.cloudinary.com/doem0zjpf/image/upload/v1563001489/nice_try_bzisao.png" alt=""> -->
-      </div>
+  <div class="popup overlay">
+    <!-- <div class="popup-image">
+    <img src="https://res.cloudinary.com/doem0zjpf/image/upload/v1563001489/nice_try_bzisao.png" alt="">
+      </div>-->
     <h2>Congratulations!</h2>
     <a class="close" href="#">&times;</a>
     <div class="content">
       <% @trophies.each do |trophy| %>
         <%= trophy.name %>
         <div class="trophy-image">
-        <img src= "<% trophy.image %>" alt="nothing">
+          <img class="trophy-popup" src=<%= trophy.image %> alt="">
         </div>
       <% end %>
     </div>
   </div>
-</div>
 
 
   <div class="card-pomodoro">
@@ -165,31 +164,21 @@
 <!-- Try a focus session for another milestone under this entry: Or go back to your journal. -->
 
 <script>
-  <% @trophies.each do |trophy| %>
-    document.querySelectorAll("div.achievement-banner, div.achievement-icon, div.achievement-text").forEach( (div) => {
-    div.classList.add("activated");
-  });
-  <% end %>
 
-</script>
-
-
-
-<script>
-  console.log("hell");
-  if (<%= !@trophies.empty? %>) {
+  <% unless @trophies.empty? %>
     document.addEventListener('DOMContentLoaded', (event) => {
-      console.log("hell");
-      document.querySelectorAll("#popup1").forEach((div) => {
-        div.classList.remove("overlay");
-      });
+      setTimeout(() => {
+        document.querySelectorAll(".popup").forEach((div) => {
+          div.classList.remove("overlay");
+        });
+      }, 1500);
 
       const cross = document.querySelector('.close');
       cross.addEventListener("click", (event) => {
-        document.querySelectorAll("#popup1").forEach( (div) => {
+        document.querySelectorAll(".popup").forEach( (div) => {
           div.classList.add("overlay");
         });
       });
     });
-  }
+  <% end %>
 </script>

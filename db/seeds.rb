@@ -183,7 +183,7 @@ pomodoro54 = Pomodoro.create!(milestone: milestone3, start: (DateTime.now - 1.mi
 
 
 
-trophy1 = Trophy.create!(name: "Wow awesome job! Have a trophy.", image:"https://res.cloudinary.com/dyeffcfck/image/upload/v1563416897/a_nice_medal_for_steven_gydqku.png")
+trophy1 = Trophy.create!(name: "You've spent 5 hours on this journal", image:"https://res.cloudinary.com/dyeffcfck/image/upload/v1563416897/a_nice_medal_for_steven_gydqku.png")
 trophy2 = Trophy.create!(name: "Got started on a new journey.", image:"https://res.cloudinary.com/doem0zjpf/image/upload/v1563342626/052-medal-29_iraf0f.png")
 
 
@@ -191,4 +191,4 @@ pierce.journals.each do |journal|
   Achievement.create!(journal: journal, trophy: (Trophy.find_by name: "Got started on a new journey."), shown: true)
 end
 
-Achievement.create!(journal: (pierce.journals.find_by title: "Fitness"), trophy: (Trophy.find_by name: "Wow awesome job! Have a trophy."), shown: true)
+Achievement.create!(journal: (pierce.journals.find_by title: "Fitness"), trophy: (Trophy.find_by name: "You've spent 5 hours on this journal"), shown: true)
