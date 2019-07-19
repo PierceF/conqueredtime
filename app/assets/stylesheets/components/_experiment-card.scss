@@ -2,13 +2,13 @@
   background-color: #EF959D;
   color: white;
   cursor: pointer;
-  width: 250px;
+  width:300px;
   height:60px;
   border: none;
   outline: none;
   border-radius:0px 4px 4px 0px;
   margin-top:10px;
-  position: relative; 
+  position: relative;
 }
 
 .collapsible {
@@ -27,7 +27,7 @@
   overflow: hidden;
   transition: max-height 0.3s ease-out;
   background-color: #f4bbbf;
-  width:395px;
+  width:100%;
   // border-radius:0px 14px 14px 0px;
   margin-bottom:10px;
 }
@@ -35,7 +35,7 @@
 
 .group-collapse {
   height:100%;
-  width:395px;
+  width:100%;
   padding:10px 20px;
   display: flex;
   justify-content: space-between;
