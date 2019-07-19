@@ -32,12 +32,18 @@
   font-weight:800;
 }
 
+.content-group1 h3 {
+  color:#EF959D !important;
+}
+
 
 
 .content-group1 p, .content-group2 p, .content-group3 p, .content-group4 p, .content-group5 p,   {
-  width:320px;
+  width:350px;
   margin: 20px auto;
-
+  font-size:20px;
+  text-align: center;
+  font-weight:400;
 }
 .content-group1 h3, .content-group2 h3, .content-group3 h3, .content-group4 h3, .content-group5 h3,   {
   margin-top:50px;
@@ -47,7 +53,7 @@
 }
 
 .content-group1 p {
-  width:260px;
+
 }
 
 

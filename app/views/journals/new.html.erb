@@ -1,3 +1,9 @@
+<div class="card-create-journal">
+    <div class="group-new">
+      <img class="fade-in" src="https://res.cloudinary.com/doem0zjpf/image/upload/v1563001489/nice_try_bzisao.png" alt="">
+      <p> <span class="style-inline"> Let's begin! </span><br> Select which journal to track your goal in, or create a new journal at the bottom.</p>
+    </div>
+</div>
 
 <% @journals.each do |journal| %>
   <div class="card-journal">
@@ -11,11 +17,11 @@
               <img src=<%= journal.image %> alt="">
                 <% end %>
       </div>
-      <div class="card-journal-trophies">
+        <div class="card-journal-trophies">
         <div class="trophies">
           <% if journal.achievements.count == 0 %>
           <% then %>
-            <p>Get started!</p>
+            <p>Get Started!</p>
             <% else %>
             <p><%= journal.trophies_number %></p>
             <% end %>
@@ -38,8 +44,11 @@
       </div>
 <div class="card-journal-book-add-container">
   <%= link_to new_journal_entry_path(journal) do %>
-  <div class="card-journal-book-add">
-    <p style="color:white; font-weight:800;">Open Journal</p>
+  <p class="button-fast">Work On Fitness</p>
+  <!-- <div class="card-journal-book-add"> -->
+  <!-- <div class="something"> -->
+    <!-- <a class="button-goals" href="#">See Your Goals</a> -->
+    <!-- <p style="color:white; font-weight:800;">Work On JOURNAL NAME</p> -->
   </div>
   <% end %>
 </div>
