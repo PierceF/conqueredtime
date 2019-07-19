@@ -1,6 +1,29 @@
 #milestone_title {
 }
 
+.style-text-trophy  {
+  width:100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.style-text-trophy img {
+width:100px;
+
+}
+
+.trophy-popup {
+  background: white;
+}
+
+.popup p {
+  width:100%;
+  text-align: center;
+}
+
 
 .box {
   margin: 0 auto;
@@ -45,10 +68,7 @@
   display: none;
 }
 
-.trophy-popup {
-  max-height: 102px;
-  max-width: 102px;
-}
+
 
 .hidden {
   display: none;
@@ -129,7 +149,7 @@
 .popup .content {
     max-height: 150px;
   overflow: auto;
-  width:300px;
+  width: 100%;;
   background: none;
   padding: 10px 10px;
    align-items: center;
