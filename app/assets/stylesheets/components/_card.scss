@@ -1,53 +1,248 @@
-  .card-for-entries {
-  margin: 0 auto;
-  background-color:white;
-  border-radius:15px;
-  height:550px;
-  width:400px;
-  border-bottom: 5px solid #E5E5E5;
-  border-right:  5px solid #E5E5E5;
-  box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+//   .card-for-entries {
+//   margin: 0 auto;
+//   background-color:white;
+//   border-radius:15px;
+//   height:550px;
+//   width:400px;
+//   border-bottom: 5px solid #E5E5E5;
+//   border-right:  5px solid #E5E5E5;
+//   box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
 
+// }
+
+// .card-for-entries img {
+//   width:63px;
+//   height:224px;
+// }
+
+// .card-for-entries-inner {
+// display: flex;
+// justify-content: space-between;
+// margin-right:20px;
+// align-items: center;
+// padding:11px 0px;
+// }
+
+// .card-for-entries-button {
+//   margin:0px 20px;
+// }
+
+// .card-for-milestones {
+//   background-color: white;
+//   border-radius: 15px;
+//   width:400px;
+//   height:600px;
+//   border-bottom: 5px solid #E5E5E5;
+//   border-right:  5px solid #E5E5E5;
+//   box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+//   margin: 0 auto;
+// }
+
+
+// .card-for-milestones img {
+//   width:63px;
+//   height:224px;
+// }
+
+// .card-for-milestones-inner {
+//   margin-left:20px;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   padding:11px 0px;
+// }
+
+
+.card-instruction {
+  padding:10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin:20px auto;
+  width:290px;
+  h2 {
+    font-size:2.5rem;
+    color: #f46b45; /* fallback for old browsers */
+  color: -webkit-linear-gradient(to right, #f46b45, #eea849); /* Chrome 10-25, Safari 5.1-6 */
+  color: linear-gradient(to right, #f46b45, #eea849);  
+  }
 }
 
-.card-for-entries img {
-  width:63px;
-  height:224px;
-}
 
-.card-for-entries-inner {
-display: flex;
-justify-content: space-between;
-margin-right:20px;
-align-items: center;
-padding:11px 0px;
-}
-
-.card-for-entries-button {
-  margin:0px 20px;
-}
-
-.card-for-milestones {
-  background-color: white;
-  border-radius: 15px;
-  width:400px;
-  height:600px;
-  border-bottom: 5px solid #E5E5E5;
-  border-right:  5px solid #E5E5E5;
-  box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
-  margin: 0 auto;
-}
-
-
-.card-for-milestones img {
-  width:63px;
-  height:224px;
-}
-
-.card-for-milestones-inner {
-  margin-left:20px;
+.card-journal-wrap {
   display: flex;
-  justify-content: space-between;
+  overflow-x: scroll;
+}
+
+.card-journal {
+  width:290px;
+  box-shadow: 0 0 7px rgba(0,0,0,0.2);
+  min-height:250px;
+  margin:20px auto;
+  position: relative;
+  .card-background {
+    width:100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  .card-background-border {
+    height: 5px;
+    width:100%;
+    background: #f46b45; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f46b45, #eea849); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f46b45, #eea849);  
+    position: absolute;
+    bottom:0px;
+  }
+  .card-background {
+    height:145px;
+    width:100%;
+  }
+  .card-journal-trophies {
+    display: flex;
+    justify-content: space-between;
+    padding:10px 5px;
+  }
+  .trophy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2rem;
+  }
+  .card-journal-forward {
+    position: absolute;
+    right:5px;
+    bottom:2px;
+  }
+  .card-background-title {
+    color:white;
+    margin-left:10%;
+  }
+  .form-textfield {
+    box-shadow: 0 0 7px rgba(0,0,0,0.2);
+    border:none;
+    outline: none;
+    width:100%;
+    height:40px;
+    font-size: 1rem;
+    margin-top:10px;
+    padding-left:5px;
+    color:#494949;
+  }
+  .fa-arrow-right {
+    font-size:1.1rem;
+  }
+  form {
+    width:90%;
+    margin:0 auto;
+  }
+}
+
+.card-journal-entries {
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  height:200px;
+  width:290px;
+  position: relative;
+  .card-entries-title {
+
+  }
+  .form-control {
+    background:#f4f4f4;
+    border-bottom:2px solid red;
+    width:290px;
+    border:none;
+    height:50px;
+    outline:none;
+    font-size:1rem;
+    font-weight: 800;
+    color: #494949;
+  }
+  .form-submit {
+    position: absolute;
+    bottom:2px;
+    right:10px;
+  }
+}
+
+.card-journal-milestones {
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width:290px;
+}
+
+.card-journal-wrap {
+  height:100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding:11px 0px;
+}
+
+
+.card-full {
+  min-height:400px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width:290px;
+  margin:0 auto;
+  position: relative;
+  .card-full-background {
+    color:black;
+    height:150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    .card-full-paragraph {
+      color:white;
+    }
+  }
+
+  .card-full-trophies {
+    height:65px;
+    background: #f46b45; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f46b45, #eea849); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f46b45, #eea849);
+    color:White;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:10px;
+  }
+  .card-full-new-goal {
+    position: absolute;
+    bottom:2px;
+    right:10px;
+    color:#494949;
+    a{
+      color:#494949;
+      text-decoration: none;
+    }
+  }
+  .card-goals {
+    display: flex;
+    background:#f4f4f4;
+    padding:5px 10px;
+    background: #f46b45; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f46b45, #eea849); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f46b45, #eea849);
+    color:white;
+    justify-content: space-between;
+  }
+  .new-pomodoro {
+    display: flex;
+  }
+  .simple_form {
+    display: flex;
+    justify-content: space-between;
+    padding:10px 5px;
+    .fa-arrow-right {
+      font-size:1.1rem;
+      margin-left:10px;
+    }
+  }
+  .new_pomodoro:nth-child(odd) {
+    background:#f4f4f4;
+  }
+
+  .new_pomodoro:nth-child(even) {
+    background:#CACACA;
+  }
 }

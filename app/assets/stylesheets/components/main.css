@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
+}
+
+html {
+  display: block;
+}
+
+.container-main {
+  width: 310px;
+  margin: 0 auto;
+}
+/*# sourceMappingURL=main.css.map */
