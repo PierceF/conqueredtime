@@ -1,7 +1,5 @@
 .banner-mainpage {
-  height:70vh;
-  position: relative;
-  margin-bottom:30vh;
+  height:calc(100vh - 70px);
   .banner-textfield {
     display: flex;
     flex-direction: column;
@@ -19,10 +17,7 @@
     margin-bottom:10px;
   }
   .button-main {
-    position: absolute;
-    bottom:-35px;
-    left:50%;
-    transform: translateX(-50%);
+    margin-top:20px;
   }
 }
 

@@ -1,62 +1,69 @@
-
-
-       <div class="card-full-popup">
-         <div class="card-full-popup-inner">
-          <p class="add-goal" style="color:#69585F; text-align:center;">Add a New Goal</p>
-          <a href="" class="button-main-small">Add</a>
-            <%= simple_form_for [@journal, @entry] do |m| %>
-            <%= m.input :goal  %>
-          </div>
-          </div>
-          <% end %>
-<div class="card-full">
-  <div class="card-full-new-goal">
-    <a class="" href="#popup-goal">New Goal</a>
-    <i class="fas fa-arrow-right"></i>
+<div id="popup-goal" class="overlay">
+    <div class="popup1">
+        <i class="fas fa-times close-popup"></i>
+      <p class="add-goal" style="color:#69585F; text-align:center;">Add a New Goal</p>
+        <%= simple_form_for [@journal, @entry] do |m| %>
+        <%= m.input :goal %>
+      <% end %>
   </div>
+</div>
+
+<div class="card-full-wrap">
 <% content_for :meta_title, "#{@journal.title.capitalize} - #{DEFAULT_META["meta_product_name"]}" %>
-    <div class="card-full-background" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://res.cloudinary.com/doem0zjpf/image/upload/v1574155290/back_iwhfiy.jpg');   background-position: center;
-    background-size: cover;">
+      <div class="card-full">
+          <div class="card-full-background" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://res.cloudinary.com/doem0zjpf/image/upload/v1574155290/back_iwhfiy.jpg'); background-position: center; background-size:cover;">
           <h2 class="card-full-title"><%= @journal.title.capitalize %></h2>
-    </div>
+          <i class="fas fa-plus open-target"></i>
+        </div>
+      <div class="card-full-trophies">
       <% if @journal.achievements.count == 0 %>
           <% then %>
-          <div class="card-full-trophies">
-          <p class="card-full-paragraph">No trophies yet!</p>
+          <p>No trophies yet!</p>
             <% else %>
               <% @journal.trophies.each do |trophy| %>
-
-                <img  class="medals-fix" src=<%= trophy.image %>
+                <img  class="medals-fix" src=<%= trophy.image %>>
               <% end %>
           <% end %>
-        </div>
-
-
+      </div>
     <% @entries.each do |entry| %>
-        <div class="card-goals">
-        <h3><%= entry.goal %><br></h3>
-          <a class="button" style="" href="#popup<%= entry.id %>">+</a>
-        </div>
+      <button class="collapsible">
+        <h3><%= entry.goal %></h3>
+        <i class="fas fa-plus icon-goal"></i>
+      </button>
+          <!-- <a class="button"  href="#popup<%= entry.id %>">+</a> -->
+      <div class="content">
           <% entry.milestones.each do |milestone| %>
             <%= simple_form_for([milestone, Pomodoro.new]) do |m| %>
+            <div class="group-collapse">
               <p><%= milestone.title %></p>
               <%= button_tag do %>
-      <i class="fas fa-arrow-right"></i>
+              <i class="fas fa-arrow-right"></i>
             <% end %>
+          </div>
         <% end %>
       <% end %>
-      <a class="close" href="#">&times;</a>
-
+  <div id="popup<%= entry.id %>" class="overlay">
+    <div class="popup">
+      <div class="popup-group">
+        <p  class="add-milestone" style="color:#69585F; text-align:center">New Milestone</p>
         <%= simple_form_for [entry, Milestone.new] do |m| %>
         <%= m.input :title, label: false, :class => "form-textfield" %>
+      </div>
       <% end %>
+
+      <div class="popup-border"></div>
+  </div>
+</div>
+</div>
 <% end %>
-</div>
-</div>
-</div>
 
 
-<script>
+
+</div>
+
+</div>
+
+<!-- <script>
   function on() {
     document.getElementById("overlay").style.display = "block";
   }
@@ -64,4 +71,4 @@
   function off() {
     document.getElementById("overlay").style.display = "none";
   }
-</script>
+</script> -->

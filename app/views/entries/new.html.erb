@@ -7,11 +7,12 @@
 
         <%= simple_form_for [@journal, @entry] do |m| %>
           <%= m.input :goal %>
-          <i class="fas fa-arrow-right form-submit"></i>
+          <i class="fas fa-arrow-right form-submit submit-entry"></i>
         </div>
 
         <div class="card-journal-milestones">
-        <p><span class="style-inline"> Last step!</span><br> List up to 3 actions, habits, or benchmarks that will bring you closer to your goal.</p>
+        <h2>Milestones</h2>
+        <p><br> List up to 3 actions, habits, or benchmarks that will bring you closer to your goal.</p>
 
         <%= m.simple_fields_for :milestones do |p| %>
         <%= p.input :title, :class => "form-textfield-milestone" %>
@@ -22,7 +23,9 @@
     <%= m.simple_fields_for :milestones do |p| %>
     <%= p.input :title, label: false, :class => "form-textfield-milestone" %>
   <% end %>
-  <%= m.submit "Create", :class => "form-submit"%>
+  <div class="btn-area">
+  <%= m.submit "Create", :class => "form-submit button-main-small"%>
+</div>
 <% end %>
 </div>
 </div>

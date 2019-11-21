@@ -3,6 +3,12 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'poppins', sans-serif;
+  outline: none;
+}
+
+
+.active {
+  display: block;
 }
 
 html {
@@ -12,4 +18,17 @@ display: block;
 .container-main {
   width:310px;
   margin: 0 auto;
+}
+
+.none {
+  display: none;
+
+}
+
+.flex {
+  display: flex;
+}
+
+.block {
+  display: block;
 }
