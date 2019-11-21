@@ -97,6 +97,10 @@ display: block;
       padding:20px 0px;
       display: flex;
       justify-content: space-between;
+      .card-instruction {
+        width:220px;
+        padding:30px 10px;
+      }
     }
 
     .card-journal-wrap {
