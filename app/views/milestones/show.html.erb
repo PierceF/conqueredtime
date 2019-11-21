@@ -26,7 +26,6 @@
             <p>How was the quality of your focus?</p>
           <%= @milestone.stars %>
           <%= simple_form_for [@pomodoro] do |f| %>
-          <div class="container">
             <div class="feedback">
               <div class="rating">
                 <input type="radio" name="stars" id="rating-5" value="5">
@@ -40,7 +39,6 @@
                 <input type="radio" name="stars" id="rating-1" value="1">
                 <label for="rating-1"></label>
                 </div>
-              </div>
             </div>
           </div>
           <div class="button-center">

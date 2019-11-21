@@ -32,3 +32,118 @@ display: block;
 .block {
   display: block;
 }
+
+
+@media (min-width: 1281px) {
+
+    .container-main {
+        width:1200px;
+        margin:0 auto;
+    }
+    .card-instruction-wrapper {
+      padding:20px 0px;
+      display: flex;
+      justify-content: space-between;
+
+    }
+    .card-journal-wrap {
+      padding:20px 0px;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      flex-direction: row;
+      .card-journal {
+
+      }
+    }
+    .card-full {
+      width:380px;
+    }
+
+ }
+  
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    .container-main {
+        width:1010px;
+        margin:0 auto;
+    }
+    .card-instruction-wrapper {
+      padding:20px 0px;
+      display: flex;
+      justify-content: space-between;
+
+    }
+    .card-journal-wrap {
+      padding:20px 0px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+    .card-full {
+      width:380px;
+    }
+
+ }
+  
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .container-main {
+        width:750px;
+        margin:0 auto;
+    }
+
+    .card-instruction-wrapper {
+      padding:20px 0px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .card-journal-wrap {
+      padding:20px 0px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+    .card-full {
+      width:380px;
+    }
+    
+
+ }
+  
+  
+  
+  @media (min-width: 481px) and (max-width: 767px) {
+  
+    /* General-styling */
+    .container-main {
+        width:470px;
+        margin:0 auto;
+    }
+    
+    .card-full {
+      width:380px;
+    }
+ }
+
+ button {
+   border:none;
+ }
+
+ .fa-arrow-right {
+   background: transparent;
+ }
+
+
+ .scroll-effect {
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+ }
+
+ .feedback {
+   margin:0 auto;
+ }
