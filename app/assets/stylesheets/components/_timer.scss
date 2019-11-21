@@ -1,351 +1,53 @@
-#seconds {
-  font-weight:300;
-}
-
-#minutes {
-  font-weight:300;
-}
-
-
-.content2 {
-    height: 300px;
-    background: #fafafa;
-    border-radius: 15px;
-    margin: 250px auto;
-    border-bottom: 10px solid #E5E5E5;
-    width: 400px;
-    border-bottom: 5px solid #E5E5E5;
-    border-right: 5px solid #E5E5E5;
-    border-radius: 15px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-}
-
-
-
-.card-journal-book-text {
-    padding: 20px 20px;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #0E0000;
-    text-align: left;
-
-  h2 {
-    color: #EF959D;
-    font-size: 40px;
-    font-family: "Roboto", "sans-serif";
-    color: #69585F;
-    font-weight: 800;
-    line-height: 1.2;
-  }
-}
-
-
-#milestone {
-      padding: 20px 20px;
-
-  h2 {
-    color: #EF959D;
-    font-size: 40px;
-    font-family: "Roboto", "sans-serif";
-    color: #69585F;
-    font-weight: 800;
-  }
-
-
-
-#session {
-  margin-right: 0px;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-  font-size: 16px;
-
-
-  &:hover{
-    color: inherit;
-    text-decoration: none;
-  }
-}
-
-}
-
-
 #pomodoro {
-  margin-top: -65px;
-  margin-bottom: 43px;
-  max-width: 512px;
-  margin-left:38px;
-  width: 100%;
-  position: relative;
-  right: 40px;
-  #clock {
-    background-size: contain;
+  height:calc(100vh - 70px);
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  flex-direction: column;
+  #countdown {
+    
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #f46b45; /* fallback for old browsers */
+    color: -webkit-linear-gradient(to right, #f46b45, #eea849); /* Chrome 10-25, Safari 5.1-6 */
+    color: linear-gradient(to right, #f46b45, #eea849);
+  }
+  .fa-plus-square {
+
+  }
+  .fa-minus-square {
+  }
+  .fas {
+    font-size:2.5rem;
+    margin:0 10px;
+    color: #f46b45; /* fallback for old browsers */
+    color: -webkit-linear-gradient(to right, #f46b45, #eea849); /* Chrome 10-25, Safari 5.1-6 */
+    color: linear-gradient(to right, #f46b45, #eea849);
+  }
+  .start-stop {
     display: flex;
     justify-content: center;
-    margin-bottom: -6.25vw;
-    // padding: 45vw 0;
-    @media all and (min-width: 512px){
-      margin-bottom: -20px;
-      // padding: 213px 0;
-    }
-    #timer {
-      $hover: 5;
-      // position: fixed;
-      align-items: center;
-      cursor: pointer;
-      display: flex;
-      flex-direction: column;
-
-      #title {
-        color: #EF959D;
-        font-size: 28px;
-        line-height: 28px;
-        margin: 3px 0 1px;
-        @media all and (max-width: 512px){
-          font-size: 5.5vw;
-          line-height: 5.5vw;
-        }
-        @media all and (max-width: 184px){
-          font-size: 10px;
-          line-height: 10px;
-        }
-      }
-      #countdown {
-        color: #69585F;
-        display: flex;
-        font-size: 43px;
-        font-weight: 300;
-        line-height: 43px;
-        @media all and (max-width: 512px){
-          font-size: 8.4vw;
-          line-height: 8.4vw;
-        }
-        @media all and (max-width: 184px){
-          font-size: 15.4px;
-          line-height: 15.4px;
-        }
-        #minutes::after {
-          content: ":";
-        }
-      }
-      #controls {
-        align-items: center;
-        display: flex;
-        color: #EF959D;
-        flex-direction: column;
-        font-size: 15px;
-        font-weight: 700;
-        line-height: 15px;
-        margin-top: 25px;
-        text-align: center;
-        text-transform: uppercase;
-        .fas, .svg-inline--fa {
-          position: relative;
-        }
-        #start, #pause, #reset, #done {
-          white-space: nowrap;
-        }
-        #start {
-          .fa-play {
-            font-size: 77%;
-            // top: -1px;
-            color: #69585F;
-          }
-          &:hover {
-            // color: darken(#FF6292, $hover);
-          }
-        }
-
-        #pause {
-          .fa-pause {
-            font-size: 90%;
-            top: -1px;
-            transform: scaleX(.84);
-          }
-          &:hover {
-            // color: darken(#FF6292, $hover);
-          }
-        }
-        .btn-tag {
-           color: #EF959D;
-           border: none;
-           font-size: 16px;
-           margin: 0px;
-           background-color: transparent;
-           text-transform: uppercase;
-           font-weight: 200;
-           outline: 0;
-           font-family: 'Nunito', sans-serif;
-          .fa-check {
-            font-size: 90%;
-            //top: -1px;
-            transform: scaleX(.84);
-          }
-          &:hover {
-            // color: darken(#FF6292, $hover);
-          }
-        }
-        #reset {
-          position: absolute;
-          margin-top: 17.56px;
-          transition: margin-top .43s, opacity .43s;
-          .fa-sync-alt {
-            font-size: 84%;
-          }
-          &:hover {
-            // color: darken(#FF6292, $hover);
-          }
-        }
-        &.reset {
-          #pause {
-            display: none;
-          }
-          #done {
-            display: none;
-          }
-
-          #back {
-            display: none;
-          }
-          #reset {
-            margin-top: 0;
-            opacity: 0;
-            z-index: -1;
-          }
-        }
-        &.started {
-          #start {
-            display: none;
-          }
-          #reset {
-            opacity: 0;
-          }
-          #back {
-            display: none;
-          }
-        }
-        &.paused {
-          #pause {
-            display: none;
-          }
-        }
-        &.done {
-          #done {
-            display: none;
-          }
-          #start {
-            display: none;
-          }
-        }
-
-        @media all and (max-width: 512px){
-          font-size: 5.5vw;
-          line-height: 5.5vw;
-          #start, #pause, #reset {
-            font-size: 3vw;
-            line-height: 3vw;
-          }
-          #reset {
-            margin-top: 3.43vw;
-          }
-        }
-        @media all and (max-width: 184px){
-          font-size: 10px;
-          line-height: 10px;
-          #start, #pause, #reset {
-            font-size: 5.5px;
-            line-height: 5.5px;
-          }
-          #reset {
-            margin-top: 6.31px;
-          }
-        }
-      }
-    }
-  }
-  #options {
-
-    top: 200px;
-    color: #EF959D;
-    font-size: 28px;
-    font-weight: normal;
-    margin-bottom: 15px;
-    .option-title {
-      color: #EF959D;
-      font-size: 20px;
-      font-weight: bold;
-      margin-bottom: -6px;
-      padding-top: 3px;
-      padding-bottom: 3px;
+    p {
+      margin-top:10px;
+      font-size:1.5rem;
+      font-weight:800;
       text-transform: uppercase;
-      padding-right: 3px;
-      padding-left: 3px;
-    }
-    .fa-plus-square {
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
-      color: #B8D8BA;
-      cursor: pointer;
-      font-size: 50px;
-      margin-left: 30px;
-      margin-right: -12px;
-
-    }
-    .fa-minus-square {
-    color: #EF959D;
-      cursor: pointer;
-      font-size: 50px;
-      margin-right: 30px;
-
-    }
-    #session {
-      align-items: center;
-      display: flex;
-      justify-content: center;
-      margin-top: 73px;
-      width: 100%;
-
-    }
-    input[type=number]{
-      background: linear-gradient(lighten(#EF959D, 20), lighten(#FF6292, 22));
-      border: none;
-      border-bottom: calc(3px + .28vw) solid #FF6292;
-      border-radius: 10px;
-      color: #EF959D;
-      font: bold calc(21px + 1.43vw) "Open Sans", sans-serif;
-      margin: calc(5px + .43vw) calc(3px + .43vw);
-      padding: calc(3px + .43vw) calc(5px + .43vw);
-      text-align: center;
-      &::-webkit-inner-spin-button,
-      &::-webkit-outer-spin-button {
-        -webkit-appearance: none;
-      }
-      @media all and (min-width: 512px){
-        border-bottom: 4.43px solid #FF6292;
-        font: bold 28.43px "Open Sans", sans-serif;
-        margin: 7.2px 5.2px;
-        padding: 5.2px 7.2px;
-      }
-      @media all and (max-width: 184px){
-        border-bottom: 3.5px solid #FF6292;
-        font: bold 23.6px "Open Sans", sans-serif;
-        margin: 5.7px 3.7px;
-        padding: 3.7px 5.7px;
-      }
+      letter-spacing:2px;
     }
   }
+  .title-session {
+    color:black;
+    text-decoration: none;
+    border:none;
+  }
+  #done {
+    margin-left:10px;
+  }
 }
-audio {
-  display: none;
-}
-p {
-  font-size: 23px;
-  font-weight: 250;
 
+#back {
+  p {
+    text-decoration: none;
+    color:black;
+  }
 }

@@ -1,81 +1,65 @@
-<div class="container-main">
-<div class="card-create-journal">
-    <div class="group-new">
-      <img class="fade-in" src="https://res.cloudinary.com/doem0zjpf/image/upload/v1563001489/nice_try_bzisao.png" alt="">
-      <p> <span class="style-inline"> Let's begin! </span><br> Select which journal to track your goal in, or create a new journal at the bottom.</p>
-    </div>
-</div>
 
+<div class="container-main">
+
+<div class="card-journal-wrap">
 <% @journals.each do |journal| %>
   <div class="card-journal">
-    <!-- <div class="card-journal-profile"> <img src="https://source.unsplash.com/random/100x100" alt=""> </div> -->
-    <div class="card-journal-top">
-      <h2><%= journal.title.capitalize %> <br><span class="text-special"></span></h2>
-            <% if journal.image == nil %>
-          <% then %>
-            <img src="https://res.cloudinary.com/doem0zjpf/image/upload/v1563012445/zxc_vvjt4c.png" alt="" style="object-fit: cover;">
-            <% else %>
-              <img src=<%= journal.image %> alt="" style="object-fit: cover;">
-                <% end %>
+      <div class="card-background" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://res.cloudinary.com/doem0zjpf/image/upload/v1574155290/back_iwhfiy.jpg');   background-position: center;
+      background-size: cover;">
+        <h2 class="card-background-title"><%= journal.title.capitalize %></h2>
+        <div class="card-background-border">
+      </div>
       </div>
         <div class="card-journal-trophies">
-        <div class="trophies">
-          <% if journal.achievements.count == 0 %>
-          <% then %>
-            <p>Get Started!</p>
-            <% else %>
+          <div class="stat-total trophy">
             <p><%= journal.trophies_number %></p>
-            <% end %>
           <i class="fas fa-trophy"></i>
         </div>
-
-
-          <div class="times">
+          <div class="times trophy">
               <p><%= journal.time %></p>
             <i class="fas fa-hourglass-end"></i>
           </div>
-          <div class="time">
+          <div class="time trophy">
           <p><%= journal.focus_sessions %></p>
           <i class="fas fa-history"></i>
           </div>
-          <div class="apple">
+          <div class="apple trophy">
             <p> <%= journal.star_average %> </p>
           <i class="fas fa-star"></i>
           </div>
       </div>
-<div class="card-journal-book-add-container">
-  <%= link_to new_journal_entry_path(journal) do %>
-  <p class="button-fast" style="font-weight:800;">Work on <%= journal.title %></p>
-  <!-- <div class="card-journal-book-add"> -->
-  <!-- <div class="something"> -->
-    <!-- <a class="button-goals" href="#">See Your Goals</a> -->
-    <!-- <p style="color:white; font-weight:800;">Work On JOURNAL NAME</p> -->
+      <div class="card-journal-forward">
+          <%= link_to new_journal_entry_path(journal) do %>
+          <button><i class="fas fa-arrow-right"></i></button>
+          </div>
+          <% end %>
   </div>
-  <% end %>
-</div>
-</div>
-</div>
 <% end %>
-</div>
- <div class="card-own-journal">
-<div class="card-own-journal-text">
-  <p>Feel free to create another journal. Remember the title should be a broad subject you wish to work on.</p>
-  <div class="image-create">
-  <img src="https://res.cloudinary.com/doem0zjpf/image/upload/v1563108730/reverze_cuytoz.png" alt="">
+
+
+ <div class="card-journal">
+   <div class="card-background" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://res.cloudinary.com/doem0zjpf/image/upload/v1574155290/back_iwhfiy.jpg');   background-position: center;
+   background-size: cover;">
+    <h2 class="card-background-title">Create journal</h2>
+    <div class="card-background-border">
+    </div>
   </div>
-</div>
   <form action="/journals" method="post">
     <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-    <label class="hidden" for="title">Title:
+    <label for="title">
     </label>
     <input class="form-textfield" type="text" name="journal[title]" id="title">
- <input type="hidden" id="helpUser" name="helpUser" value=true>
-<div class="button-margin">
-    <input class="form-submit" value="Make a new Journal" type="submit">
+    <input type="hidden" id="helpUser" name="helpUser" value=true>
+    <div class="card-journal-forward">
+        <button><i class="fas fa-arrow-right"></i></button>
+      <input class="form-submit" value="" type="submit">
+    </div>
   </form>
-  </div>
+</div>
 </div>
 
-<div class="" style="margin-bottom:40px;">
 
+
+
+</div>
 </div>

@@ -1,53 +1,796 @@
-  .card-for-entries {
-  margin: 0 auto;
-  background-color:white;
-  border-radius:15px;
-  height:550px;
-  width:400px;
-  border-bottom: 5px solid #E5E5E5;
-  border-right:  5px solid #E5E5E5;
-  box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+//   .card-for-entries {
+//   margin: 0 auto;
+//   background-color:white;
+//   border-radius:15px;
+//   height:550px;
+//   width:400px;
+//   border-bottom: 5px solid #E5E5E5;
+//   border-right:  5px solid #E5E5E5;
+//   box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+
+// }
+
+// .card-for-entries img {
+//   width:63px;
+//   height:224px;
+// }
+
+// .card-for-entries-inner {
+// display: flex;
+// justify-content: space-between;
+// margin-right:20px;
+// align-items: center;
+// padding:11px 0px;
+// }
+
+// .card-for-entries-button {
+//   margin:0px 20px;
+// }
+
+// .card-for-milestones {
+//   background-color: white;
+//   border-radius: 15px;
+//   width:400px;
+//   height:600px;
+//   border-bottom: 5px solid #E5E5E5;
+//   border-right:  5px solid #E5E5E5;
+//   box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+//   margin: 0 auto;
+// }
+
+
+// .card-for-milestones img {
+//   width:63px;
+//   height:224px;
+// }
+
+// .card-for-milestones-inner {
+//   margin-left:20px;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   padding:11px 0px;
+// }
+
+
+.card-instruction {
+  padding:10px 20px;
+  box-shadow: 0 0 7px rgba(0,0,0,0.2);
+  margin:20px auto;
+  width:290px;
+  border-radius: 6px;
+  h2 {
+    font-size:4rem;
+    color: #f46b45; /* fallback for old browsers */
+  color: -webkit-linear-gradient(to right, #f46b45, #eea849); /* Chrome 10-25, Safari 5.1-6 */
+  color: linear-gradient(to right, #f46b45, #eea849);  
+  }
+}
+
+
+.card-journal-wrap {
+  display: flex;
+  overflow-x: scroll;
+}
+
+.card-journal {
+  width:290px;
+  box-shadow: 0 0 3px rgba(0,0,0,0.2);
+  min-height:250px;
+  margin:20px auto;
+  position: relative;
+  .card-journal-bottom {
+    height:105px;
+    display: flex;
+    margin-top:10px;
+  }
+  .card-background {
+    width:100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 0 7px rgba(0,0,0,0.2);
+  }
+  .card-background-border {
+    height: 5px;
+    width:100%;
+    background: #f46b45; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f46b45, #eea849); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f46b45, #eea849);  
+    position: absolute;
+    bottom:0px;
+  }
+  .card-background {
+    height:145px;
+    width:100%;
+  }
+  .card-journal-trophies {
+    display: flex;
+    justify-content: space-between;
+    padding:10px 5px;
+    color:#494949;
+  }
+  .trophy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.1rem;
+    p {
+      font-size:0.9rem;
+    }
+  }
+  .card-journal-forward {
+    position: absolute;
+    right:5px;
+    bottom:2px;
+  }
+  .card-background-title {
+    color:white;
+    margin-left:10%;
+  }
+  .form-textfield {
+    box-shadow: 0 0 7px rgba(0,0,0,0.2);
+    border:none;
+    outline: none;
+    width:100%;
+    height:40px;
+    font-size: 1rem;
+    margin-top:10px;
+    padding-left:5px;
+    color:#494949;
+  }
+  .fa-arrow-right {
+    font-size:1.1rem;
+  }
+  form {
+    width:90%;
+    margin:0 auto;
+  }
+}
+
+.card-journal-entries {
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  height:200px;
+  width:290px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display:flex;
+  .card-entries-title {
+    color: #f46b45; /* fallback for old browsers */
+    color: -webkit-linear-gradient(to right, #f46b45, #eea849); /* Chrome 10-25, Safari 5.1-6 */
+    color: linear-gradient(to right, #f46b45, #eea849);  
+  }
+  .form-control {
+    background:#f4f4f4;
+    width:250px;
+    border:none;
+    display: block;
+    height:50px;
+    outline:none;
+    font-size:1rem;
+    font-weight: 800;
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    color: #494949;
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+  }
+  .form-submit {
+    position: absolute;
+    bottom:2px;
+    right:10px;
+  }
+}
+
+.card-journal-milestones {
+  margin-top:20px;
+  width:290px;
+  box-shadow: 0 0 7px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  min-height:350px;
+  display:none;
+  .form-control {
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    border:none;
+    height:40px;
+    margin:5px 0px;
+    background:#f4f4f4;
+    width:250px;
+
+  }
+  label {
+    display: none;
+  }
+  .fas {
+    position: absolute;
+    bottom:5px;
+    right:5px;
+    color:#494949;
+  }
+  p {
+    width:250px;
+    margin:0 auto;
+  }
+  h2 {
+    color: #f46b45; /* fallback for old browsers */
+    color: -webkit-linear-gradient(to right, #f46b45, #eea849); /* Chrome 10-25, Safari 5.1-6 */
+    color: linear-gradient(to right, #f46b45, #eea849);  
+  }
+  .form-submit {
+
+  }
+
+  .btn-area {
+    width:250px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top:5px;
+  }
+}
+
+.card-journal-wrap {
+  min-height:calc(100vh - 70px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.card-full {
+  min-height:400px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width:290px;
+  margin:0 auto;
+  position: relative;
+  .card-full-background {
+    color:black;
+    height:150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    position:relative;
+    .card-full-paragraph {
+      color:white;
+    }
+    .fa-plus {
+      position: absolute;
+      top:10px;
+      right:10px;
+      font-size:1.5rem; 
+    }
+  }
+
+  .card-full-trophies {
+    height:65px;
+    background: #f46b45; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f46b45, #eea849); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f46b45, #eea849);
+    color:White;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .card-full-new-goal {
+    position: absolute;
+    bottom:2px;
+    right:10px;
+    color:#494949;
+    a{
+      color:#494949;
+      text-decoration: none;
+      font-size:0.8rem;
+    }
+  }
+  .card-goals {
+    display: flex;
+    background:#f9f9f9;
+    padding:5px 10px;
+    color:black;
+    justify-content: space-between;
+  }
+  .new-pomodoro {
+    display: flex;
+  }
+  .simple_form {
+    display: flex;
+    justify-content: space-between;
+    .fa-arrow-right {
+      font-size:0.8rem;
+      margin-left:10px;
+    }
+  }
+  .new-pomodoro {
+  }
+  p {
+    font-size: 0.8rem;
+  }
+}
+
+.new-pomodoro:hover {
+  background:#f2f2f2;
+}
+
+.card-pomodoro {
+  display: flex;
+  height:100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  h3 {
+    font-size:2.5rem;
+    color: #f46b45; /* fallback for old browsers */
+    color: -webkit-linear-gradient(to right, #f46b45, #eea849); /* Chrome 10-25, Safari 5.1-6 */
+    color: linear-gradient(to right, #f46b45, #eea849);
+  }
+  .button-center {
+    display: flex;
+    justify-content: center;
+    .form-submit {  
+      font-size:1rem;
+      font-weight:800;
+    }
+  }
+}
+
+
+.content {
+  display: none;
+  
+}
+
+// .card-journal-wrap {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   flex-direction: column;
+//   height:100vh;
+// }
+
+.card-full-wrap {
+  min-height:100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.milestones {
+  display:none;
+}
+
+.card-full-wrapper {
+  min-height:100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  input {
+    background:green;
+  }
+}
+
+
+.card-journal-book-add {
+  padding:10px 0px;
+}
+
+
+.card-full-wrap {
 
 }
 
-.card-for-entries img {
-  width:63px;
-  height:224px;
-}
 
-.card-for-entries-inner {
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+// .card-journal-book {
+//   margin:0 auto;
+//   min-height:100vh;
+//   width:100%;
+//   background: white;
+//   padding-bottom:20px;
+//   // border-radius:15px;
+//   // border-right:5px solid #E5E5E5;
+//   // border-bottom:5px solid #E5E5E5;
+//   box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+// }
+
+
+// .card-journal-book i {
+//   font-size:24px;
+//   outline-color: none;
+// }
+
+// .card-journal-book p {
+//   font-size:20px;
+//   font-weight:800;
+// }
+
+// .card-journal-book-top {
+//  height:120px;
+//  border-radius:15px 15px 0px 0px;
+//  display: flex;
+//  align-items: center;
+//  justify-content: center;
+// }
+
+
+
+
+// .card-journal-book-trophies {
+//   background: #CDE9F6;
+//   min-height:100px;
+//   width:100%;
+//   display: flex;
+//   align-items: flex-start;
+//   justify-content: space-around;
+// }
+
+// .card-journal-book-trophies img  {
+//   width:50px;
+// }
+
+// .card-journal-book h4 {
+//   font-size:16px;
+//   text-align: left;
+// }
+
+// .card-journal-book h2 {
+//   color:white;
+//   font-weight:800;
+// }
+
+// .card-journal-book h3{
+//   font-size:16px;
+//   font-weight:800;
+//   color:white;
+//   text-align:left;
+
+// }
+
+// .card-journal-book-entries {
+//   display: flex;
+//   justify-content: center;
+//   flex-direction: column;
+// }
+
+// .card-journal-book-add-container {
+// }
+
+// .card-journal-book-add {
+//   background: #B8D8BA;
+//   height:60px;
+//   width:50%;
+//   border-radius:0px 4px 4px 0px;
+//   display: flex;
+//   align-items: center;
+//   padding:0 10px;
+//   margin-bottom:0px;
+//   margin-top:20px;
+// }
+
+// .card-journal-book-add {
+//   color:white;
+// }
+
+
+
+
+// .card-journal h3 {
+//   padding:30px 0px 10px 0px;
+// }
+
+
+
+
+
+// .button-small-red  {
+//   border-left:none;
+//   border-right:none;
+//   border-top:none;
+//   font-size:16px;
+//   padding:25px 50px;
+//   background-color: #B8D8BA;
+//   color:white;
+//   text-decoration:none;
+//   font-weight:800;
+//   border-radius:15px;
+//   border-bottom:7px solid #A8C5AA;
+// }
+
+// .button-small-red a:hover {
+//   background-color:#DA888F;
+//   transition:0.3s;
+// }
+
+// .button-small-red:active {
+//   background-color:#A8C5AA;
+//   border:none;
+// }
+
+
+// /* Button Large */
+
+
+// .button-large-red a {
+//   font-size:16px;
+//   padding:25px 80px;
+//   background-color: #EF959D;
+//   color:white;
+//   text-decoration:none;
+//   font-weight:800;
+//   border-radius: 4px;
+//   display:block;
+// }
+
+// .button-large-red a:hover {
+//   background-color:#DA888F;
+//   transition:0.3s;
+// }
+
+// /* Button Blue */
+
+// .button-large-blue {
+//   margin:10px 0px;
+//   cursor:pointer;
+// }
+
+// .button-large-red {
+//   margin:10px 0px;
+//   cursor:pointer;
+// }
+
+
+// .button-large-blue a {
+//   font-size:16px;
+//   padding:25px 80px;
+//   background-color: #B1DDF1;
+//   color:white;
+//   text-decoration:none;
+//   font-weight:800;
+//   border-radius: 4px;
+//   display:block;
+// }
+
+// .button-large-blue a:hover {
+//   background-color:#B8E0F2;
+//   transition:0.3s;
+// }
+
+
+// .button-small-blue {
+// cursor:pointer;
+// }
+
+// .button-small-blue a {
+//   font-size:16px;
+//   padding:25px 50px;
+//   background-color: #B1DDF1;
+//   color:white;
+//   text-decoration:none;
+//   font-weight:800;
+//   border-radius: 15px;
+//   border-bottom:7px solid #91B5C6;
+// }
+
+// .button-small-blue a:active {
+//   background: #91B5C6;
+//   border:none;
+// }
+
+// .button-center {
+// display:flex;
+// align-items: center;
+// justify-content: center;
+
+
+// }
+
+// .target-button-mainpage button {
+//   padding:20px 70px;
+// }
+
+
+// .card-journal-book-add-container {
+//   display: flex;
+//   height:323px;
+//   align-items: center;
+//   width:100%;
+//   justify-content: center;
+// }
+
+
+// .button-fast {
+//   border-left:none;
+//   border-right:none;
+//   border-top:none;
+//   font-size:16px;
+//   padding:25px 50px;
+//   background-color: #B8D8BA;
+//   color:white;
+//   text-decoration:none;
+//   font-weight:800;
+//   border-radius:15px;
+//   border-bottom:7px solid #A8C5AA;
+// }
+
+// .button-fast a:hover {
+//   background-color:#DA888F;
+//   transition:0.3s;
+// }
+
+// .button-fast:active {
+//   background-color:#A8C5AA;
+//   border:none;
+// }
+
+// .button-fast-second {
+//   border-left:none;
+//   border-right:none;
+//   border-top:none;
+//   font-size:16px;
+//   padding:25px 50px;
+//   background-color: #B8D8BA;
+//   color:white;
+//   text-decoration:none;
+//   font-weight:800;
+//   border-radius:15px;
+//   border-bottom:7px solid #A8C5AA;
+// }
+
+// .button {
+
+// }
+
+
+#popup-goal {
+position: fixed;
+height:100vh;
+width:100vw;
+background: rgba(0,0,0,0.2);
+z-index:30;
 display: flex;
-justify-content: space-between;
-margin-right:20px;
+justify-content: center;
 align-items: center;
-padding:11px 0px;
+display: none;
+top:0px;
+right:0px;
+.popup1 {
+  background:white;
+  height:150px;
+  width:250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  input {
+    background:#f4f4f4;
+    border:none;
+    height:40px;
+    width:240px;
+    font-size:1rem;
+    color:#494949;
+  }
+  label {
+    display: none;
+  }
+  .fa-times {
+    position: absolute;
+    top:0px;
+    right:0px;
+    padding:10px;
+  }
+}
 }
 
-.card-for-entries-button {
-  margin:0px 20px;
+.overlay {
+  height:80px;
+  background:#f1f1f1;
 }
 
-.card-for-milestones {
-  background-color: white;
-  border-radius: 15px;
-  width:400px;
-  height:600px;
-  border-bottom: 5px solid #E5E5E5;
-  border-right:  5px solid #E5E5E5;
-  box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
-  margin: 0 auto;
+#new-pomodoro {
+  display: flex;
 }
 
 
-.card-for-milestones img {
-  width:63px;
-  height:224px;
+.collapsible-wrap {
 }
 
-.card-for-milestones-inner {
-  margin-left:20px;
+.collapsible {
+  height:100%;
+  width:100%;
+  font-size:0.8rem;
+  text-align: left;
+  padding:15px 10px;
+  background:White;
+  padding-left:10px;
+  border:none;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom:1px solid #f4f4f4;
+  h3 {
+    pointer-events: none;
+    font-weight:400;
+    color:#494949;
+  }
+}
+
+
+.block {
+  display: block;
+}
+
+.card-journal-book-add {
+ text-transform: uppercase;
+ font-size:0.8rem;
+ color:#494949;
+ font-weight:800;
+ text-decoration: none;
+}
+
+.group-collapse {
+  display: flex;
+  width:100%;
+  height:100%;
+  justify-content: space-between;
+  padding:15px 5px;
+  border-bottom:1px solid #f4f4f4;
+}
+
+.icon-goal {
+
+}
+
+.popup {
+  display: flex;
+  height:100%;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.popup-border {
+  height:5px;
+  width:100%;
+  position: absolute;
+  bottom:0px;
+  background: #f46b45; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #f46b45, #eea849); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #f46b45, #eea849);  
+  padding:0 10px;
+}
+
+.popup-group {
+  padding:0 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding:11px 0px;
+  height:100%;
+  width:100%;
+}
+
+.logo-s {
+  width:50px;
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  left:10px;
 }
