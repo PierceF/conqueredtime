@@ -1,7 +1,5 @@
+<h2>Sign up</h2>
 
-<div class="login-wrap" style="background: url('https://res.cloudinary.com/doem0zjpf/image/upload/v1574194895/photo-1518126085714-4f983a88f6c5_hrivn9.jpg'); background-position:center; background-size:cover;">
-<div class="container-main">
-<div class="login-form">
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
@@ -20,12 +18,8 @@
   </div>
 
   <div class="form-actions">
-  <div class="box-under-button">
     <%= f.button :submit, "Sign up" %>
-<% end %>
-<div class="box-under-button-under">
-<%= render "devise/shared/links" %>
-</div>
- </div>
   </div>
-</div>
+<% end %>
+
+<%= render "devise/shared/links" %>

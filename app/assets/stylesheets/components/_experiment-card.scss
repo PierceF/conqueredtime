@@ -1,72 +1,72 @@
-// .collapsible {
-//   background-color: #EF959D;
-//   color: white;
-//   cursor: pointer;
-//   width:50%;
-//   height:60px;
-//   border: none;
-//   outline: none;
-//   border-radius:0px 4px 4px 0px;
-//   margin-top:10px;
-//   position: relative;
-// }
+.collapsible {
+  background-color: #EF959D;
+  color: white;
+  cursor: pointer;
+  width:50%;
+  height:60px;
+  border: none;
+  outline: none;
+  border-radius:0px 4px 4px 0px;
+  margin-top:10px;
+  position: relative;
+}
 
-// .collapsible {
-//   transition:0.3s;
-// }
+.collapsible {
+  transition:0.3s;
+}
 
-// .active {
-//   background: #C47A81;
-//   box-shadow:none;
-//   transition:0.3s;
-// }
+.active {
+  background: #C47A81;
+  box-shadow:none;
+  transition:0.3s;
+}
 
 
-// .content {
-//   max-height: 0;
-//   overflow: hidden;
-//   transition: max-height 0.3s ease-out;
-//   background-color: #f4bbbf;
-//   width:100%;
-//   // border-radius:0px 14px 14px 0px;
-//   margin-bottom:10px;
-// }
+.content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  background-color: #f4bbbf;
+  width:100%;
+  // border-radius:0px 14px 14px 0px;
+  margin-bottom:10px;
+}
 
-// .collapsible h3 {
-//   font-size:20px !important;
-// }
+.collapsible h3 {
+  font-size:20px !important;
+}
 
-// .group-collapse p {
-//   font-size:16px !important;
-// }
+.group-collapse p {
+  font-size:16px !important;
+}
 
-// .group-collapse {
-//   height:100%;
-//   width:100%;
-//   padding: 20px 20px;
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-// }
+.group-collapse {
+  height:100%;
+  width:100%;
+  padding: 20px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-// .group-collapse button {
-//   color:white;
-//   border:none;
-//   background:rgba(0,0,0,0.0);
-//   margin: 0px;
-//   padding: 0px;
-// }
+.group-collapse button {
+  color:white;
+  border:none;
+  background:rgba(0,0,0,0.0);
+  margin: 0px;
+  padding: 0px;
+}
 
-// .group-collapse i {
-//   font-size:35px !important;
-//   color:white;
-//   margin:0px;
-// }
+.group-collapse i {
+  font-size:35px !important;
+  color:white;
+  margin:0px;
+}
 
-// .group-collapse p {
-//   color:white;
-//   border:none;
-//   font-weight:800;
-//   font-size:20px !important;
+.group-collapse p {
+  color:white;
+  border:none;
+  font-weight:800;
+  font-size:20px !important;
 
-// }
+}
