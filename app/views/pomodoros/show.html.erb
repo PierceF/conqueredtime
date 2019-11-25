@@ -1,26 +1,19 @@
-
-
 <div class="container-main">
 <% content_for :meta_title, "#{@milestone.title} is your focus now" %>
 <div class="content2">
 <div class="card-journal-book-top">
   <div class="card-journal-book-text">
+  <h2 align="center"> Focus Timer </h2>
   <!-- <h4>  Session <%=@milestone.title %> </h4> -->
   </div>
 </div>
 <!-- <div class="card-pomodoro"> -->
- 
 
 <div id="pomodoro">
-     <div id="countdown">
-        <span id="minutes">25</span>
-        <span>:</span>
-        <span id="seconds">00</span>
-      </div>
   <div id="options">
     <div id="session">
       <i id="decrSession" class="fas fa-minus-square"></i>
-      <span class="option-title"></span>
+      <span class="option-title">Session length</span>
       <!-- <input id="sessionInput" type="number" value="25" max="25" min="25"> -->
       <i id="incrSession" class="fas fa-plus-square"></i>
       <span class="option-title" ></span>
@@ -29,9 +22,12 @@
 
   <div id="clock">
     <div id="timer">
+      <div id="countdown">
+        <span id="minutes">25</span>
+        <span id="seconds">00</span>
+      </div>
 
     <div id="controls" class="reset">
-      <div class="start-stop">
       <div id="start">
           <%= simple_form_for @pomodoro, remote: true do |f| %>
             <%= f.input :action, as: :hidden, input_html: { value: 'start' } %>
@@ -49,7 +45,7 @@
           <% end %>
         <% end %>
       </div>
-    </div>
+
       <div id="back">
         <%= link_to milestone_path(@milestone, pomodoro_id: @pomodoro.id) do %>
           <p>Evaluate Your Session</p>
@@ -72,8 +68,6 @@
 
 
 </div>
-
-
 <script>
 const time = 25;
 window.time = time;
